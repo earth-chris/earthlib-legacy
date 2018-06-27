@@ -1,0 +1,5 @@
+ENVI
+samples = 10
+lines = 10
+file type = ENVI Standard
+spectra names = { 1 , 2 , 3 }
