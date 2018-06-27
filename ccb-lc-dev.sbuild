@@ -1,0 +1,98 @@
+Bootstrap: docker
+From: ubuntu:17.10 
+
+%help
+    Singularity image based on ubuntu 17.10 with spatial python software
+    https://github.com/tianon/docker-brew-ubuntu-core/blob/85822fe532df3854da30b4829c31878ac51bcb91/xenial/Dockerfile
+    Maintained by Christopher Anderson (cbanders@stanford.edu) @christobal54
+
+%labels
+    Maintainer christobal54
+    Version UserEror
+
+%setup
+    # set the default directory for storing configuration files
+    mkdir $SINGULARITY_ROOTFS/ccb
+
+%environment
+    # set the base ccb data directory
+    export CCB=/ccb
+
+    # tell ipython where to look for configuration files
+    export IPYTHONDIR=$CCB
+
+    # set the python path for custom installs
+    export PYTHONPATH=$CCB/aei-py
+
+%post
+    # set the default directory for storing configuration files
+    export CCB=/ccb
+    cd $CCB
+
+    # install packages via apt
+    apt-get update -y
+    apt-get upgrade  -y
+    apt-get install -y \
+	python-gdal \
+	gdal-bin \
+	ipython \
+	python-setuptools \
+	python-dev \
+	python-pip \
+	python-tk \
+	build-essential \
+	libfontconfig1 \
+	mesa-common-dev \
+	python-numpy \
+	python-scipy \
+	python-sklearn \
+	python-pandas \
+	python-geopandas \
+	python-qt4 \
+	python-sip \
+	python-pyside \
+	gcc \
+	gfortran \
+	qt5.1 \
+	git \
+	vim
+
+    # clean up the apt files
+    apt-get clean 
+    rm -rf /var/lib/apt/lists/*
+
+    # install pip packages
+    pip install --upgrade pip
+    pip install natcap.invest[ui] \
+    	matplotlib \
+    	qtpy \
+    	shapely \
+    	Pyro4 \
+    	psutil \
+    	rtree \
+    	qtawesome \
+    	qtpy \
+    	six \
+    	taskgraph \
+    	Pyro4 \
+        spectral \
+        pyprosail
+
+    # since pyprosail is broken on default, move some files around
+    mv /usr/local/lib/python2.7/dist-packages/PyPROSAIL/_prosail_model.so /usr/local/lib/python2.7/dist-packages/pyprosail/
+
+    # tell ipython where to look for configuration files
+    export IPYTHONDIR=$CCB
+    ipython profile create default
+    mv /ipython_config.py $IPYTHONDIR/profile_default/ipython_config.py
+
+    # install personal git repo
+    git clone https://github.com/christobal54/aei-py.git
+
+%files
+    # add the ccb-format ipython config file to the ccb directory
+    ipython_config.py 
+
+%runscript
+    echo "--- ccb-lc-dev ---"
+    exec "$@"
