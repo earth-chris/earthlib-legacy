@@ -1,0 +1,2583 @@
+Attribute,Value,Description,Order
+"FAO_74","A","Acrisol",105
+"FAO_74","Af","Ferric Acrisol",109
+"FAO_74","Ag","Gleyic Acrisol",107
+"FAO_74","Ah","Humic Acrisol",108
+"FAO_74","Ao","Orthic Acrisol",110
+"FAO_74","Ap","Plinthic Acrisol",106
+"FAO_74","B","Cambisol",120
+"FAO_74","Bc","Chromic Cambisol",128
+"FAO_74","Bd","Dystric Cambisol",127
+"FAO_74","Be","Eutric Cambisol",129
+"FAO_74","Bf","Ferralic Cambisol",126
+"FAO_74","Bg","Gleyic Cambisol",122
+"FAO_74","Bh","Humic Cambisol",125
+"FAO_74","Bk","Calcic Cambisol",124
+"FAO_74","Bv","Vertic Cambisol",123
+"FAO_74","Bx","Gelic Cambisol",121
+"FAO_74","C","Chernozem",72
+"FAO_74","Cg","Glossic Chernozem",74
+"FAO_74","Ch","Haplic Chernozem",76
+"FAO_74","Ck","Calcic Chernozem",75
+"FAO_74","Cl","Luvic Chernozem",73
+"FAO_74","D","Podzoluvisols",86
+"FAO_74","Dd","Dystric Podzoluvisol",88
+"FAO_74","De","Eutric Podzoluvisol",89
+"FAO_74","Dg","Gleyic Podzoluvisol",87
+"FAO_74","E","Rendzina",43
+"FAO_74","F","Ferralsol",51
+"FAO_74","Fa","Acric Ferralsol",54
+"FAO_74","Fh","Humic Ferralsol",53
+"FAO_74","Fo","Orthic Ferralsol",57
+"FAO_74","Fp","Plinthic Ferralsol",52
+"FAO_74","Fr","Rhodic Ferralsol",55
+"FAO_74","Fx","Xanthic Ferralsol",56
+"FAO_74","G","Gleysol",19
+"FAO_74","Gc","Calcaric Gleysol",24
+"FAO_74","Gd","Dystric Gleysol",25
+"FAO_74","Ge","Eutric Gleysol",26
+"FAO_74","Gh","Humic Gleysol",23
+"FAO_74","Gm","Mollic Gleysol",22
+"FAO_74","Gp","Plinthic Gleysol",21
+"FAO_74","Gx","Gelic Gleysol",20
+"FAO_74","H","Phaeozem",81
+"FAO_74","Hc","Calcaric Phaeozem",84
+"FAO_74","Hg","Gleyic Phaeozem",82
+"FAO_74","Hh","Haplic Phaeozem",85
+"FAO_74","Hl","Luvic Phaeozem",83
+"FAO_74","I","Lithosol",5
+"FAO_74","J","Fluvisol",9
+"FAO_74","Jc","Calcaric Fluvisol",11
+"FAO_74","Jd","Dystric Fluvisol",12
+"FAO_74","Je","Eutric Fluvisol",13
+"FAO_74","Jt","Thionic Fluvisol",10
+"FAO_74","K","Kastanozem",77
+"FAO_74","Kh","Haplic Kastanozem",80
+"FAO_74","Kk","Calcic Kastanozem",79
+"FAO_74","Kl","Luvic Kastanozem",78
+"FAO_74","L","Luvisol",111
+"FAO_74","La","Albic Luvisol",114
+"FAO_74","Lc","Chromic Luvisol",118
+"FAO_74","Lf","Ferric Luvisol",117
+"FAO_74","Lg","Gleyic Luvisol",113
+"FAO_74","Lk","Calcic Luvisol",116
+"FAO_74","Lo","Orthic Luvisol",119
+"FAO_74","Lp","Plinthic Luvisol",112
+"FAO_74","Lv","Vertic Luvisol",115
+"FAO_74","M","Greyzem",69
+"FAO_74","Mg","Gleyic Greyzem",70
+"FAO_74","Mo","Orthic Greyzem",71
+"FAO_74","N","Nitosol",101
+"FAO_74","Nd","Dystric Nitosol",103
+"FAO_74","Ne","Eutric Nitosol",104
+"FAO_74","Nh","Humic Nitosol",102
+"FAO_74","O","Histosol",1
+"FAO_74","Od","Dystric Histosol",3
+"FAO_74","Oe","Eutric Histosol",4
+"FAO_74","Ox","Gelic Histosol",2
+"FAO_74","P","Podzol",44
+"FAO_74","Pf","Ferric Podzol",48
+"FAO_74","Pg","Gleyic Podzol",46
+"FAO_74","Ph","Humic Podzol",47
+"FAO_74","Pl","Leptic Podzol",49
+"FAO_74","Po","Orthic Podzol",50
+"FAO_74","Pp","Placic Podzol",45
+"FAO_74","Q","Arenosol",32
+"FAO_74","Qa","Albic Arenosol",33
+"FAO_74","Qc","Cambic Arenosol",36
+"FAO_74","Qf","Ferralic Arenosol",35
+"FAO_74","Ql","Luvic Arenosol",34
+"FAO_74","R","Regosol",37
+"FAO_74","Rc","Calcaric Regosol",39
+"FAO_74","Rd","Dystric Regosol",40
+"FAO_74","Re","Eutric Regosol",41
+"FAO_74","Rx","Gelic Regosol",38
+"FAO_74","S","Solonetz",65
+"FAO_74","Sg","Gleyic Solonetz",66
+"FAO_74","Sm","Mollic Solonetz",67
+"FAO_74","So","Orthic Solonetz",68
+"FAO_74","T","Andosol",27
+"FAO_74","Th","Humic Andosol",29
+"FAO_74","Tm","Mollic Andosol",28
+"FAO_74","To","Ochric Andosol",30
+"FAO_74","Tv","Vitric Andosol",31
+"FAO_74","U","Ranker",42
+"FAO_74","V","Vertisol",6
+"FAO_74","Vc","Chromic Vertisol",8
+"FAO_74","Vp","Pellic Vertisol",7
+"FAO_74","W","Planosol",58
+"FAO_74","Wd","Dystric Planosol",63
+"FAO_74","We","Eutric Planosol",64
+"FAO_74","Wh","Humic Planosol",62
+"FAO_74","Wm","Mollic Planosol",61
+"FAO_74","Ws","Solodic Planosol",60
+"FAO_74","Wx","Gelic Planosol",59
+"FAO_74","X","Xerosol",90
+"FAO_74","Xh","Haplic Xerosol",94
+"FAO_74","Xk","Calcic Xerosol",93
+"FAO_74","Xl","Luvic Xerosol",91
+"FAO_74","Xy","Gypsic Xerosol",92
+"FAO_74","Y","Yermosol",95
+"FAO_74","Yh","Haplic Yermosol",100
+"FAO_74","Yk","Calcic Yermosol",99
+"FAO_74","Yl","Luvic Yermosol",97
+"FAO_74","Yt","Takyric Yermosol",96
+"FAO_74","Yy","Gypsic Yermosol",98
+"FAO_74","Z","Solonchak",14
+"FAO_74","Zg","Gleyic Solonchak",15
+"FAO_74","Zm","Mollic Solonchak",17
+"FAO_74","Zo","Orthic Solonchak",18
+"FAO_74","Zt","Takyric Solonchak",16
+"FAO_88","FL","Fluvisol",1
+"FAO_88","FLe","Eutric Fluvisol",2
+"FAO_88","FLc","Calcaric Fluvisol",3
+"FAO_88","FLd","Dystric Fluvisol",4
+"FAO_88","FLm","Mollic Fluvisol",5
+"FAO_88","FLu","Umbric Fluvisol",6
+"FAO_88","FLt","Thionic Fluvisol",7
+"FAO_88","FLs","Salic Fluvisol",8
+"FAO_88","GL","Gleysol",9
+"FAO_88","GLe","Eutric Gleysol",10
+"FAO_88","GLk","Calcic Gleysol",11
+"FAO_88","GLd","Dystric Gleysol",12
+"FAO_88","GLa","Andic Gleysol",13
+"FAO_88","GLm","Mollic Gleysol",14
+"FAO_88","GLu","Umbric Gleysol",15
+"FAO_88","GLt","Thionic Gleysol",16
+"FAO_88","GLi","Gelic Gleysol",17
+"FAO_88","RG","Regosol",18
+"FAO_88","RGe","Eutric Regosol",19
+"FAO_88","RGc","Calcaric Regosol",20
+"FAO_88","RGy","Gypsic Regosol",21
+"FAO_88","RGd","Dystric Regosol",22
+"FAO_88","RGu","Umbric Regosol",23
+"FAO_88","RGi","Gelic Regosol",24
+"FAO_88","LP","Leptosol",25
+"FAO_88","LPe","Eutric Leptosol",26
+"FAO_88","LPd","Dystric Leptosol",27
+"FAO_88","LPk","Rendzic Leptosol",28
+"FAO_88","LPm","Mollic Leptosol",29
+"FAO_88","LPu","Umbric Leptosol",30
+"FAO_88","LPq","Lithic Leptosol",31
+"FAO_88","LPi","Gelic Leptosol",32
+"FAO_88","AR","Arenosol",33
+"FAO_88","ARh","Haplic Arenosol",34
+"FAO_88","ARb","Cambic Arenosol",35
+"FAO_88","ARl","Luvic Arenosol",36
+"FAO_88","ARo","Ferralic Arenosol",37
+"FAO_88","ARa","Albic Arenosol",38
+"FAO_88","ARc","Calcaric Arenosol",39
+"FAO_88","ARg","Gleyic Arenosol",40
+"FAO_88","AN","Andosol",41
+"FAO_88","ANh","Haplic Andosol",42
+"FAO_88","ANm","Mollic Andosol",43
+"FAO_88","ANu","Umbric Andosol",44
+"FAO_88","ANz","Vitric Andosol",45
+"FAO_88","ANg","Gleyic Andosol",46
+"FAO_88","ANi","Gelic Andosol",47
+"FAO_88","VR","Vertisol",48
+"FAO_88","VRe","Eutric Vertisol",49
+"FAO_88","VRk","Calcic Vertisol",50
+"FAO_88","CL","Calcisol",51
+"FAO_88","CLh","Haplic Calcisol",52
+"FAO_88","CLl","Luvic Calcisol",53
+"FAO_88","CLp","Petric Calcisol",54
+"FAO_88","GY","Gypsisol",55
+"FAO_88","GYh","Haplic Gypsisol",56
+"FAO_88","GYk","Calcic Gypsisol",57
+"FAO_88","GYl","Luvic Gypsisol",58
+"FAO_88","GYp","Petric Gypsisol",59
+"FAO_88","SN","Solonetz",60
+"FAO_88","SNh","Haplic Solonetz",61
+"FAO_88","SNm","Mollic Solonetz",62
+"FAO_88","SNk","Calcic Solonetz",63
+"FAO_88","SNy","Gypsic Solonetz",64
+"FAO_88","SNj","Stagnic Solonetz",65
+"FAO_88","SC","Solonchak",66
+"FAO_88","SCh","Haplic Solonchak",67
+"FAO_88","SCm","Mollic Solonchak",68
+"FAO_88","SCk","Calcic Solonchak",69
+"FAO_88","SCy","Gypsic Solonchak",70
+"FAO_88","SCn","Sodic Solonchak",71
+"FAO_88","SCg","Gleyic Solonchak",72
+"FAO_88","SCi","Gelic Solonchak",73
+"FAO_88","KS","Kastanozem",74
+"FAO_88","KSh","Haplic Kastanozem",75
+"FAO_88","KSl","Luvic Kastanozem",76
+"FAO_88","KSk","Calcic Kastanozem",77
+"FAO_88","KSy","Gypsic Kastanozem",78
+"FAO_88","CH","Chernozem",79
+"FAO_88","CHh","Haplic Chernozem",80
+"FAO_88","CHk","Calcic Chernozem",81
+"FAO_88","CHl","Luvic Chernozem",82
+"FAO_88","CHw","Glossic Chernozem",83
+"FAO_88","CHg","Gleyic Chernozem",84
+"FAO_88","PH","Phaeozem",85
+"FAO_88","PHh","Haplic Phaeozem",86
+"FAO_88","PHc","Calcaric Phaeozem",87
+"FAO_88","PHj","Stagnic Phaeozem",88
+"FAO_88","GR","Greyzem",89
+"FAO_88","GRh","Haplic Greyzem",90
+"FAO_88","GRg","Gleyic Greyzem",91
+"FAO_88","LV","Luvisol",92
+"FAO_88","LVh","Haplic Luvisol",93
+"FAO_88","LVf","Ferric Luvisol",94
+"FAO_88","LVx","Chromic Luvisol",95
+"FAO_88","LVk","Calcic Luvisol",96
+"FAO_88","LVj","Stagnic Luvisol",97
+"FAO_88","LVg","Gleyic Luvisol",98
+"FAO_88","PL","Planosol",99
+"FAO_88","PLe","Eutric Planosol",100
+"FAO_88","PLd","Dystric Planosol",101
+"FAO_88","PLm","Mollic Planosol",102
+"FAO_88","PLu","Umbric Planosol",103
+"FAO_88","PLi","Gelic Planosol",104
+"FAO_88","PD","Podzoluvisol",105
+"FAO_88","PDe","Eutric Podzoluvisol",106
+"FAO_88","PDd","Dystric Podzoluvisol",107
+"FAO_88","PDj","Stagnic Podzoluvisol",108
+"FAO_88","PDg","Gleyic Podzoluvisol",109
+"FAO_88","PDi","Gelic Podzoluvisol",110
+"FAO_88","PZ","Podzol",111
+"FAO_88","PZh","Haplic Podzol",112
+"FAO_88","PZb","Cambic Podzol",113
+"FAO_88","PZf","Ferric Podzol",114
+"FAO_88","PZc","Carbic Podzol",115
+"FAO_88","PZg","Gleyic Podzol",116
+"FAO_88","PZi","Gelic Podzol",117
+"FAO_88","LX","Lixisol",118
+"FAO_88","LXh","Haplic Lixisol",119
+"FAO_88","LXf","Ferric Lixisol",120
+"FAO_88","LXp","Plinthic Lixisol",121
+"FAO_88","LXa","Albic Lixisol",122
+"FAO_88","LXj","Stagnic Lixisol",123
+"FAO_88","LXg","Gleyic Lixisol",124
+"FAO_88","AC","Acrisol",125
+"FAO_88","ACh","Haplic Acrisol",126
+"FAO_88","ACf","Ferric Acrisol",127
+"FAO_88","ACu","Humic Acrisol",128
+"FAO_88","ACp","Plinthic Acrisol",129
+"FAO_88","ACg","Gleyic Acrisol",130
+"FAO_88","AL","Alisol",131
+"FAO_88","ALh","Haplic Alisol",132
+"FAO_88","ALf","Ferric Alisol",133
+"FAO_88","ALu","Humic Alisol",134
+"FAO_88","ALp","Plinthic Alisol",135
+"FAO_88","ALj","Stagnic Alisol",136
+"FAO_88","ALg","Gleyic Alisol",137
+"FAO_88","NT","Nitisol",138
+"FAO_88","NTh","Haplic Nitisol",139
+"FAO_88","NTr","Rhodic Nitisol",140
+"FAO_88","NTu","Humic Nitisol",141
+"FAO_88","FR","Ferralsol",142
+"FAO_88","FRh","Haplic Ferralsol",143
+"FAO_88","FRx","Xanthic Ferralsol",144
+"FAO_88","FRr","Rhodic Ferralsol",145
+"FAO_88","FRu","Humic Ferralsol",146
+"FAO_88","FRg","Geric Ferralsol",147
+"FAO_88","FRp","Plinthic Ferralsol",148
+"FAO_88","PT","Plinthosol",149
+"FAO_88","PTe","Eutric Plinthosol",150
+"FAO_88","PTd","Dystric Plinthosol",151
+"FAO_88","PTu","Humic Plinthosol",152
+"FAO_88","PTa","Albic Plinthosol",153
+"FAO_88","CM","Cambisol",154
+"FAO_88","CMe","Eutric Cambisol",155
+"FAO_88","CMd","Dystric Cambisol",156
+"FAO_88","CMu","Humic Cambisol",157
+"FAO_88","CMc","Calcaric Cambisol",158
+"FAO_88","CMx","Chromic Cambisol",159
+"FAO_88","CMv","Vertic Cambisol",160
+"FAO_88","CMo","Ferralic Cambisol",161
+"FAO_88","CMg","Gleyic Cambisol",162
+"FAO_88","CMi","Gelic Cambisol",163
+"FAO_88","AT","Anthrosol",164
+"FAO_88","Ata","Aric Anthrosol",165
+"FAO_88","ATc","Cumulic Anthrosol",166
+"FAO_88","ATf","Fimic Anthrosol",167
+"FAO_88","ATu","Urbic Anthrosol",168
+"FAO_88","HS","Histosol",169
+"FAO_88","HSl","Folic Histosol",170
+"FAO_88","HSs","Terric Histosol",171
+"FAO_88","HSf","Fibric Histosol",172
+"FAO_88","HSt","Thionic Histosol",173
+"FAO_88","HSi","Gelic Histosol",174
+"FAO_88","LVv","Vertic Luvisol",175
+"FAO_88","LVa","Albic Luvisol",176
+"FAO_88","VRd","Dystric Vertisol",177
+"FAO_88","PHl","Luvic Phaeozem",178
+"FAO_88","PHg","Gleyic Phaeozem",179
+"FAO_88","SNg","Gleyic Solonetz",180
+"DHOR_74","AG","agric",1
+"DHOR_74","AL","albic",2
+"DHOR_74","AN","anthropic",3
+"DHOR_74","AR","argillic",4
+"DHOR_74","CA","cambic",5
+"DHOR_74","CL","calcic",6
+"PHA_74","CE","cerrado phase",1
+"PHA_74","LI","lithic phase",2
+"PHA_74","MK","petrocalcic phase",3
+"PHA_74","MQ","duripan phase",4
+"PHA_74","MS","petroferric phase",5
+"PHA_74","MY","petrogypsic",6
+"PHA_74","PE","petric phase",7
+"PHA_74","PH","phreatic phase",8
+"PHA_74","SO","sodic phase",9
+"PHA_74","ST","stony phase",10
+"PHA_74","X","fragipan phase",11
+"PHA_74","Z","saline phase",12
+"PHA_88","AN","anthraquic phase",1
+"PHA_88","DU","duripan phase",2
+"PHA_88","FR","fragipan phase",3
+"PHA_88","GE","gelundic phase",4
+"PHA_88","GI","gilgai phase",5
+"PHA_88","IN","inundic phase",6
+"PHA_88","LI","lithic phase",7
+"PHA_88","PF","petroferric phase",8
+"PHA_88","PH","phreatic phase",9
+"PHA_88","PL","placic phase",10
+"PHA_88","RU","rudic phase",11
+"PHA_88","SA","salic phase",12
+"PHA_88","SK","skeletic phase",13
+"PHA_88","SO","sodic phase",14
+"PHA_88","TK","takyric phase",15
+"PHA_88","YR","yermic phase",16
+"DHOR_74","DU","duripan",7
+"DHOR_74","PL","placic",18
+"DHOR_74","SA","salic",19
+"DHOR_74","SO","sombric",20
+"DHOR_74","SP","spodic",21
+"DHOR_74","SU","sulfuric",22
+"DHOR_74","UM","umbric",23
+"DPRO_74","AL","albic material",1
+"DPRO_74","AM","exchange complex dominated by amorphous material",2
+"DPRO_74","AT","abrupt textural change",3
+"DPRO_74","CF","petroferric contact",4
+"DPRO_74","CL","paralithic contact",5
+"DPRO_74","CO","COLE",6
+"DPRO_74","DU","durinodes",7
+"DPRO_74","FA","ferralic properties",8
+"DPRO_74","FE","ferric properties",9
+"DPRO_74","GL","gilgai",10
+"DPRO_74","HY","hydromorphic properties",11
+"DPRO_74","IF","interfingering",12
+"DPRO_74","IR","thin iron pan",13
+"DPRO_74","K","soft powdery lime",14
+"DPRO_74","LI","lithic contact",15
+"DPRO_74","MO","mottles with chroma <2",16
+"DPRO_74","NV","n-value > 0.7",17
+"DPRO_74","OR","high organic matter content",18
+"DPRO_74","PF","permafrost",19
+"DPRO_74","SA","high salinity",20
+"DPRO_74","SC","smeary consistence",21
+"DPRO_74","SL","slickensides",22
+"DPRO_74","SQ","plinthite",23
+"DPRO_74","SU","sulfidic material",24
+"DPRO_74","TA","takyric",25
+"DPRO_74","TO","tonguing",26
+"DPRO_74","TX","thixotropy",27
+"DPRO_74","VE","vertic properties",28
+"DPRO_74","WE","weatherable minerals",29
+"USMIN","03","allitic",1
+"USMIN","04","calcareous",2
+"USMIN","05","carbonatic",3
+"USMIN","07","clastic",4
+"USMIN","08","coprogenous",5
+"USMIN","20","glauconitic",12
+"USMIN","22","gypsic",13
+"USMIN","24","halloysitic",14
+"USMIN","26","illitic",15
+"USMIN","27","illitic (calcareous)",16
+"USMIN","28","kaolinitic",17
+"USMIN","30","marly",18
+"USMIN","32","micaceous",19
+"USMIN","34","mixed",20
+"USMIN","35","mixed (calcareous)",21
+"USMIN","37","montmorillonitic",22
+"USMIN","38","montmorillonitic (calcareous)",23
+"USMIN","40","oxidic",24
+"USMIN","42","sepiolitic",25
+"USMIN","44","serpentinitic",26
+"USMIN","45","sesquic",27
+"USMIN","46","siliceous",28
+"USMIN","50","vermiculitic",29
+"USTX","036","fragmental",1
+"USTX","044","sandy-skeletal",2
+"USTX","050","loamy-skeletal",3
+"USTX","056","clayey-skeletal",4
+"USTX","062","sandy",5
+"USTX","068","loamy",6
+"USTX","080","coarse-loamy",7
+"USTX","096","fine-loamy",8
+"USTX","088","coarse-silty",9
+"USTX","106","fine-silty",10
+"USTX","114","clayey",11
+"USTX","126","fine",12
+"USTX","134","very fine",13
+"USTX","003","cindery",14
+"USTX","004","cindery over sandy",15
+"USTX","005","ashy",16
+"USTX","006","cindery over loamy",17
+"USTX","007","ashy over cindery",18
+"USTX","008","ashy over loamy",19
+"USTX","009","ashy-skeletal",20
+"USTX","010","medial",21
+"USTX","011","medial-skeletal",22
+"USTX","012","medial over cindery",23
+"USTX","013","ashy over loamy-skeletal",24
+"USTX","014","medial over clayey",25
+"USTX","015","cindery over medial-skeletal",26
+"USTX","016","medial over fragmental",27
+"USTX","017","cindery over medial",28
+"USTX","018","medial over loamy",29
+"USTX","019","ashy over medial",30
+"USTX","020","medial over loamy-skeletal",31
+"USTX","022","medial over sandy",32
+"USTX","024","medial over thixotropic",33
+"USTX","026","thixotropic",34
+"USTX","027","thixotropic-skeletal",35
+"USTX","028","thixotropic over fragmental",36
+"USTX","030","thixotropic over sandy/sandy-skeletal",37
+"USTX","032","thixotropic over loamy-skeletal",38
+"USTX","034","thixotropic over loamy",39
+"USTX","046","sandy-skeletal over loamy",40
+"USTX","047","sandy-skeletal over clayey",41
+"USTX","051","loamy-skeletal over fragmental",42
+"USTX","052","loamy-skeletal over sandy",43
+"USTX","054","loamy-skeletal over clayey",44
+"USTX","058","clayey-skeletal over sandy",45
+"USTX","063","sandy-skeletal",46
+"USTX","064","sandy over loamy",47
+"USTX","066","sandy over clayey",48
+"USTX","072","loamy over sandy/sandy-skeletal",49
+"USTX","082","coarse-loamy over fragmental",50
+"USTX","084","coarse-loamy over sandy/sandy-skeletal",51
+"USTX","086","coarse-loamy over clayey",52
+"USTX","088","coarse-silty",53
+"USTX","092","coarse-silty over sandy/sandy-skeletal",54
+"USTX","094","coarse-silty over clayey",55
+"USTX","098","fine-loamy over fragmental",56
+"USTX","100","fine-loamy over sandy/sandy-skeletal",57
+"USTX","102","fine-loamy over clayey",58
+"USTX","108","fine-silty over fragmental",59
+"USTX","110","fine-silty over sandy/sandy-skeletal",60
+"USTX","112","fine-silty over clayey",61
+"USTX","116","clayey over fragmental",62
+"USTX","118","clayey over sandy/sandy-skeletal",63
+"USTX","120","clayey over loamy-skeletal",64
+"USTX","122","clayey over fine-silty",65
+"USTX","124","clayey over loamy",66
+"USTX","150","gravelly",67
+"SMR","AQ","aquic",1
+"SMR","AR","aridic",2
+"SMR","PQ","peraquic",3
+"FSUB_88","aa","Anthraqui-",1
+"FSUB_88","ab","Albi-",2
+"FSUB_88","ac","Alcali-",3
+"FSUB_88","ad","Aridi-",4
+"FSUB_88","ak","Acri-",5
+"FSUB_88","al","Ali-",6
+"FSUB_88","an","Andi-",7
+"FSUB_88","ap","Abrupti-",8
+"FSUB_88","ar","Areni-",9
+"FSUB_88","au","Alumi-",10
+"FSUB_88","ba","Bathi-",11
+"FSUB_88","ca","Calcari-",12
+"FSUB_88","cc","Calci-",13
+"FSUB_88","ch","Chromi-",14
+"FSUB_88","cu","Cumuli-",15
+"FSUB_88","du","Duri-",16
+"FSUB_88","dy","Dystri-",17
+"FSUB_88","ea","Epiandi-",18
+"FSUB_88","eb","Endoandi-",19
+"FSUB_88","ed","Epidystri-",20
+"FSUB_88","eg","Epigleyi-",21
+"FSUB_88","eh","Endohisti-",22
+"FSUB_88","en","Endo-",23
+"FSUB_88","ep","Epi-",24
+"FSUB_88","es","Endosodi-",25
+"FSUB_88","et","Endostagni-",26
+"FSUB_88","eu","Eutri-",27
+"FSUB_88","ez","Endosali-",28
+"FSUB_88","fa","Ferrali-",29
+"FSUB_88","fe","Ferri-",30
+"FSUB_88","fh","Fibrihisti-",31
+"FSUB_88","fi","Fimi-",32
+"FSUB_88","fl","Fluvi-",33
+"FSUB_88","fr","Fragi-",34
+"FSUB_88","ge","Geli-",35
+"FSUB_88","gl","Gleyi-",36
+"FSUB_88","gr","Geri-",37
+"FSUB_88","gs","Glossi-",38
+"FSUB_88","gu","Grumi-",39
+"FSUB_88","gy","Gypsi-",40
+"FSUB_88","ha","Hyperalbi-",41
+"FSUB_88","hc","Hypercalci-",42
+"FSUB_88","hd","Hyperdystri-",43
+"FSUB_88","he","Hypereutri-",44
+"FSUB_88","hf","Hyperferrali-",45
+"FSUB_88","hg","Hypoglossi-",46
+"FSUB_88","hh","Hypergypsi-",47
+"FSUB_88","hi","Histi-",48
+"FSUB_88","hk","Hypocalci-",49
+"FSUB_88","kl","Hypoplinthi-",50
+"FSUB_88","hp","Hypo-",51
+"FSUB_88","hr","Hyperferri-",52
+"FSUB_88","hs","Hyposodi-",53
+"FSUB_88","hu","Humi-",54
+"FSUB_88","hy","Hyper-",55
+"FSUB_88","hz","Hyposali-",56
+"FSUB_88","la","Lamelli-",57
+"FSUB_88","li","Lithi-",58
+"FSUB_88","lu","Luvi-",59
+"FSUB_88","lx","Lixi-",60
+"FSUB_88","ma","Mazi-",61
+"FSUB_88","mh","Mollihumi-",62
+"FSUB_88","mo","Molli-",63
+"FSUB_88","ni","Niti-",64
+"FSUB_88","ny","Nudiyermi-",65
+"FSUB_88","oc","Orthicalci-",66
+"FSUB_88","od","Orthidystri-",67
+"FSUB_88","oe","Orthieutri-",68
+"FSUB_88","or","Orthi-",69
+"FSUB_88","ot","Orthothioni-",70
+"FSUB_88","pa","Pachi-",71
+"FSUB_88","pe","Pelli-",72
+"FSUB_88","pf","Petroferri-",73
+"FSUB_88","pg","Petrogypsi-",74
+"FSUB_88","pi","Plinthi-",75
+"FSUB_88","pk","Petrocalci-",76
+"FSUB_88","pl","Placi-",77
+"FSUB_88","pn","Plani-",78
+"FSUB_88","po","Protothioni-",79
+"FSUB_88","pr","Proto-",80
+"FSUB_88","ps","Petrosali-",81
+"FSUB_88","pt","Petri-",82
+"FSUB_88","rh","Rhodi-",83
+"FSUB_88","rp","Rupti-",84
+"FSUB_88","sa","Sali-",85
+"FSUB_88","si","Silti-",86
+"FSUB_88","so","Sodi-",87
+"FSUB_88","sp","Spodi-",88
+"FSUB_88","st","Stagni-",89
+"FSUB_88","th","Terrihisti-",90
+"FSUB_88","ti","Thioni-",91
+"FSUB_88","tk","Takyri-",92
+"FSUB_88","to","Toxi-",93
+"FSUB_88","uh","Umbrihumi-",94
+"FSUB_88","um","Umbri-",95
+"FSUB_88","ve","Verti-",96
+"FSUB_88","vm","Vermi-",97
+"FSUB_88","vt","Veti-",98
+"FSUB_88","xa","Xanthi-",99
+"FSUB_88","ye","Yermi-",100
+"DHOR_74","FR","fragipan",8
+"DHOR_74","GY","gypsic",9
+"DHOR_74","HI","histic",10
+"DHOR_74","MO","mollic",11
+"SMR","PU","perudic",4
+"SMR","TO","torric",5
+"SMR","UD","udic",6
+"SMR","US","ustic",7
+"SMR","XE","xeric",8
+"STR","CR","cryic",1
+"STR","FR","frigid",2
+"STR","HT","hyperthermic",3
+"STR","IF","isofrigid",4
+"STR","IH","isohyperthermic",5
+"STR","IM","isomesic",6
+"STR","IT","isothermic",7
+"STR","ME","mesic",8
+"STR","MT","megathermic",9
+"STR","PG","pergelic",10
+"STR","TH","thermic",11
+"UHOR_92","AG","agric horizon",1
+"UHOR_92","AL","albic horizon",2
+"UHOR_92","AN","anthropic epipedon",3
+"UHOR_92","AR","argillic horizon",4
+"UHOR_92","CA","calcic horizon",5
+"UHOR_92","CB","cambic horizon",6
+"UHOR_92","DU","duripan",7
+"UHOR_92","FR","fragipan",8
+"UHOR_92","GL","glossic horizon",9
+"UHOR_92","GY","gypsic horizon",10
+"UHOR_92","HI","histic epipedon",11
+"UHOR_92","KA","kandic horizon",12
+"UHOR_92","ME","melanic epipedon",13
+"UHOR_92","MO","mollic epipedon",14
+"UHOR_92","NA","natric horizon",15
+"UHOR_92","OC","ochric epipedon",16
+"UHOR_92","OX","oxic horizon",17
+"UHOR_92","PC","petrocalcic horizon",18
+"UHOR_92","PG","petrogypsic horizon",19
+"UHOR_92","PL","placic horizon",20
+"UHOR_92","PE","plaggen epipedon",21
+"UHOR_92","SA","salic horizon",22
+"UHOR_92","SO","sombric horizon",23
+"UHOR_92","SP","spodic horizon",24
+"UHOR_92","SU","sulfuric horizon",25
+"UHOR_92","UM","umbric epipedon",26
+"UPRO_92","AA","anthraquic conditions",1
+"UPRO_92","AB","abrupt textural change",2
+"UPRO_92","AL","albic materials",3
+"UPRO_92","AN","andic soil properties",4
+"UPRO_92","AQ","aquic conditions",5
+"UPRO_92","AS","anthric saturation",6
+"UPRO_92","CO","coefficient of linear extensibility",7
+"UPRO_92","DR","durinodes",8
+"UPRO_92","EN","endosaturation",9
+"UPRO_92","EP","episaturation",10
+"UPRO_92","IF","interfingering of albic materials",11
+"UPRO_92","LC","lithic contact",12
+"UPRO_92","LE","linear extensibility",13
+"UPRO_92","NV","n value > 0.7",14
+"UPRO_92","PC","paralithic contact",15
+"UPRO_92","PE","permafrost",16
+"UPRO_92","PF","petroferric contact",17
+"UPRO_92","PL","plinthite",18
+"UPRO_92","SB","sequum and bisequum",19
+"UPRO_92","SC","soft powdery lime",20
+"UPRO_92","SF","sulfidic materials",21
+"UPRO_92","SL","slickensides",22
+"UPRO_92","SP","spodic materials",23
+"UPRO_92","WM","weatherable minerals",24
+"USMIN","09","chloritic",6
+"USMIN","10","diatomaceous",7
+"USMIN","12","ferrihumic",8
+"USMIN","14","ferritic",9
+"USMIN","15","ferruginous",10
+"USMIN","18","gibbsitic",11
+"USGG_75","io","Ochrept",134
+"DHOR_74","NA","natric",12
+"USGG_75","aqw","Albaqualf",3
+"USGG_75","aqd","Duraqualf",4
+"USGG_75","a","Alfisol",1
+"USGG_75","aq","Aqualf",2
+"USGG_75","aqf","Fragiaqualf",5
+"USGG_75","aqg","Glossaqualf",6
+"USGG_75","aqn","Natraqualf",7
+"USGG_75","aqo","Ochraqualf",8
+"USGG_75","aql","Plinthaqualf",9
+"USGG_75","aqt","Tropaqualf",10
+"USGG_75","aqm","Umbraqualf",11
+"USGG_75","ab","Boralf",12
+"USGG_75","abo","Cryoboralf",13
+"USGG_75","abe","Eutroboralf",14
+"USGG_75","abf","Fragiboralf",15
+"USGG_75","abg","Glossoboralf",16
+"USGG_75","abn","Natriboralf",17
+"USGG_75","abb","Paleboralf",18
+"USGG_75","ad","Udalf",19
+"USGG_75","adc","Agrudalf",20
+"USGG_75","adi","Ferrudalf",21
+"USGG_75","adf","Fragiudalf",22
+"USGG_75","agf","Fraglossudalf",23
+"USGG_75","adg","Glossudalf",24
+"USGG_75","ada","Hapludalf",25
+"USGG_75","adn","Natrudalf",26
+"USGG_75","adb","Paleudalf",27
+"USGG_75","adt","Tropudalf",28
+"USGG_75","au","Ustalf",29
+"USGG_75","aud","Durustalf",30
+"USGG_75","aua","Haplustalf",31
+"USGG_75","aun","Natrustalf",32
+"USGG_75","aub","Paleustalf",33
+"USGG_75","aul","Plinthustalf",34
+"USGG_75","aur","Rhodustalf",35
+"USGG_75","ax","Xeralf",36
+"USGG_75","axd","Durixeralf",37
+"USGG_75","axa","Haploxeralf",38
+"USGG_75","axn","Natrixeralf",39
+"USGG_75","axb","Palexeralf",40
+"USGG_75","axl","Plinthoxeralf",41
+"USGG_75","axr","Rhodoxeralf",42
+"USGG_75","d","Aridisol",43
+"USGG_75","dr","Argid",44
+"USGG_75","drd","Durargid",45
+"USGG_75","dra","Haplargid",46
+"USGG_75","drj","Nadurargid",47
+"USGG_75","drn","Natrargid",48
+"USGG_75","drb","Paleargid",49
+"USGG_75","do","Orthid",50
+"USGG_75","dok","Calciorthid",51
+"USGG_75","dom","Camborthid",52
+"USGG_75","dod","Durorthid",53
+"USGG_75","dog","Gypsiorthid",54
+"USGG_75","dob","Paleorthid",55
+"USGG_75","dos","Salorthid",56
+"USGG_75","e","Entisol",57
+"USGG_75","eq","Aquent",58
+"USGG_75","eqc","Cryaquent",59
+"USGG_75","eqv","Fluvaquent",60
+"USGG_75","eqa","Haplaquent",61
+"USGG_75","eqw","Hydraquent",62
+"USGG_75","eqs","Psammaquent",63
+"USGG_75","eqi","Sulfaquent",64
+"USGG_75","eqt","Tropaquent",65
+"USGG_75","er","Arent",66
+"USGG_75","ev","Fluvent",67
+"USGG_75","evc","Cryofluvent",68
+"USGG_75","evp","Torrifluvent",69
+"USGG_75","evt","Tropofluvent",70
+"USGG_75","evd","Udifluvent",71
+"USGG_75","evu","Ustifluvent",72
+"USGG_75","evx","Xerofluvent",73
+"USGG_75","eo","Orthent",74
+"USGG_75","eoc","Cryorthent",75
+"USGG_75","eop","Torriorthent",76
+"USGG_75","eot","Troporthent",77
+"USGG_75","eod","Udorthent",78
+"USGG_75","eou","Ustorthent",79
+"USGG_75","eox","Xerorthent",80
+"USGG_75","es","Psamment",81
+"USGG_75","esc","Cryopsamment",82
+"USGG_75","esz","Quartzipsamment",83
+"USGG_75","esp","Torripsamment",84
+"USGG_75","est","Tropopsamment",85
+"USGG_75","esd","Udipsamment",86
+"USGG_75","esu","Ustipsamment",87
+"USGG_75","esx","Xeropsamment",88
+"USGG_75","h","Histosol",89
+"USGG_75","hi","Fibrist",90
+"USGG_75","hib","Borofibrist",91
+"USGG_75","hic","Cryofibrist",92
+"USGG_75","hil","Luvifibrist",93
+"USGG_75","him","Medifibrist",94
+"USGG_75","his","Sphagnofibrist",95
+"USGG_75","hit","Tropofibrist",96
+"USGG_75","hl","Folist",97
+"USGG_75","hlb","Borofolist",98
+"USGG_75","hlc","Cryofolist",99
+"USGG_75","hlt","Tropofolist",100
+"USGG_75","he","Hemist",101
+"USGG_75","heb","Borohemist",102
+"USGG_75","hec","Cryohemist",103
+"USGG_75","hel","Luvihemist",104
+"USGG_75","hem","Medihemist",105
+"USGG_75","hei","Sulfihemist",106
+"USGG_75","heo","Sulfohemist",107
+"USGG_75","het","Tropohemist",108
+"USGG_75","ha","Saprist",109
+"USGG_75","har","Borosaprist",110
+"USGG_75","hac","Cryosaprist",111
+"USGG_75","ham","Medisaprist",112
+"USGG_75","hat","Troposaprist",113
+"USGG_75","i","Inceptisol",114
+"USGG_75","in","Andept",115
+"USGG_75","inc","Cryandept",116
+"USGG_75","ind","Durandept",117
+"USGG_75","iny","Dystrandept",118
+"USGG_75","ine","Eutrandept",119
+"USGG_75","inw","Hydrandept",120
+"USGG_75","inp","Placandept",121
+"USGG_75","inv","Vitrandept",122
+"USGG_75","iq","Aquept",123
+"USGG_75","iqn","Andaquept",124
+"USGG_75","iqc","Cryaquept",125
+"USGG_75","iqf","Fragiaquept",126
+"USGG_75","iqx","Halaquept",127
+"USGG_75","iqa","Haplaquept",128
+"USGG_75","iqh","Humaquept",129
+"USGG_75","iqp","Placaquept",130
+"USGG_75","iql","Plinthaquept",131
+"USGG_75","iqs","Sulfaquept",132
+"USGG_75","iqt","Tropaquept",133
+"USGG_75","ioc","Cryochrept",135
+"USGG_75","iod","Durochrept",136
+"USGG_75","ioy","Dystrochrept",137
+"USGG_75","ioe","Eutrochrept",138
+"USGG_75","iof","Fragiochrept",139
+"USGG_75","iou","Ustochrept",140
+"USGG_75","iox","Xerochrept",141
+"USGG_75","ig","Plaggept",142
+"USGG_75","it","Tropept",143
+"USGG_75","ity","Dystropept",144
+"USGG_75","ite","Eutropept",145
+"USGG_75","ith","Humitropept",146
+"USGG_75","its","Sombritropept",147
+"USGG_75","itu","Ustropept",148
+"USGG_75","im","Umbrept",149
+"USGG_75","imc","Cryumbrept",150
+"USGG_75","imf","Fragiumbrept",151
+"USGG_75","ima","Haplumbrept",152
+"USGG_75","imx","Xerumbrept",153
+"USGG_75","m","Mollisol",154
+"USGG_75","mw","Alboll",155
+"USGG_75","mwr","Argialboll",156
+"USGG_75","mwn","Natralboll",157
+"USGG_75","mq","Aquoll",158
+"USGG_75","mqr","Argiaquoll",159
+"USGG_75","mqk","Calciaquoll",160
+"USGG_75","mqc","Cryaquoll",161
+"USGG_75","mqd","Duraquoll",162
+"USGG_75","mqa","Haplaquoll",163
+"USGG_75","mqn","Natraquoll",164
+"USGG_75","mb","Boroll",165
+"USGG_75","mbr","Argiboroll",166
+"USGG_75","mbk","Calciboroll",167
+"USGG_75","mbc","Cryoboroll",168
+"USGG_75","mba","Haploboroll",169
+"USGG_75","mbn","Natriboroll",170
+"USGG_75","mbb","Paleboroll",171
+"USGG_75","mbv","Vermiboroll",172
+"USGG_75","mr","Rendoll",173
+"USGG_75","md","Udoll",174
+"USGG_75","mdr","Argiudoll",175
+"USGG_75","mda","Hapludoll",176
+"USGG_75","mdb","Paleudoll",177
+"USGG_75","mdv","Vermudoll",178
+"USGG_75","mu","Ustoll",179
+"USGG_75","mur","Argiustoll",180
+"USGG_75","muk","Calciustoll",181
+"USGG_75","mud","Durustoll",182
+"USGG_75","mua","Haplustoll",183
+"USGG_75","mun","Natrustoll",184
+"USGG_75","mub","Paleustoll",185
+"USGG_75","muv","Vermustoll",186
+"USGG_75","mx","Xeroll",187
+"USGG_75","mxr","Argixeroll",188
+"USGG_75","mxk","Calcixeroll",189
+"USGG_75","mxd","Durixeroll",190
+"USGG_75","mxa","Haploxeroll",191
+"USGG_75","mxn","Natrixeroll",192
+"USGG_75","mxb","Palexeroll",193
+"USGG_75","o","Oxisol",194
+"USGG_75","oq","Aquox",195
+"USGG_75","oqg","Gibbsiaquox",196
+"USGG_75","oqo","Ochraquox",197
+"USGG_75","oql","Plinthaquox",198
+"USGG_75","oqm","Umbraquox",199
+"USGG_75","oh","Humox",200
+"USGG_75","ohk","Acrohumox",201
+"USGG_75","ohg","Gibbsihumox",202
+"USGG_75","oha","Haplohumox",203
+"USGG_75","ohs","Sombrihumox",204
+"USGG_75","oo","Orthox",205
+"USGG_75","ook","Acrorthox",206
+"USGG_75","ooe","Eutrorthox",207
+"USGG_75","oog","Gibbsiorthox",208
+"USGG_75","ooa","Haplorthox",209
+"USGG_75","oos","Sombriorthox",210
+"USGG_75","oom","Umbriorthox",211
+"USGG_75","op","Torrox",212
+"USGG_75","ou","Ustox",213
+"USGG_75","ouk","Acrustox",214
+"USGG_75","oue","Eutrustox",215
+"USGG_75","oua","Haplustox",216
+"USGG_75","ous","Sombriustox",217
+"USGG_75","s","Spodosol",218
+"USGG_75","sq","Aquod",219
+"USGG_75","sqc","Cryaquod",220
+"USGG_75","sqd","Duraquod",221
+"USGG_75","sqf","Fragiaquod",222
+"USGG_75","sqa","Haplaquod",223
+"USGG_75","sqp","Placaquod",224
+"USGG_75","sqs","Sideraquod",225
+"USGG_75","sqt","Tropaquod",226
+"USGG_75","si","Ferrod",227
+"USGG_75","sh","Humod",228
+"USGG_75","shc","Cryohumod",229
+"USGG_75","shf","Fragihumod",230
+"USGG_75","sha","Haplohumod",231
+"USGG_75","shp","Placohumod",232
+"USGG_75","sht","Tropohumod",233
+"USGG_75","so","Orthod",234
+"USGG_75","soc","Cryorthod",235
+"USGG_75","sof","Fragiorthod",236
+"USGG_75","soa","Haplorthod",237
+"USGG_75","sop","Placorthod",238
+"USGG_75","sot","Troporthod",239
+"USGG_75","u","Ultisol",240
+"USGG_75","uq","Aquult",241
+"USGG_75","uqw","Albaquult",242
+"USGG_75","uqf","Fragiaquult",243
+"USGG_75","uqo","Ochraquult",244
+"USGG_75","uqb","Paleaquult",245
+"USGG_75","uql","Plinthaquult",246
+"USGG_75","uqt","Tropaquult",247
+"USGG_75","uqm","Umbraquult",248
+"USGG_75","uh","Humult",249
+"USGG_75","uha","Haplohumult",250
+"USGG_75","uhb","Palehumult",251
+"USGG_75","uhl","Plinthohumult",252
+"USGG_75","uhs","Sombrihumult",253
+"USGG_75","uht","Tropohumult",254
+"USGG_75","ud","Udult",255
+"USGG_75","udf","Fragiudult",256
+"USGG_75","uda","Hapludult",257
+"USGG_75","udb","Paleudult",258
+"USGG_75","udl","Plinthudult",259
+"USGG_75","udr","Rhodudult",260
+"USGG_75","udt","Tropudult",261
+"USGG_75","uu","Ustult",262
+"USGG_75","uua","Haplustult",263
+"USGG_75","uub","Paleustult",264
+"USGG_75","uul","Plinthustult",265
+"USGG_75","uur","Rhodustult",266
+"USGG_75","ux","Xerult",267
+"USGG_75","uxa","Haploxerult",268
+"USGG_75","uxb","Palexerult",269
+"USGG_75","v","Vertisol",270
+"USGG_75","vp","Torrert",271
+"USGG_75","vd","Udert",272
+"USGG_75","vdr","Chromudert",273
+"USGG_75","vdl","Pelludert",274
+"USGG_75","vu","Ustert",275
+"USGG_75","vur","Chromustert",276
+"USGG_75","vul","Pellustert",277
+"USGG_75","vx","Xerert",278
+"USGG_75","vxr","Chromoxerert",279
+"USGG_75","vxl","Pelloxerert",280
+"USSG_75","AL02","Albaquultic",16
+"USSG_75","AL04","Albic",17
+"USSG_75","AL08","Albic Glossic",18
+"USSG_75","AB","Abruptic",1
+"USSG_75","AB04","Abruptic Aridic",2
+"USSG_75","AB08","Abruptic Cryic",3
+"USSG_75","AB10","Abruptic Haplic",4
+"USSG_75","AB14","Abruptic Udic",5
+"USSG_75","AB16","Abruptic Xerollic",6
+"USSG_75","AE","Aeric",7
+"USSG_75","AE03","Aeric Arenic",8
+"USSG_75","AE05","Aeric Grossarenic",9
+"USSG_75","AE06","Aeric Mollic",10
+"USSG_75","AE08","Aeric Humic",11
+"USSG_75","AE09","Aeric Tropic",12
+"USSG_75","AE10","Aeric Umbric",13
+"USSG_75","AE12","Aeric Xeric",14
+"USSG_75","AL","Albaquic",15
+"USSG_75","AL10","Alfic",19
+"USSG_75","AL12","Alfic Arenic",20
+"USSG_75","AL13","Alfic Andeptic",21
+"USSG_75","AL16","Alfic Lithic",22
+"USSG_75","AN","Andic",23
+"USSG_75","AN01","Andeptic",24
+"USSG_75","AN03","Andaquic",25
+"USSG_75","AN06","Andic Dystric",26
+"USSG_75","AN11","Andeptic Glossoboric",27
+"USSG_75","AN22","Andic Ustic",28
+"USSG_75","AN24","Andaqueptic",29
+"USSG_75","AN30","Anthropic",30
+"USSG_75","AQ","Aqualfic",31
+"USSG_75","AQ02","Aquentic",32
+"USSG_75","AQ04","Aqueptic",33
+"USSG_75","AQ06","Aquic",34
+"USSG_75","AQ08","Aquic Arenic",35
+"USSG_75","AQ14","Aquic Duric",36
+"USSG_75","AQ16","Aquic Durorthidic",37
+"USSG_75","AQ18","Aquic Dystric",38
+"USSG_75","AQ24","Aquic Haplic",39
+"USSG_75","AQ26","Aquic Lithic",40
+"USSG_75","AQ31","Aquic Psammentic",41
+"USSG_75","AQ34","Aquollic",42
+"USSG_75","AQ36","Aquultic",43
+"USSG_75","AR","Arenic",44
+"USSG_75","AR02","Arenic Aridic",45
+"USSG_75","AR03","Arenic Orthoxic",46
+"USSG_75","AR04","Arenic Plinthaquic",47
+"USSG_75","AR06","Arenic Plinthic",48
+"USSG_75","AR08","Arenic Rhodic",49
+"USSG_75","AR10","Arenic Ultic",50
+"USSG_75","AR14","Arenic Umbric",51
+"USSG_75","AR16","Arenic Ustalfic",52
+"USSG_75","AR18","Arenic Ustollic",53
+"USSG_75","AR22","Argiaquic",54
+"USSG_75","AR24","Argiaquic Xeric",55
+"USSG_75","AR26","Argic",56
+"USSG_75","AR28","Argic Lithic",57
+"USSG_75","AR30","Argic Pachic",58
+"USSG_75","AR32","Argic Vertic",59
+"USSG_75","AR34","Aridic",60
+"USSG_75","AR36","Aridic Calcic",61
+"USSG_75","AR42","Aridic Duric",62
+"USSG_75","AR50","Aridic Pachic",63
+"USSG_75","AR52","Aridic Petrocalcic",64
+"USSG_75","BO","Boralfic",65
+"USSG_75","BO02","Boralfic Lithic",66
+"USSG_75","BO04","Boralfic Udic",67
+"USSG_75","BO06","Borollic",68
+"USSG_75","BO08","Borollic Glossic",69
+"USSG_75","BO10","Borollic Lithic",70
+"USSG_75","BO12","Borollic Vertic",71
+"USSG_75","CA","Calcic",72
+"USSG_75","CA04","Calcic Pachic",73
+"USSG_75","CA06","Calciorthidic",74
+"USSG_75","CA10","Calcixerollic",75
+"USSG_75","CA20","Cambic",76
+"USSG_75","CH","Chromic",77
+"USSG_75","CH06","Chromudic",78
+"USSG_75","CR","Cryic",79
+"USSG_75","CR10","Cryic Lithic",80
+"USSG_75","CR14","Cryic Pachic",81
+"USSG_75","CU","Cumulic",82
+"USSG_75","CU02","Cumulic Udic",83
+"USSG_75","CU04","Cumulic Ultic",84
+"USSG_75","DU","Durargidic",85
+"USSG_75","DU02","Duric",86
+"USSG_75","DU08","Durixerollic",87
+"USSG_75","DU10","Durixerollic Lithic",88
+"USSG_75","DU11","Durochreptic",89
+"USSG_75","DU12","Durorthidic",90
+"USSG_75","DU14","Durorthidic Xeric",91
+"USSG_75","DY02","Dystric",92
+"USSG_75","DY03","Dystric Entic",93
+"USSG_75","DY04","Dystric Fluventic",94
+"USSG_75","DY06","Dystric Lithic",95
+"USSG_75","DY08","Dystropeptic",96
+"USSG_75","EN","Entic",97
+"USSG_75","EN02","Entic Lithic",98
+"USSG_75","EN06","Entic Ultic",99
+"USSG_75","EP","Epiaquic",100
+"USSG_75","EP10","Epiaquic Orthoxic",101
+"USSG_75","EU","Eutric",102
+"USSG_75","EU02","Eutrochreptic",103
+"USSG_75","EU04","Eutropeptic",104
+"USSG_75","FE","Ferrudalfic",105
+"USSG_75","FI","Fibric",106
+"USSG_75","FI02","Fibric Terric",107
+"USSG_75","FL02","Fluvaquentic",108
+"USSG_75","FL06","Fluventic",109
+"USSG_75","FL12","Fluventic Umbric",110
+"USSG_75","FR10","Fragiaquic",111
+"USSG_75","FR18","Fragic",112
+"USSG_75","GL02","Glossaquic",113
+"USSG_75","GL04","Glossic",114
+"USSG_75","GL10","Glossic Udic",115
+"USSG_75","GL12","Glossic Ustollic",116
+"USSG_75","GL14","Glossoboralfic",117
+"USSG_75","GL16","Glossoboric",118
+"USSG_75","GR","Grossarenic",119
+"USSG_75","GR01","Grossarenic Entic",120
+"USSG_75","GR04","Grossarenic Plinthic",121
+"USSG_75","HA","Haplaquodic",122
+"USSG_75","HA01","Haplaquic",123
+"USSG_75","HA02","Haplic",124
+"USSG_75","HA05","Haplohumic",125
+"USSG_75","HA07","Haploxerollic",126
+"USSG_75","HA09","Hapludic",127
+"USSG_75","HA12","Hapludollic",128
+"USSG_75","HA16","Haplustollic",129
+"USSG_75","HE","Hemic",130
+"USSG_75","HE02","Hemic Terric",131
+"USSG_75","HI","Histic",132
+"USSG_75","HI02","Histic Lithic",133
+"USSG_75","HI06","Histic Pergelic",134
+"USSG_75","HU","Humic",135
+"USSG_75","HU02","Humic Lithic",136
+"USSG_75","HU05","Humic Pergelic",137
+"USSG_75","HU06","Humoxic",138
+"USSG_75","HU10","Humaqueptic",139
+"USSG_75","HY","Hydric",140
+"USSG_75","HY02","Hydric Lithic",141
+"USSG_75","LE","Leptic",142
+"USSG_75","LI","Limnic",143
+"USSG_75","LI02","Lithic",144
+"USSG_75","LI04","Lithic Mollic",145
+"USSG_75","LI06","Lithic Ruptic Alfic",146
+"USSG_75","LI07","Lithic Ruptic Argic",147
+"USSG_75","LI08","Lithic Ruptic Entic Xerollic",148
+"USSG_75","LI09","Lithic Ruptic Entic",149
+"USSG_75","LI12","Lithic Ultic",150
+"USSG_75","LI11","Lithic Ruptic Xerorthentic",151
+"USSG_75","LI10","Lithic Udic",152
+"USSG_75","LI13","Lithic Ruptic Ultic",153
+"USSG_75","LI14","Lithic Umbric",154
+"USSG_75","LI15","Lithic Ruptic Xerochreptic",155
+"USSG_75","LI16","Lithic Ustic",156
+"USSG_75","LI18","Lithic Ustollic",157
+"USSG_75","LI20","Lithic Vertic",158
+"USSG_75","LI22","Lithic Xeric",159
+"USSG_75","LI24","Lithic Xerollic",160
+"USSG_75","MO","Mollic",161
+"USSG_75","NA06","Natric",162
+"USSG_75","OC","Ochreptic",163
+"USSG_75","OR","Orthidic",164
+"USSG_75","OR01","Orthic",165
+"USSG_75","OR02","Orthoxic",166
+"USSG_75","OX","Oxic",167
+"USSG_75","PA","Pachic",168
+"USSG_75","PA02","Pachic Udic",169
+"USSG_75","PA04","Pachic Ultic",170
+"USSG_75","PA06","Paleorthidic",171
+"USSG_75","PA08","Paleustollic",172
+"USSG_75","PA10","Palexerollic",173
+"USSG_75","PA20","Paralithic Vertic",174
+"USSG_75","PE","Pergelic",175
+"USSG_75","PE01","Pergelic Ruptic Histic",176
+"USSG_75","PE02","Pergelic Sideric",177
+"USSG_75","PE04","Petrocalcic",178
+"USSG_75","PE06","Petrocalcic Ustalfic",179
+"USSG_75","PE08","Petrocalcic Ustollic",180
+"USSG_75","PE14","Petrocalcic Xerollic",181
+"USSG_75","PE16","Petroferric",182
+"USSG_75","PE20","Petrogypsic",183
+"USSG_75","PK","Placic",184
+"USSG_75","PK10","Plaggeptic",185
+"USSG_75","PK12","Plaggic",186
+"USSG_75","PL","Plinthaquic",187
+"USSG_75","PL04","Plinthic",188
+"USSG_75","PL06","Plinthudic",189
+"USSG_75","PS","Psammaquentic",190
+"USSG_75","PS02","Psammentic",191
+"USSG_75","QU","Quartzipsammentic",192
+"USSG_75","RE","Rendollic",193
+"USSG_75","RH","Rhodic",194
+"USSG_75","RU02","Ruptic Alfic",195
+"USSG_75","RU09","Ruptic Lithic",196
+"USSG_75","RU11","Ruptic Lithic Entic",197
+"USSG_75","RU15","Ruptic Lithic Xerochreptic",198
+"USSG_75","RU17","Ruptic Ultic",199
+"USSG_75","RU19","Ruptic Vertic",200
+"USSG_75","SA","Salorthidic",201
+"USSG_75","SA02","Sapric",202
+"USSG_75","SA04","Sapric Terric",203
+"USSG_75","SI","Sideric",204
+"USSG_75","SO04","Sombrihumic",205
+"USSG_75","SP","Sphagnic",206
+"USSG_75","SP02","Sphagnic Terric",207
+"USSG_75","SP04","Spodic",208
+"USSG_75","SU","Sulfic",209
+"USSG_75","TE","Terric",210
+"USSG_75","TH04","Thapto-Histic",211
+"USSG_75","TH06","Thapto-Histic Tropic",212
+"USSG_75","TO","Torrertic",213
+"USSG_75","TO02","Torrifluventic",214
+"USSG_75","TO04","Torriorthentic",215
+"USSG_75","US","Ustalfic",231
+"USSG_75","US02","Ustertic",232
+"USSG_75","US04","Ustic",233
+"USSG_75","TO06","Torripsammentic",216
+"USSG_75","TO10","Torroxic",217
+"USSG_75","TR","Tropaquodic",218
+"USSG_75","TR02","Tropeptic",219
+"USSG_75","TR04","Tropic",220
+"USSG_75","AA","Typic",221
+"USSG_75","UD","Udertic",222
+"USSG_75","UD01","Udalfic",223
+"USSG_75","UD02","Udic",224
+"USSG_75","UD03","Udollic",225
+"USSG_75","UD05","Udorthentic",226
+"USSG_75","UD10","Udoxic",227
+"USSG_75","UL","Ultic",228
+"USSG_75","UM","Umbreptic",229
+"USSG_75","UM02","Umbric",230
+"USSG_75","US06","Ustochreptic",234
+"USSG_75","US08","Ustollic",235
+"USSG_75","US12","Ustoxic",236
+"USSG_75","VE","Vermic",237
+"USSG_75","VE02","Vertic",238
+"USSG_75","XE","Xeralfic",239
+"USSG_75","XE02","Xerertic",240
+"USSG_75","XE04","Xeric",241
+"USSG_75","XE08","Xerollic",242
+"USSG_92","A08","Acrudoxic",9
+"USSG_92","A16","Aeric Humic",17
+"USSG_92","A17","Aeric Tropic",18
+"USSG_92","A18","Aeric Umbric",19
+"USSG_92","A19","Albaquic",20
+"USSG_92","A20","Albaquultic",21
+"USSG_92","A21","Albic",22
+"USSG_92","AA","Typic",1
+"USSG_92","A01","Abruptic",2
+"USSG_92","A02","Abruptic Aridic",3
+"USSG_92","A03","Abruptic Cryic",4
+"USSG_92","A04","Abruptic Haplic",5
+"USSG_92","A05","Abruptic Udic",6
+"USSG_92","A06","Abruptic Xerollic",7
+"USSG_92","A07","Acraquoxic",8
+"USSG_92","A09","Acrudoxic Hydric",10
+"USSG_92","A10","Acrudoxic Plinthic",11
+"USSG_92","A11","Acrudoxic Thapthic",12
+"USSG_92","A12","Acrudoxic Ultic",13
+"USSG_92","A13","Acrudoxic Vitric",14
+"USSG_92","A14","Acrustoxic",15
+"USSG_92","A15","Aeric",16
+"USSG_92","A22","Albic Glossic",23
+"USSG_92","A23","Albollic",24
+"USSG_92","A24","Alfic",25
+"USSG_92","A25","Alfic Arenic",26
+"USSG_92","A49","Aquic Lithic",50
+"USSG_92","A50","Aquic Petroferric",51
+"USSG_92","A51","Aquodic",52
+"USSG_92","A52","Aquollic",53
+"USSG_92","A26","Alfic Humic",27
+"USSG_92","A27","Alfic Lithic",28
+"USSG_92","A28","Alic",29
+"USSG_92","A29","Alic Aquic",30
+"USSG_92","A30","Alic Pachic",31
+"USSG_92","A31","Alic Thaptic",32
+"USSG_92","A32","Andic",33
+"USSG_92","A33","Andic Ombroaquic",34
+"USSG_92","A34","Anionic",35
+"USSG_92","A35","Anionic Aquic",36
+"USSG_92","A36","Anthraquic",37
+"USSG_92","A37","Anthropic",38
+"USSG_92","A38","Aqualfic",39
+"USSG_92","A39","Aquandic",40
+"USSG_92","A40","Aquentic",41
+"USSG_92","A41","Aqueptic",42
+"USSG_92","A42","Aquertic",43
+"USSG_92","A43","Aquic",44
+"USSG_92","A44","Aquic Arenic",45
+"USSG_92","A45","Aquic Duric",46
+"USSG_92","A46","Aquic Durorthidic",47
+"USSG_92","A47","Aquic Dystric",48
+"USSG_92","A48","Aquic Haplic",49
+"USSG_92","A53","Aquultic",54
+"USSG_92","A54","Arenic",55
+"USSG_92","A55","Arenic Aridic",56
+"USSG_92","A56","Arenic Plinthaquic",57
+"USSG_92","A57","Arenic Plinthic",58
+"USSG_92","A58","Arenic Rhodic",59
+"USSG_92","A59","Arenic Ultic",60
+"USSG_92","A60","Arenic Umbric",61
+"USSG_92","A61","Arenic Ustalfic",62
+"USSG_92","A62","Arenic Ustollic",63
+"USSG_92","A63","Argiaquic",64
+"USSG_92","A64","Argiaquic Xeric",65
+"USSG_92","A65","Argic",66
+"USSG_92","A66","Argic Lithic",67
+"USSG_92","A67","Argic Pachic",68
+"USSG_92","A68","Argic Ustic",69
+"USSG_92","A69","Argic Vertic",70
+"USSG_92","A70","Aridic",71
+"USSG_92","A71","Aridic Calcic",72
+"USSG_92","A72","Aridic Duric",73
+"USSG_92","A73","Aridic Petrocalcic",74
+"USSG_92","B01","Boralfic",75
+"USSG_92","B02","Boralfic Lithic",76
+"USSG_92","B03","Boralfic Udic",77
+"USSG_92","B04","Borollic",78
+"USSG_92","B05","Borollic Glossic",79
+"USSG_92","B06","Borollic Lithic",80
+"USSG_92","B07","Borollic Vertic",81
+"USSG_92","C01","Calcic",82
+"USSG_92","C02","Calcic Pachic",83
+"USSG_92","C03","Calcic Udic",84
+"USSG_92","C04","Calciorthidic",85
+"USSG_92","C05","Calcixerollic",86
+"USSG_92","C06","Cambic",87
+"USSG_92","C07","Chromic",88
+"USSG_92","C08","Chromic Udic",89
+"USSG_92","C09","Cryic",90
+"USSG_92","C10","Cryic Lithic",91
+"USSG_92","C11","Cryic Pachic",92
+"USSG_92","C12","Cumulic",93
+"USSG_92","C13","Cumulic Udic",94
+"USSG_92","C14","Cumulic Ultic",95
+"USSG_92","D01","Durargidic",96
+"USSG_92","D02","Duric",97
+"USSG_92","D03","Duric Histic",98
+"USSG_92","D04","Durixerollic",99
+"USSG_92","D05","Durixerollic Lithic",100
+"USSG_92","D06","Durorthidic",101
+"USSG_92","D07","Durorthidic Xeric",102
+"USSG_92","D08","Dystric",103
+"USSG_92","D09","Dystric Entic",104
+"USSG_92","D10","Dystric Fluventic",105
+"USSG_92","D11","Dystric Lithic",106
+"USSG_92","D12","Dystric Vitric",107
+"USSG_92","E01","Entic",108
+"USSG_92","E02","Entic Lithic",109
+"USSG_92","E03","Entic Udic",110
+"USSG_92","E04","Entic Ultic",111
+"USSG_92","E05","Eutric",112
+"USSG_92","E06","Eutric Hydric",113
+"USSG_92","E07","Eutric Pachic",114
+"USSG_92","E08","Eutric Thaptic",115
+"USSG_92","E09","Eutric Vitric",116
+"USSG_92","E10","Eutrochreptic",117
+"USSG_92","E11","Eutropeptic",118
+"USSG_92","F01","Ferrudalfic",119
+"USSG_92","F02","Fibric",120
+"USSG_92","F03","Fibric Terric",121
+"USSG_92","F04","Fluvaquentic",122
+"USSG_92","F05","Fluventic",123
+"USSG_92","F06","Fluventic Umbric",124
+"USSG_92","F07","Fragiaquic",125
+"USSG_92","F08","Fragic",126
+"USSG_92","G01","Glossaquic",127
+"USSG_92","G02","Glossic",128
+"USSG_92","G03","Glossic Udic",129
+"USSG_92","G04","Glossic Ustollic",130
+"USSG_92","G05","Glossoboric",131
+"USSG_92","G06","Grossarenic",132
+"USSG_92","G07","Grossarenic Entic",133
+"USSG_92","G08","Grossarenic Plinthic",134
+"USSG_92","G09","Gypsic",135
+"USSG_92","H01","Halic",136
+"USSG_92","H02","Haplic",137
+"USSG_92","H03","Haploxerollic",138
+"USSG_92","H04","Hapludic",139
+"USSG_92","H05","Haplustollic",140
+"USSG_92","H06","Hemic",141
+"USSG_92","H07","Hemic Terric",142
+"USSG_92","H08","Histic",143
+"USSG_92","H09","Histic Lithic",144
+"USSG_92","H10","Histic Pergelic",145
+"USSG_92","H11","Humaqueptic",146
+"USSG_92","H12","Humic",147
+"USSG_92","H13","Humic Pergelic",148
+"USSG_92","H14","Humic Rhodic",149
+"USSG_92","H15","Humic Xanthic",150
+"USSG_92","H16","Humic Xeric",151
+"USSG_92","H17","Hydraquentic",152
+"USSG_92","H18","Hydric",153
+"USSG_92","H19","Hydric Lithic",154
+"USSG_92","H20","Hydric Pachic",155
+"USSG_92","H21","Hydric Thaptic",156
+"USSG_92","I01","Inceptic",157
+"USSG_92","K01","Kandic",158
+"USSG_92","K02","Kandiudalfic",159
+"USSG_92","K03","Kandiustalfic",160
+"USSG_92","L15","Lithic Ustic",176
+"USSG_92","L16","Lithic Ustollic",177
+"USSG_92","L17","Lithic Xeric",178
+"USSG_92","L18","Lithic Xerollic",179
+"USSG_92","M01","Mollic",180
+"USSG_92","K04","Kanhaplic",161
+"USSG_92","L01","Leptic",162
+"USSG_92","L02","Leptic Udic",163
+"USSG_92","L03","Limnic",164
+"USSG_92","L04","Lithic",165
+"USSG_92","L05","Lithic Mollic",166
+"USSG_92","L06","Lithic Petrocalcic",167
+"USSG_92","L07","Lithic Ruptic Alfic",168
+"USSG_92","L08","Lithic Ruptic Argic",169
+"USSG_92","L09","Lithic Ruptic Entic",170
+"USSG_92","L10","Lithic Ruptic Entic Xerollic",171
+"USSG_92","L11","Lithic Ruptic Xerochreptic",172
+"USSG_92","L12","Lithic Ruptic Xerorthentic",173
+"USSG_92","L13","Lithic Ruptic Ultic",174
+"USSG_92","L14","Lithic Ultic",175
+"USSG_92","N01","Natric",181
+"USSG_92","O01","Ochreptic",182
+"USSG_92","O02","Ombroaquic",183
+"USSG_92","O03","Orthidic",184
+"USSG_92","O04","Oxic",185
+"USSG_92","O05","Oxyaquic",186
+"USSG_92","P01","Pachic",187
+"USSG_92","P02","Pachic Udic",188
+"USSG_92","P03","Pachic Ultic",189
+"USSG_92","P04","Pergelic",190
+"USSG_92","P05","Pergelic Ruptic Histic",191
+"USSG_92","P06","Petrocalcic",192
+"USSG_92","P07","Petrocalcic Ustalfic",193
+"USSG_92","P08","Petrocalcic Ustollic",194
+"USSG_92","P09","Petrocalcic Xerollic",195
+"USSG_92","P10","Petroferric",196
+"USSG_92","P11","Petrogypsic",197
+"USSG_92","P12","Placic",198
+"USSG_92","P13","Plaggeptic",199
+"USSG_92","P14","Plinthaquic",200
+"USSG_92","P15","Plinthic",201
+"USSG_92","P16","Plinthudic",202
+"USSG_92","P17","Psammaquentic",203
+"USSG_92","P18","Psammentic",204
+"USSG_92","Q01","Quartzipsammentic",205
+"USSG_92","R01","Rendollic",206
+"USSG_92","R02","Rhodic",207
+"USSG_92","R03","Ruptic Alfic",208
+"USSG_92","R04","Ruptic Lithic",209
+"USSG_92","R05","Ruptic Lithic Entic",210
+"USSG_92","R06","Ruptic Ultic",211
+"USSG_92","S01","Salorthidic",212
+"USSG_92","S02","Sapric",213
+"USSG_92","S03","Sapric Terric",214
+"USSG_92","S04","Sodic",215
+"USSG_92","S05","Sombric",216
+"USSG_92","S06","Sphagnic",217
+"USSG_92","S07","Sphagnic Terric",218
+"USSG_92","S08","Spodic",219
+"USSG_92","S09","Sulfic",220
+"USSG_92","T01","Terric",221
+"USSG_92","T02","Thaptic",222
+"USSG_92","T03","Thapto-Histic",223
+"USSG_92","T04","Thapto-Histic Tropic",224
+"USSG_92","T05","Torrertic",225
+"USSG_92","T06","Torrifluventic",226
+"USSG_92","T07","Torriorthentic",227
+"USSG_92","T08","Torripsammentic",228
+"USSG_92","T09","Torroxic",229
+"USSG_92","T10","Tropic",230
+"USSG_92","U01","Udandic",231
+"USSG_92","U02","Udertic",232
+"USSG_92","U03","Udic",233
+"USSG_92","U04","Udifluventic",234
+"USSG_92","U05","Udollic",235
+"USSG_92","U06","Udorthentic",236
+"USSG_92","U07","Udoxic",237
+"USSG_92","U08","Ultic",238
+"USSG_92","U09","Umbreptic",239
+"USSG_92","U10","Umbric",240
+"USSG_92","U11","Ustalfic",241
+"USSG_92","U12","Ustandic",242
+"USSG_92","U13","Ustertic",243
+"USSG_92","U14","Ustic",244
+"USSG_92","U15","Ustivitrandic",245
+"USSG_92","U16","Ustochreptic",246
+"USSG_92","U17","Ustollic",247
+"USSG_92","U18","Ustoxic",248
+"USSG_92","V01","Vermic",249
+"USSG_92","V02","Vertic",250
+"USSG_92","V03","Vitrandic",251
+"USSG_92","V04","Vitric",252
+"USSG_92","V05","Vitritorrandic",253
+"USSG_92","V06","Vitrixerandic",254
+"USSG_92","X01","Xanthic",255
+"USSG_92","X02","Xeralfic",256
+"USSG_92","X03","Xerertic",257
+"USSG_92","X04","Xeric",258
+"USSG_92","X05","Xerochreptic",259
+"USSG_92","X06","Xerollic",260
+"FHOR_88","AC","argic B",1
+"FHOR_88","AL","albic E",2
+"FHOR_88","CA","cambic B",3
+"FHOR_88","CL","calcic",4
+"FHOR_88","FI","fimic A",5
+"FHOR_88","FL","ferralic B",6
+"FHOR_88","GY","gypsic",7
+"FHOR_88","HI","histic H",8
+"FHOR_88","MO","mollic A",9
+"FHOR_88","NA","natric B",10
+"FHOR_88","OC","ochric A",11
+"FHOR_88","PC","petrocalcic",12
+"FHOR_88","PG","petrogypsic",13
+"FHOR_88","SP","spodic B",14
+"FHOR_88","SU","sulfuric",15
+"FHOR_88","UM","umbric A",16
+"FPRO_88","AD","andic properties",1
+"FPRO_88","AT","abrupt textural change",2
+"FPRO_88","CC","calcaric",3
+"FPRO_88","CR","continuous hard rock",4
+"FPRO_88","CS","calcareous",5
+"FPRO_88","FA","ferralic properties",6
+"FPRO_88","FE","ferric properties",7
+"FPRO_88","FL","fluvic properties",8
+"FPRO_88","GE","geric properties",9
+"FPRO_88","GP","gypsiferous",10
+"FPRO_88","GW","gleyic properties",11
+"FPRO_88","IF","interfingering",12
+"FPRO_88","K","soft powdery lime",13
+"FPRO_88","NI","nitic properties",14
+"FPRO_88","OS","organic soil materials",15
+"FPRO_88","PF","permafrost",16
+"FPRO_88","SC","smeary consistence",17
+"FPRO_88","SF","sulfidic materials",18
+"FPRO_88","SH","strongly humic",19
+"FPRO_88","SL","slickensides",20
+"FPRO_88","SO","sodic properties",21
+"FPRO_88","SP","salic properties",22
+"FPRO_88","SQ","plinthite",23
+"FPRO_88","ST","stagnic properties",24
+"FPRO_88","TO","tonguing",25
+"FPRO_88","VE","vertic properties",26
+"FPRO_88","WE","weatherable minerals",27
+"DHOR_74","OC","ochric",13
+"DHOR_74","OX","oxic",14
+"DHOR_74","PA","plaggen",15
+"DHOR_74","PC","petrocalcic",16
+"DHOR_74","PG","petrogypsic",17
+"WRB_RG","AC","Acrisol",1
+"WRB_RG","AB","Albeluvisol",2
+"WRB_RG","AL","Alisol",3
+"WRB_RG","AN","Andosol",4
+"WRB_RG","AT","Anthrosol",5
+"WRB_RG","AR","Arenosol",6
+"WRB_RG","CL","Calcisol",7
+"WRB_RG","CM","Cambisol",8
+"WRB_RG","CH","Chernozem",9
+"WRB_RG","CR","Cryosol",10
+"WRB_RG","DU","Durisol",11
+"WRB_RG","FR","Ferralsol",12
+"WRB_RG","FL","Fluvisol",13
+"WRB_RG","GL","Gleysol",14
+"WRB_RG","GY","Gypsisol",15
+"WRB_RG","HS","Histosol",16
+"WRB_RG","KS","Kastanozem",17
+"WRB_RG","LP","Leptosol",18
+"WRB_RG","LX","Lixisol",19
+"WRB_RG","LV","Luvisol",20
+"WRB_RG","NT","Nitisol",21
+"WRB_RG","PH","Phaeozem",22
+"WRB_RG","PL","Planosol",23
+"WRB_RG","PT","Plinthosol",24
+"WRB_RG","PZ","Podzol",25
+"WRB_RG","RG","Regosol",26
+"WRB_RG","SC","Solonchak",27
+"WRB_RG","SN","Solonetz",28
+"WRB_RG","UM","Umbrisol",29
+"WRB_RG","VR","Vertisol",30
+"WRB_Q1","ap","Abruptic",1
+"WRB_Q1","ae","Aceric",2
+"WRB_Q1","ac","Acric",3
+"WRB_Q1","ao","Acroxic",4
+"WRB_Q1","ab","Albic",5
+"WRB_Q1","abh","Hyperalbic",6
+"WRB_Q1","abg","Glossalbic",7
+"WRB_Q1","ax","Alcalic",8
+"WRB_Q1","al","Alic",9
+"WRB_Q1","au","Alumic",10
+"WRB_Q1","an","Andic",11
+"WRB_Q1","ana","Aluandic",12
+"WRB_Q1","ans","Silandic",13
+"WRB_Q1","aq","Anthraquic",14
+"WRB_Q1","am","Anthric",15
+"WRB_Q1","ah","Anthropic",16
+"WRB_Q1","ai","Aric",17
+"WRB_Q1","ar","Arenic",18
+"WRB_Q1","ad","Aridic",19
+"WRB_Q1","az","Arzic",20
+"WRB_Q1","ca","Calcaric",21
+"WRB_Q1","cc","Calcic",22
+"WRB_Q1","cch","Hypercalcic",23
+"WRB_Q1","ccw","Hypocalcic",24
+"WRB_Q1","cco","Orthicalcic",25
+"WRB_Q1","cb","Carbic",26
+"WRB_Q1","cn","Carbonatic",27
+"WRB_Q1","ch","Chernic",28
+"WRB_Q1","cl","Chloridic",29
+"WRB_Q1","cr","Chromic",30
+"WRB_Q1","cy","Cryic",31
+"WRB_Q1","ct","Cutanic",32
+"WRB_Q1","dn","Densic",33
+"WRB_Q1","du","Duric",34
+"WRB_Q1","dy","Dystric",35
+"WRB_Q1","dye","Epidystric",36
+"WRB_Q1","dyh","Hyperdystric",37
+"WRB_Q1","dyo","Orthidystric",38
+"WRB_Q1","et","Entic",39
+"WRB_Q1","eu","Eutric",40
+"WRB_Q1","eun","Endoeutric",41
+"WRB_Q1","euh","Hypereutric",42
+"WRB_Q1","euo","Orthieutric",43
+"WRB_Q1","es","Eutrisilic",44
+"WRB_Q1","fl","Ferralic",45
+"WRB_Q1","flh","Hyperferralic",46
+"WRB_Q1","flw","Hypoferralic",47
+"WRB_Q1","fr","Ferric",48
+"WRB_Q1","frh","Hyperferric",49
+"WRB_Q1","fi","Fibric",50
+"WRB_Q1","fo","Folic",51
+"WRB_Q1","fv","Fluvic",52
+"WRB_Q1","fg","Fragic",53
+"WRB_Q1","fu","Fulvic",54
+"WRB_Q1","ga","Garbic",55
+"WRB_Q1","ge","Gelic",56
+"WRB_Q1","gt","Gelistagnic",57
+"WRB_Q1","gr","Geric",58
+"WRB_Q1","gi","Gibbsic",59
+"WRB_Q1","gc","Glacic",60
+"WRB_Q1","gl","Gleyic",61
+"WRB_Q1","gln","Endogleyic",62
+"WRB_Q1","glp","Epigleyic",63
+"WRB_Q1","gs","Glossic",64
+"WRB_Q1","gsm","Molliglossic",65
+"WRB_Q1","gsu","Umbriglossic",66
+"WRB_Q1","gz","Greyic",67
+"WRB_Q1","gm","Grumic",68
+"WRB_Q1","gy","Gypsic",69
+"WRB_Q1","gyh","Hypergypsic",70
+"WRB_Q1","gyw","Hypogypsic",71
+"WRB_Q1","gp","Gypsiric",72
+"WRB_Q1","ha","Haplic",73
+"WRB_Q1","hi","Histic",74
+"WRB_Q1","hif","Fibrihistic",75
+"WRB_Q1","his","Saprihistic",76
+"WRB_Q1","ir","Irragric",85
+"WRB_Q1","ll","Lamellic",86
+"WRB_Q1","le","Leptic",87
+"WRB_Q1","len","Endoleptic",88
+"WRB_Q1","lep","Epileptic",89
+"WRB_Q1","li","Lithic",90
+"WRB_Q1","lip","Paralithic",91
+"WRB_Q1","lx","Lixic",92
+"WRB_Q1","lv","Luvic",93
+"WRB_Q1","lvw","Hypoluvic",94
+"WRB_Q1","mg","Magnesic",95
+"WRB_Q1","mz","Mazic",96
+"WRB_Q1","me","Melanic",97
+"WRB_Q1","ms","Mesotrophic",98
+"WRB_Q1","mo","Mollic",99
+"WRB_Q1","na","Natric",100
+"WRB_Q1","ni","Nitic",101
+"WRB_Q1","oh","Ochric",102
+"WRB_Q1","ohh","Hyperochric",103
+"WRB_Q1","om","Ombric",104
+"WRB_Q1","or","Orthic",105
+"WRB_Q1","oa","Oxyaquic",106
+"WRB_Q1","ph","Pachic",107
+"WRB_Q1","pe","Pellic",108
+"WRB_Q1","pt","Petric",109
+"WRB_Q1","ptn","Endopetric",110
+"WRB_Q1","ptp","Epipetric",111
+"WRB_Q1","pc","Petrocalcic",112
+"WRB_Q1","hib","Thaptohistic",77
+"WRB_Q1","ht","Hortic",78
+"WRB_Q1","hu","Humic",79
+"WRB_Q1","hum","Mollihumic",80
+"WRB_Q1","huu","Umbrihumic",81
+"WRB_Q1","hg","Hydragric",82
+"WRB_Q1","hy","Hydric",83
+"WRB_Q1","hk","Hyperskeletic",84
+"WRB_Q1","pcn","Endopetrocalcic",113
+"WRB_Q1","pcp","Epipetrocalcic",114
+"WRB_Q1","pd","Petroduric",115
+"WRB_Q1","pdn","Endopetroduric",116
+"WRB_Q1","pdp","Epipetroduric",117
+"WRB_Q1","pg","Petrogypsic",118
+"WRB_Q1","pgn","Endopetrogypsic",119
+"WRB_Q1","pgp","Epipetrogypsic",120
+"WRB_Q1","pp","Petroplinthic",121
+"WRB_Q1","ppn","Endopetroplinthic",122
+"WRB_Q1","ppp","Epipetroplinthic",123
+"WRB_Q1","ps","Petrosalic",124
+"WRB_Q1","psn","Endopetrosalic",125
+"WRB_Q1","psp","Epipetrosalic",126
+"WRB_Q1","pi","Placic",127
+"WRB_Q1","pa","Plaggic",128
+"WRB_Q1","pn","Planic",129
+"WRB_Q1","pl","Plinthic",130
+"WRB_Q1","plp","Epiplinthic",131
+"WRB_Q1","plh","Hyperplinthic",132
+"WRB_Q1","plo","Orthiplinthic",133
+"WRB_Q1","plr","Paraplinthic",134
+"WRB_Q1","pli","Pisoplinthic",135
+"WRB_Q1","po","Posic",136
+"WRB_Q1","pf","Profondic",137
+"WRB_Q1","pr","Protic",138
+"WRB_Q1","rd","Reductic",139
+"WRB_Q1","rg","Regic",140
+"WRB_Q1","rz","Rendzic",141
+"WRB_Q1","rh","Rheic",142
+"WRB_Q1","ro","Rhodic",143
+"WRB_Q1","ru","Rubic",144
+"WRB_Q1","rp","Ruptic",145
+"WRB_Q1","rs","Rustic",146
+"WRB_Q1","sz","Salic",147
+"WRB_Q1","szn","Endosalic",148
+"WRB_Q1","szp","Episalic",149
+"WRB_Q1","szh","Hypersalic",150
+"WRB_Q1","szw","Hyposalic",151
+"WRB_Q1","sa","Sapric",152
+"WRB_Q1","si","Silic",153
+"WRB_Q1","sl","Siltic",154
+"WRB_Q1","sk","Skeletic",155
+"WRB_Q1","skn","Endoskeletic",156
+"WRB_Q1","skp","Episkeletic",157
+"WRB_Q1","so","Sodic",158
+"WRB_Q1","son","Endosodic",159
+"WRB_Q1","sow","Hyposodic",160
+"WRB_Q1","sd","Spodic",161
+"WRB_Q1","sp","Spolic",162
+"WRB_Q1","st","Stagnic",163
+"WRB_Q1","stn","Endostagnic",164
+"WRB_Q1","su","Sulphatic",165
+"WRB_Q1","ty","Takyric",166
+"WRB_Q1","tf","Tephric",167
+"WRB_Q1","tr","Terric",168
+"WRB_Q1","ti","Thionic",169
+"WRB_Q1","tio","Orthithionic",170
+"WRB_Q1","tit","Protothionic",171
+"WRB_Q1","tx","Toxic",172
+"WRB_Q1","tu","Turbic",173
+"WRB_Q1","um","Umbric",174
+"WRB_Q1","ub","Urbic",175
+"WRB_Q1","vt","Vetic",176
+"WRB_Q1","vm","Vermic",177
+"WRB_Q1","vr","Vertic",178
+"WRB_Q1","vi","Vitric",179
+"WRB_Q1","xa","Xanthic",180
+"WRB_Q1","ye","Yermic",181
+"WRB_Q1","yes","Nudiyermic",182
+"WRB_Q2","ap","Abrupti-",1
+"WRB_Q2","ae","Aceri-",2
+"WRB_Q2","ac","Acri-",3
+"WRB_Q2","ao","Acroxi-",4
+"WRB_Q2","ab","Albi-",5
+"WRB_Q2","abh","Hyperalbi-",6
+"WRB_Q2","abg","Glossalbi-",7
+"WRB_Q2","ax","Alcali-",8
+"WRB_Q2","al","Ali-",9
+"WRB_Q2","au","Alumi-",10
+"WRB_Q2","an","Andi-",11
+"WRB_Q2","ana","Aluandi-",12
+"WRB_Q2","ans","Silandi-",13
+"WRB_Q2","aq","Anthraqui-",14
+"WRB_Q2","am","Anthri-",15
+"WRB_Q2","ah","Anthropi-",16
+"WRB_Q2","ai","Ari-",17
+"WRB_Q2","ar","Areni-",18
+"WRB_Q2","ad","Aridi-",19
+"WRB_Q2","az","Arzi-",20
+"WRB_Q2","ca","Calcari-",21
+"WRB_Q2","cc","Calci-",22
+"WRB_Q2","cch","Hypercalci-",23
+"WRB_Q2","ccw","Hypocalci-",24
+"WRB_Q2","cco","Orthicalci-",25
+"WRB_Q2","cb","Carbi-",26
+"WRB_Q2","cn","Carbonati-",27
+"WRB_Q2","ch","Cherni-",28
+"WRB_Q2","cl","Chloridi-",29
+"WRB_Q2","cr","Chromi-",30
+"WRB_Q2","cy","Cryi-",31
+"WRB_Q2","ct","Cutani-",32
+"WRB_Q2","dn","Densi-",33
+"WRB_Q2","du","Duri-",34
+"WRB_Q2","dy","Dystri-",35
+"WRB_Q2","dye","Epidystri-",36
+"WRB_Q2","dyh","Hyperdystri-",37
+"WRB_Q2","dyo","Orthidystri-",38
+"WRB_Q2","et","Enti-",39
+"WRB_Q2","eu","Eutri-",40
+"WRB_Q2","eun","Endoeutri-",41
+"WRB_Q2","euh","Hypereutri-",42
+"WRB_Q2","euo","Orthieutri-",43
+"WRB_Q2","es","Eutrisili-",44
+"WRB_Q2","fl","Ferrali-",45
+"WRB_Q2","flh","Hyperferrali-",46
+"WRB_Q2","flw","Hypoferrali-",47
+"WRB_Q2","fr","Ferri-",48
+"WRB_Q2","frh","Hyperferri-",49
+"WRB_Q2","fi","Fibri-",50
+"WRB_Q2","fo","Foli-",51
+"WRB_Q2","fv","Fluvi-",52
+"WRB_Q2","fg","Fragi-",53
+"WRB_Q2","fu","Fulvi-",54
+"WRB_Q2","ga","Garbi-",55
+"WRB_Q2","ge","Geli-",56
+"WRB_Q2","gt","Gelistagni-",57
+"WRB_Q2","gr","Geri-",58
+"WRB_Q2","gi","Gibbsi-",59
+"WRB_Q2","gc","Glaci-",60
+"WRB_Q2","gl","Gleyi-",61
+"WRB_Q2","gln","Endogleyi-",62
+"WRB_Q2","glp","Epigleyi-",63
+"WRB_Q2","gs","Glossi-",64
+"WRB_Q2","gsm","Molliglossi-",65
+"WRB_Q2","gsu","Umbriglossi-",66
+"WRB_Q2","gz","Greyi-",67
+"WRB_Q2","gm","Grumi-",68
+"WRB_Q2","gy","Gypsi-",69
+"WRB_Q2","gyh","Hypergypsi-",70
+"WRB_Q2","gyw","Hypogypsi-",71
+"WRB_Q2","gp","Gypsiri-",72
+"WRB_Q2","ha","Hapli-",73
+"WRB_Q2","hi","Histi-",74
+"WRB_Q2","hif","Fibrihisti-",75
+"WRB_Q2","his","Saprihisti-",76
+"WRB_Q2","ir","Irragri-",85
+"WRB_Q2","ll","Lamelli-",86
+"WRB_Q2","le","Lepti-",87
+"WRB_Q2","len","Endolepti-",88
+"WRB_Q2","lep","Epilepti-",89
+"WRB_Q2","li","Lithi-",90
+"WRB_Q2","lip","Paralithi-",91
+"WRB_Q2","lx","Lixi-",92
+"WRB_Q2","lv","Luvi-",93
+"WRB_Q2","lvw","Hypoluvi-",94
+"WRB_Q2","mg","Magnesi-",95
+"WRB_Q2","mz","Mazi-",96
+"WRB_Q2","me","Melani-",97
+"WRB_Q2","ms","Mesotrophi-",98
+"WRB_Q2","mo","Molli-",99
+"WRB_Q2","na","Natri-",100
+"WRB_Q2","ni","Niti-",101
+"WRB_Q2","oh","Ochri-",102
+"WRB_Q2","ohh","Hyperochri-",103
+"WRB_Q2","om","Ombri-",104
+"WRB_Q2","or","Orthi-",105
+"WRB_Q2","oa","Oxyaqui-",106
+"WRB_Q2","ph","Pachi-",107
+"WRB_Q2","pe","Pelli-",108
+"WRB_Q2","pt","Petri-",109
+"WRB_Q2","ptn","Endopetri-",110
+"WRB_Q2","ptp","Epipetri-",111
+"WRB_Q2","pc","Petrocalci-",112
+"WRB_Q2","hib","Thaptohisti-",77
+"WRB_Q2","ht","Horti-",78
+"WRB_Q2","hu","Humi-",79
+"WRB_Q2","hum","Mollihumi-",80
+"WRB_Q2","huu","Umbrihumi-",81
+"WRB_Q2","hg","Hydragri-",82
+"WRB_Q2","hy","Hydri-",83
+"WRB_Q2","hk","Hyperskeleti-",84
+"WRB_Q2","pcn","Endopetrocalci-",113
+"WRB_Q2","pcp","Epipetrocalci-",114
+"WRB_Q2","pd","Petroduri-",115
+"WRB_Q2","pdn","Endopetroduri-",116
+"WRB_Q2","pdp","Epipetroduri-",117
+"WRB_Q2","pg","Petrogypsi-",118
+"WRB_Q2","pgn","Endopetrogypsi-",119
+"WRB_Q2","pgp","Epipetrogypsi-",120
+"WRB_Q2","pp","Petroplinthi-",121
+"WRB_Q2","ppn","Endopetroplinthi-",122
+"WRB_Q2","ppp","Epipetroplinthi-",123
+"WRB_Q2","ps","Petrosali-",124
+"WRB_Q2","psn","Endopetrosali-",125
+"WRB_Q2","psp","Epipetrosali-",126
+"WRB_Q2","pi","Placi-",127
+"WRB_Q2","pa","Plaggi-",128
+"WRB_Q2","pn","Plani-",129
+"WRB_Q2","pl","Plinthi-",130
+"WRB_Q2","plp","Epiplinthi-",131
+"WRB_Q2","plh","Hyperplinthi-",132
+"WRB_Q2","plo","Orthiplinthi-",133
+"WRB_Q2","plr","Paraplinthi-",134
+"WRB_Q2","pli","Pisoplinthi-",135
+"WRB_Q2","po","Posi-",136
+"WRB_Q2","pf","Profondi-",137
+"WRB_Q2","pr","Proti-",138
+"WRB_Q2","rd","Reducti-",139
+"WRB_Q2","rg","Regi-",140
+"WRB_Q2","rz","Rendzi-",141
+"WRB_Q2","rh","Rhei-",142
+"WRB_Q2","ro","Rhodi-",143
+"WRB_Q2","ru","Rubi-",144
+"WRB_Q2","rp","Rupti-",145
+"WRB_Q2","rs","Rusti-",146
+"WRB_Q2","sz","Sali-",147
+"WRB_Q2","szn","Endosali-",148
+"WRB_Q2","szp","Episali-",149
+"WRB_Q2","szh","Hypersali-",150
+"WRB_Q2","szw","Hyposali-",151
+"WRB_Q2","sa","Sapri-",152
+"WRB_Q2","si","Sili-",153
+"WRB_Q2","sl","Silti-",154
+"WRB_Q2","sk","Skeleti-",155
+"WRB_Q2","skn","Endoskeleti-",156
+"WRB_Q2","skp","Episkeleti-",157
+"WRB_Q2","so","Sodi-",158
+"WRB_Q2","son","Endosodi-",159
+"WRB_Q2","sow","Hyposodi-",160
+"WRB_Q2","sd","Spodi-",161
+"WRB_Q2","sp","Spoli-",162
+"WRB_Q2","st","Stagni-",163
+"WRB_Q2","stn","Endostagni-",164
+"WRB_Q2","su","Sulphati-",165
+"WRB_Q2","ty","Takyri-",166
+"WRB_Q2","tf","Tephri-",167
+"WRB_Q2","tr","Terri-",168
+"WRB_Q2","ti","Thioni-",169
+"WRB_Q2","tio","Orthithioni-",170
+"WRB_Q2","tit","Protothioni-",171
+"WRB_Q2","tx","Toxi-",172
+"WRB_Q2","tu","Turbi-",173
+"WRB_Q2","um","Umbri-",174
+"WRB_Q2","ub","Urbi-",175
+"WRB_Q2","vt","Veti-",176
+"WRB_Q2","vm","Vermi-",177
+"WRB_Q2","vr","Verti-",178
+"WRB_Q2","vi","Vitri-",179
+"WRB_Q2","xa","Xanthi-",180
+"WRB_Q2","ye","Yermi-",181
+"WRB_Q2","yes","Nudiyermi-",182
+"WRB_H","AB","albic horizon",1
+"WRB_H","AN","andic horizon",2
+"WRB_H","ANA","aluandic horizon",3
+"WRB_H","ANS","silandic horizon",4
+"WRB_H","AQ","anthraquic horizon",5
+"WRB_H","HG","hydragric horizon",6
+"WRB_H","HT","hortic horizon",7
+"WRB_H","IR","irragric horizon",8
+"WRB_H","PA","plaggic horizon",9
+"WRB_H","TR","terric horizon",10
+"WRB_H","AG","argic horizon",11
+"WRB_H","CC","calcic horizon",12
+"WRB_H","CB","cambic horizon",13
+"WRB_H","CH","chernic horizon",14
+"WRB_H","CY","cryic horizon",15
+"WRB_H","DU","duric horizon",16
+"WRB_H","FL","ferralic horizon",17
+"WRB_H","FR","ferric horizon",18
+"WRB_H","FO","folic horizon",19
+"WRB_H","FG","fragic horizon",20
+"WRB_H","FU","fulvic horizon",21
+"WRB_H","GY","gypsic horizon",22
+"WRB_H","HI","histic horizon",23
+"WRB_H","ME","melanic horizon",24
+"WRB_H","MO","mollic horizon",25
+"WRB_H","NA","natric horizon",26
+"WRB_H","NI","nitic horizon",27
+"WRB_H","OH","ochric horizon",28
+"WRB_H","OHH","hyperochric horizon",29
+"WRB_H","PC","petrocalcic horizon",30
+"WRB_H","PD","petroduric horizon",31
+"WRB_H","PG","petrogypsic horizon",32
+"WRB_H","PP","petroplinthic horizon",33
+"WRB_H","PL","plinthic horizon",34
+"WRB_H","SZ","salic horizon",35
+"WRB_H","SD","spodic horizon",36
+"WRB_H","SU","sulfuric horizon",37
+"WRB_H","TY","takyric horizon",38
+"WRB_H","UM","umbric horizon",39
+"WRB_H","VR","vertic horizon",40
+"WRB_H","VI","vitric horizon",41
+"WRB_H","YE","yermic horizon",42
+"WRB_P","AT","abrupt textural change",1
+"WRB_P","AB","albeluvic tonguing",2
+"WRB_P","AL","alic properties",3
+"WRB_P","AR","aridic properties",4
+"WRB_P","LI","continuous hard rock",5
+"WRB_P","FR","ferralic properties",6
+"WRB_P","GR","geric properties",7
+"WRB_P","GL","gleyic properties",8
+"WRB_P","PF","permafrost",9
+"WRB_P","SC","secondary carbonates",10
+"WRB_P","ST","stagnic properties",11
+"WRB_P","SH","strongly humic properties",12
+"WRB_M","AH","anthropogeomorphic soil material",1
+"WRB_M","CA","calcaric soil material",2
+"WRB_M","FV","fluvic soil material",3
+"WRB_M","GY","gypsiric soil material",4
+"WRB_M","OG","organic soil material",5
+"WRB_M","SU","sulfidic soil material",6
+"WRB_M","TF","tephric soil material",7
+"USGG_99","j","Alfisol",1
+"USGG_99","ja","Aqualf",2
+"USGG_99","jaa","Cryaqualf",3
+"USGG_99","jad","Natraqualf",6
+"USGG_99","jae","Fragiaqualf",7
+"USGG_99","jaf","Kandiaqualf",8
+"USGG_99","jag","Vermaqualf",9
+"USGG_99","jah","Albaqualf",10
+"USGG_99","jai","Glossaqualf",11
+"USGG_99","jaj","Epiaqualf",12
+"USGG_99","jak","Endoaqualf",13
+"USGG_99","jab","Plinthaqualf",4
+"USGG_99","jac","Duraqualf",5
+"USGG_99","jb","Cryalf",14
+"USGG_99","jba","Palecryalf",15
+"USGG_99","jbb","Glossocryalf",16
+"USGG_99","jbc","Haplocryalf",17
+"USGG_99","jc","Ustalf",18
+"USGG_99","jca","Durustalf",19
+"USGG_99","jcb","Plinthustalf",20
+"USGG_99","jcc","Natrustalf",21
+"USGG_99","jcd","Kandiustalf",22
+"USGG_99","jce","Kanhaplustalf",23
+"USGG_99","jcf","Paleustalf",24
+"USGG_99","jcg","Rhodustalf",25
+"USGG_99","jch","Haplustalf",26
+"USGG_99","jd","Xeralf",27
+"USGG_99","jda","Durixeralf",28
+"USGG_99","jdb","Natrixeralf",29
+"USGG_99","jdc","Fragixeralf",30
+"USGG_99","jdd","Plinthoxeralf",31
+"USGG_99","jde","Rhodoxeralf",32
+"USGG_99","jdf","Palexeralf",33
+"USGG_99","jdg","Haploxeralf",34
+"USGG_99","je","Udalf",35
+"USGG_99","jea","Natrudalf",36
+"USGG_99","jeb","Ferrudalf",37
+"USGG_99","jec","Fraglossudalf",38
+"USGG_99","jed","Fragiudalf",39
+"USGG_99","jee","Kandiudalf",40
+"USGG_99","jef","Kanhapludalf",41
+"USGG_99","jeg","Paleudalf",42
+"USGG_99","jeh","Rhodudalf",43
+"USGG_99","jei","Glossudalf",44
+"USGG_99","jej","Hapludalf",45
+"USGG_99","d","Andisol",46
+"USGG_99","da","Aquand",47
+"USGG_99","daa","Cryaquand",48
+"USGG_99","dab","Placaquand",49
+"USGG_99","dac","Duraquand",50
+"USGG_99","dad","Vitraquand",51
+"USGG_99","dae","Melanaquand",52
+"USGG_99","daf","Epiaquand",53
+"USGG_99","dag","Endoaquand",54
+"USGG_99","db","Cryand",55
+"USGG_99","dba","Duricryand",56
+"USGG_99","dbb","Hydrocryand",57
+"USGG_99","dbc","Melanocryand",58
+"USGG_99","dbd","Fulvicryand",59
+"USGG_99","dbe","Vitricryand",60
+"USGG_99","dbf","Haplocryand",61
+"USGG_99","dc","Torrand",62
+"USGG_99","dca","Duritorrand",63
+"USGG_99","dcb","Vitritorrand",64
+"USGG_99","dcc","Haplotorrand",65
+"USGG_99","dd","Xerand",66
+"USGG_99","dda","Vitrixerand",67
+"USGG_99","ddb","Melanoxerand",68
+"USGG_99","ddc","Haploxerand",69
+"USGG_99","de","Vitrand",70
+"USGG_99","dea","Ustivitrand",71
+"USGG_99","deb","Udivitrand",72
+"USGG_99","df","Ustand",73
+"USGG_99","dfa","Durustand",74
+"USGG_99","dfb","Haplustand",75
+"USGG_99","dg","Udand",76
+"USGG_99","dga","Placudand",77
+"USGG_99","dgb","Durudand",78
+"USGG_99","dgc","Melanudand",79
+"USGG_99","dgd","Hydrudand",80
+"USGG_99","dge","Fulvudand",81
+"USGG_99","dgf","Hapludand",82
+"USGG_99","f","Aridisol",83
+"USGG_99","fa","Cryid",84
+"USGG_99","faa","Salicryid",85
+"USGG_99","fab","Petrocryid",86
+"USGG_99","fac","Gypsicryid",87
+"USGG_99","fad","Argicryid",88
+"USGG_99","fae","Calcicryid",89
+"USGG_99","faf","Haplocryid",90
+"USGG_99","fb","Salid",91
+"USGG_99","fba","Aquisalid",92
+"USGG_99","fbb","Haplosalid",93
+"USGG_99","fc","Durid",94
+"USGG_99","fca","Natridurid",95
+"USGG_99","fcb","Argidurid",96
+"USGG_99","fcc","Haplodurid",97
+"USGG_99","fd","Gypsid",98
+"USGG_99","fda","Petrogypsid",99
+"USGG_99","fdb","Natrigypsid",100
+"USGG_99","fdc","Argigypsid",101
+"USGG_99","fdd","Calcigypsid",102
+"USGG_99","fde","Haplogypsid",103
+"USGG_99","fe","Argid",104
+"USGG_99","fea","Petroargid",105
+"USGG_99","feb","Natrargid",106
+"USGG_99","fec","Paleargid",107
+"USGG_99","fed","Gypsiargid",108
+"USGG_99","fee","Calciargid",109
+"USGG_99","fef","Haplargid",110
+"USGG_99","ff","Calcid",111
+"USGG_99","ffa","Petrocalcid",112
+"USGG_99","ffb","Haplocalcid",113
+"USGG_99","fg","Cambid",114
+"USGG_99","fga","Aquicambid",115
+"USGG_99","fgb","Petrocambid",116
+"USGG_99","fgc","Anthracambid",117
+"USGG_99","fgd","Haplocambid",118
+"USGG_99","l","Entisol",119
+"USGG_99","la","Aquent",120
+"USGG_99","laa","Sulfaquent",121
+"USGG_99","lab","Hydraquent",122
+"USGG_99","lac","Cryaquent",123
+"USGG_99","lad","Psammaquent",124
+"USGG_99","lae","Fluvaquent",125
+"USGG_99","laf","Epiaquent",126
+"USGG_99","lag","Endoaquent",127
+"USGG_99","lb","Arent",128
+"USGG_99","lba","Ustarent",129
+"USGG_99","lbb","Xerarent",130
+"USGG_99","lbc","Torriarent",131
+"USGG_99","lbd","Udarent",132
+"USGG_99","lc","Psamment",133
+"USGG_99","lca","Cryopsamment",134
+"USGG_99","lcb","Torripsamment",135
+"USGG_99","lcc","Quartzipsamment",136
+"USGG_99","lcd","Ustipsamment",137
+"USGG_99","lce","Xeropsamment",138
+"USGG_99","lcf","Udipsamment",139
+"USGG_99","ld","Fluvent",140
+"USGG_99","lda","Cryofluvent",141
+"USGG_99","ldb","Xerofluvent",142
+"USGG_99","ldc","Ustifluvent",143
+"USGG_99","ldd","Torrifluvent",144
+"USGG_99","lde","Udifluvent",145
+"USGG_99","le","Orthent",146
+"USGG_99","lea","Cryorthent",147
+"USGG_99","leb","Torriorthent",148
+"USGG_99","lec","Xerorthent",149
+"USGG_99","led","Ustorthent",150
+"USGG_99","lee","Udorthent",151
+"USGG_99","a","Gelisol",152
+"USGG_99","aa","Histel",153
+"USGG_99","aaa","Folistel",154
+"USGG_99","aab","Glacistel",155
+"USGG_99","aac","Fibristel",156
+"USGG_99","aad","Hemistel",157
+"USGG_99","aae","Sapristel",158
+"USGG_99","ab","Turbel",159
+"USGG_99","aba","Histoturbel",160
+"USGG_99","abb","Aquiturbel",161
+"USGG_99","abc","Anhyturbel",162
+"USGG_99","abd","Molliturbel",163
+"USGG_99","abe","Umbriturbel",164
+"USGG_99","abf","Psammoturbel",165
+"USGG_99","abg","Haploturbel",166
+"USGG_99","ac","Orthel",167
+"USGG_99","aca","Historthel",168
+"USGG_99","acb","Aquorthel",169
+"USGG_99","acc","Anhyorthel",170
+"USGG_99","acd","Mollorthel",171
+"USGG_99","ace","Umbrorthel",172
+"USGG_99","acf","Argiorthel",173
+"USGG_99","acg","Psammorthel",174
+"USGG_99","ach","Haplorthel",175
+"USGG_99","b","Histosol",176
+"USGG_99","ba","Folist",177
+"USGG_99","baa","Cryofolist",178
+"USGG_99","bab","Torrifolist",179
+"USGG_99","bac","Ustifolist",180
+"USGG_99","bad","Udifolist",181
+"USGG_99","bb","Fibrist",182
+"USGG_99","bba","Cryofibrist",183
+"USGG_99","bbb","Sphagnofibrist",184
+"USGG_99","bbc","Haplofibrist",185
+"USGG_99","bc","Saprist",186
+"USGG_99","bca","Sulfosaprist",187
+"USGG_99","bcb","Sulfisaprist",188
+"USGG_99","bcc","Cryosaprist",189
+"USGG_99","bcd","Haplosaprist",190
+"USGG_99","bd","Hemist",191
+"USGG_99","bda","Sulfohemist",192
+"USGG_99","bdb","Sulfihemist",193
+"USGG_99","bdc","Luvihemist",194
+"USGG_99","bdd","Cryohemist",195
+"USGG_99","bde","Haplohemist",196
+"USGG_99","k","Inceptisol",197
+"USGG_99","ka","Aquept",198
+"USGG_99","kaa","Sulfaquept",199
+"USGG_99","kab","Petraquept",200
+"USGG_99","kac","Halaquept",201
+"USGG_99","kad","Fragiaquept",202
+"USGG_99","kae","Cryaquept",203
+"USGG_99","kaf","Vermaquept",204
+"USGG_99","kag","Humaquept",205
+"USGG_99","kah","Epiaquept",206
+"USGG_99","kai","Endoaquept",207
+"USGG_99","kb","Anthrept",208
+"USGG_99","kba","Plagganthrept",209
+"USGG_99","kbb","Haplanthrept",210
+"USGG_99","kc","Cryept",211
+"USGG_99","kca","Eutrocryept",212
+"USGG_99","kcb","Dystrocryept",213
+"USGG_99","kd","Ustept",214
+"USGG_99","kda","Durustept",215
+"USGG_99","kdb","Calciustept",216
+"USGG_99","kdc","Dystrustept",217
+"USGG_99","kdd","Haplustept",218
+"USGG_99","ke","Xerept",219
+"USGG_99","kea","Durixerept",220
+"USGG_99","keb","Calcixerept",221
+"USGG_99","kec","Fragixerept",222
+"USGG_99","ked","Dystroxerept",223
+"USGG_99","kee","Haploxerept",224
+"USGG_99","kf","Udept",225
+"USGG_99","kfa","Sulfudept",226
+"USGG_99","kfb","Durudept",227
+"USGG_99","kfc","Fragiudept",228
+"USGG_99","kfd","Eutrudept",229
+"USGG_99","kfe","Dystrudept",230
+"USGG_99","ia","Alboll",231
+"USGG_99","iaa","Natralboll",232
+"USGG_99","iab","Argialboll",233
+"USGG_99","ib","Aquoll",234
+"USGG_99","iba","Cryaquoll",235
+"USGG_99","ibb","Duraquoll",236
+"USGG_99","ibc","Natraquoll",237
+"USGG_99","ibd","Calciaquoll",238
+"USGG_99","ibe","Argiaquoll",239
+"USGG_99","ibf","Epiaquoll",240
+"USGG_99","ibg","Endoaquoll",241
+"USGG_99","ic","Rendoll",242
+"USGG_99","ica","Cryrendoll",243
+"USGG_99","icb","Haprendoll",244
+"USGG_99","id","Cryoll",245
+"USGG_99","ida","Duricryoll",246
+"USGG_99","idb","Natricryoll",247
+"USGG_99","idc","Palecryoll",248
+"USGG_99","idd","Argicryoll",249
+"USGG_99","ide","Calcicryoll",250
+"USGG_99","idf","Haplocryoll",251
+"USGG_99","ie","Xeroll",252
+"USGG_99","iea","Durixeroll",253
+"USGG_99","ieb","Natrixeroll",254
+"USGG_99","iec","Palexeroll",255
+"USGG_99","ied","Calcixeroll",256
+"USGG_99","iee","Argixeroll",257
+"USGG_99","ief","Haploxeroll",258
+"USGG_99","if","Ustoll",259
+"USGG_99","ifa","Durustoll",260
+"USGG_99","ifb","Natrustoll",261
+"USGG_99","ifc","Calciustoll",262
+"USGG_99","ifd","Paleustoll",263
+"USGG_99","ife","Argiustoll",264
+"USGG_99","iff","Vermustoll",265
+"USGG_99","ifg","Haplustoll",266
+"USGG_99","ig","Udoll",267
+"USGG_99","iga","Natrudoll",268
+"USGG_99","igb","Calciudoll",269
+"USGG_99","igc","Paleudoll",270
+"USGG_99","igd","Argiudoll",271
+"USGG_99","ige","Vermudoll",272
+"USGG_99","igf","Hapludoll",273
+"USGG_99","e","Oxisol",274
+"USGG_99","ea","Aquox",275
+"USGG_99","eaa","Acraquox",276
+"USGG_99","eab","Plinthaquox",277
+"USGG_99","eac","Eutraquox",278
+"USGG_99","ead","Haplaquox",279
+"USGG_99","eb","Torrox",280
+"USGG_99","eba","Acrotorrox",281
+"USGG_99","ebb","Eutrotorrox",282
+"USGG_99","ebc","Haplotorrox",283
+"USGG_99","ec","Ustox",284
+"USGG_99","eca","Sombriustox",285
+"USGG_99","ecb","Acrustox",286
+"USGG_99","ecc","Eutrustox",287
+"USGG_99","ecd","Kandiustox",288
+"USGG_99","ece","Haplustox",289
+"USGG_99","ed","Perox",290
+"USGG_99","eda","Sombriperox",291
+"USGG_99","edb","Acroperox",292
+"USGG_99","edc","Eutroperox",293
+"USGG_99","edd","Kandiperox",294
+"USGG_99","ede","Haploperox",295
+"USGG_99","ee","Udox",296
+"USGG_99","eea","Sombriudox",297
+"USGG_99","eeb","Acrudox",298
+"USGG_99","eec","Eutrudox",299
+"USGG_99","eed","Kandiudox",300
+"USGG_99","eee","Hapludox",301
+"USGG_99","c","Spodosol",302
+"USGG_99","ca","Aquod",303
+"USGG_99","caa","Cryaquod",304
+"USGG_99","cab","Alaquod",305
+"USGG_99","cac","Fragiaquod",306
+"USGG_99","cad","Placaquod",307
+"USGG_99","cae","Duraquod",308
+"USGG_99","caf","Epiaquod",309
+"USGG_99","cag","Endoaquod",310
+"USGG_99","cb","Cryod",311
+"USGG_99","cba","Placocryod",312
+"USGG_99","cbb","Duricryod",313
+"USGG_99","cbc","Humicryod",314
+"USGG_99","cbd","Haplocryod",315
+"USGG_99","cc","Humod",316
+"USGG_99","cca","Placohumod",317
+"USGG_99","ccb","Durihumod",318
+"USGG_99","ccc","Fragihumod",319
+"USGG_99","ccd","Haplohumod",320
+"USGG_99","cd","Orthod",321
+"USGG_99","cda","Placorthod",322
+"USGG_99","cdb","Durorthod",323
+"USGG_99","cdc","Fragiorthod",324
+"USGG_99","cdd","Alorthod",325
+"USGG_99","cde","Haplorthod",326
+"USGG_99","h","Ultisol",327
+"USGG_99","ha","Aquult",328
+"USGG_99","haa","Plinthaquult",329
+"USGG_99","hab","Fragiaquult",330
+"USGG_99","hac","Albaquult",331
+"USGG_99","had","Kandiaquult",332
+"USGG_99","hae","Kanhaplaquult",333
+"USGG_99","haf","Paleaquult",334
+"USGG_99","hag","Umbraquult",335
+"USGG_99","hah","Epiaquult",336
+"USGG_99","hai","Endoaquult",337
+"USGG_99","hb","Humult",338
+"USGG_99","hba","Sombrihumult",339
+"USGG_99","hbb","Plinthohumult",340
+"USGG_99","hbc","Kandihumult",341
+"USGG_99","hbd","Kanhaplohumult",342
+"USGG_99","hbe","Palehumult",343
+"USGG_99","hbf","Haplohumult",344
+"USGG_99","hc","Udult",345
+"USGG_99","hca","Plinthudult",346
+"USGG_99","hcb","Fragiudult",347
+"USGG_99","hcc","Kandiudult",348
+"USGG_99","hcd","Kanhapludult",349
+"USGG_99","hce","Paleudult",350
+"USGG_99","hcf","Rhodudult",351
+"USGG_99","hcg","Hapludult",352
+"USGG_99","hd","Ustult",353
+"USGG_99","hda","Plinthustult",354
+"USGG_99","hdb","Kandiustult",355
+"USGG_99","hdc","Kanhaplustult",356
+"USGG_99","hdd","Paleustult",357
+"USGG_99","hde","Rhodustult",358
+"USGG_99","hdf","Haplustult",359
+"USGG_99","he","Xerult",360
+"USGG_99","hea","Palexerult",361
+"USGG_99","heb","Haploxerult",362
+"USSG_99","ab","Abruptic",1
+"USSG_99","ab01","Abruptic Argiduridic",2
+"USSG_99","ab02","Abruptic Haplic",3
+"USSG_99","ab03","Abruptic Xeric",4
+"USSG_99","aa","Acraquoxic",5
+"USSG_99","ad","Acrudoxic",6
+"USSG_99","ad01","Acrudoxic Hydric",7
+"USSG_99","ad02","Acrudoxic Plinthic",8
+"USSG_99","ad03","Acrudoxic Thaptic",9
+"USSG_99","ad05","Acrudoxic Vitric",11
+"USSG_99","ad04","Acrudoxic Ultic",10
+"USSG_99","ac","Acrustoxic",12
+"USSG_99","ae","Aeric",13
+"USSG_99","ae01","Aeric Chromic Vertic",14
+"USSG_99","ae02","Aeric Fragic",15
+"USSG_99","ae03","Aeric Humic",16
+"USSG_99","ae04","Aeric Umbric",17
+"USSG_99","ae05","Aeric Vertic",18
+"USSG_99","aq","Albaquic",19
+"USSG_99","aq01","Albaquultic",20
+"USSG_99","al","Albic",21
+"USSG_99","al03","Albic Glossic",22
+"USSG_99","af","Alfic",23
+"USSG_99","af01","Alfic Arenic",24
+"USSG_99","af02","Alfic Humic",25
+"USSG_99","af03","Alfic Lithic",26
+"USSG_99","af04","Alfic Oxyaquic",27
+"USSG_99","af05","Alfic Vertic",28
+"USSG_99","au","Alic",29
+"USSG_99","an","Andic",30
+"USSG_99","an01","Andic Ombroaquic",31
+"USSG_99","ai","Anionic",32
+"USSG_99","ai01","Anionic Aquic",33
+"USSG_99","aw","Anthraquic",34
+"USSG_99","at","Anthropic",35
+"USSG_99","ag","Aqualfic",36
+"USSG_99","ah","Aquandic",37
+"USSG_99","aj","Aquentic",38
+"USSG_99","ak","Aqueptic",39
+"USSG_99","av","Aquertic",40
+"USSG_99","av01","Aquertic Chromic",41
+"USSG_99","aq","Aquic",42
+"USSG_99","ax","Aquicambidic",43
+"USSG_99","aq01","Aquic Arenic",44
+"USSG_99","aq02","Aquic Cumulic",45
+"USSG_99","aq03","Aquic Duric",46
+"USSG_99","aq04","Aquic Durinodic",47
+"USSG_99","aq05","Aquic Dystric",48
+"USSG_99","aq06","Aquic Humic",49
+"USSG_99","aq07","Aquic Lithic",50
+"USSG_99","aq08","Aquic Natriargidic",51
+"USSG_99","aq09","Aquic Petroferric",52
+"USSG_99","as","Aquodic",53
+"USSG_99","am","Aquollic",54
+"USSG_99","ao","Aquultic",55
+"USSG_99","ar","Arenic",56
+"USSG_99","ar01","Arenic Aridic",57
+"USSG_99","ar02","Arenic Plinthaquic",58
+"USSG_99","ar03","Arenic Plinthic",59
+"USSG_99","ar04","Arenic Rhodic",60
+"USSG_99","ar05","Arenic Umbric",61
+"USSG_99","ar06","Arenic Ultic",62
+"USSG_99","ar07","Arenic Ustic",63
+"USSG_99","ap","Argiaquic",64
+"USSG_99","ap01","Argiaquic Xeric",65
+"USSG_99","ay01","Argiduridic",66
+"USSG_99","ay","Argic",67
+"USSG_99","ay02","Argidic",68
+"USSG_99","az","Aridic",69
+"USSG_99","az01","Aridic Leptic",70
+"USSG_99","az02","Aridic Lithic",71
+"USSG_99","ca","Calciargidic",72
+"USSG_99","cc","Calcic",73
+"USSG_99","cc01","Calcic Lithic",74
+"USSG_99","cc02","Calcic Pachic",75
+"USSG_99","cc03","Calcic Udic",76
+"USSG_99","cd","Calcidic",77
+"USSG_99","cm","Cambidic",78
+"USSG_99","ch","Chromic",79
+"USSG_99","ch01","Chromic Udic",80
+"USSG_99","ch02","Chromic Vertic",81
+"USSG_99","cu","Cumulic",82
+"USGG_99","v","Vertisol",363
+"USGG_99","va","Aquert",364
+"USGG_99","vaa","Salaquert",365
+"USGG_99","vab","Duraquert",366
+"USGG_99","vac","Natraquert",367
+"USGG_99","vad","Calciaquert",368
+"USGG_99","vae","Dystraquert",369
+"USGG_99","vaf","Epiaquert",370
+"USGG_99","vag","Endoaquert",371
+"USGG_99","vb","Cryert",372
+"USGG_99","vba","Humicryert",373
+"USGG_99","vbb","Haplocryert",374
+"USGG_99","vc","Xerert",375
+"USGG_99","vca","Durixerert",376
+"USGG_99","vcb","Calcixerert",377
+"USGG_99","vcc","Haploxerert",378
+"USGG_99","vd","Torrert",379
+"USGG_99","vda","Salitorrert",380
+"USGG_99","vdb","Gypsitorrert",381
+"USGG_99","vdc","Calcitorrert",382
+"USGG_99","vdd","Haplotorrert",383
+"USGG_99","ve","Ustert",384
+"USGG_99","vea","Dystrustert",385
+"USGG_99","veb","Salustert",386
+"USGG_99","vec","Gypsiustert",387
+"USGG_99","ved","Calciustert",388
+"USGG_99","vee","Haplustert",389
+"USGG_99","vf","Udert",390
+"USGG_99","vfa","Dystrudert",391
+"USGG_99","vfb","Hapludert",392
+"USSG_99","cu01","Cumulic Ultic",83
+"USSG_99","cu02","Cumulic Vertic",84
+"USSG_99","du","Duric",85
+"USSG_99","du01","Duric Histic",86
+"USSG_99","du02","Duric Xeric",87
+"USSG_99","dn","Durinodic",88
+"USSG_99","dn01","Durinodic Xeric",89
+"USSG_99","dy","Dystric",90
+"USSG_99","dy01","Dystric Fluventic",91
+"USSG_99","dy02","Dystric Vitric",92
+"USSG_99","en","Entic",93
+"USSG_99","en01","Entic Grossarenic",94
+"USSG_99","en02","Entic Lithic",95
+"USSG_99","en03","Entic Udic",96
+"USSG_99","en04","Entic Ultic",97
+"USSG_99","eu","Eutric",98
+"USSG_99","eu01","Eutric Lithic",99
+"USSG_99","eu02","Eutric Pachic",100
+"USSG_99","eu03","Eutric Thaptic",101
+"USSG_99","fi","Fibric",102
+"USSG_99","fa","Fluvaquentic",103
+"USSG_99","fa01","Fluvaquentic Vertic",104
+"USSG_99","fl","Fluventic",105
+"USSG_99","fl01","Fluventic Humic",106
+"USSG_99","fg","Fragiaquic",107
+"USSG_99","fr","Fragic",108
+"USSG_99","fr01","Fragic Oxyaquic",109
+"USSG_99","gc","Glacic",110
+"USSG_99","ga","Glossaquic",111
+"USSG_99","gl","Glossic",112
+"USSG_99","gl01","Glossic Ustic",113
+"USSG_99","gl02","Glossic Vertic",114
+"USSG_99","gr","Grossarenic",115
+"USSG_99","gr01","Grossarenic Plinthic",116
+"USSG_99","gy","Gypsic",117
+"USSG_99","hz","Halic",118
+"USSG_99","hz01","Halic Terric",119
+"USSG_99","ha","Haplargidic",120
+"USSG_99","hp","Haplic",121
+"USSG_99","hp01","Haplic Haploxerollic",122
+"USSG_99","hp02","Haplic Palexerollic",123
+"USSG_99","hp03","Haplic Ustic",124
+"USSG_99","hc","Haplocalcidic",125
+"USSG_99","hd","Haploduridic",126
+"USSG_99","hf","Haploxeralfic",127
+"USSG_99","hl","Haploxerollic",128
+"USSG_99","he","Hemic",129
+"USSG_99","hi","Histic",130
+"USSG_99","hi01","Histic Lithic",131
+"USSG_99","hi02","Histic Placic",132
+"USSG_99","hu","Humaqueptic",133
+"USSG_99","hm","Humic",134
+"USSG_99","hm01","Humic Inceptic",135
+"USSG_99","hm02","Humic Lithic",136
+"USSG_99","hm03","Humic Pachic",137
+"USSG_99","hm04","Humic Psammentic",138
+"USSG_99","hm05","Humic Rhodic",139
+"USSG_99","hm06","Humic Xanthic",140
+"USSG_99","hm07","Humic Xeric",141
+"USSG_99","hq","Hydraquentic",142
+"USSG_99","hy","Hydric",143
+"USSG_99","hy02","Hydric Pachic",144
+"USSG_99","hy03","Hydric Thaptic",145
+"USSG_99","in","Inceptic",146
+"USSG_99","ka","Kandic",147
+"USSG_99","ka01","Kandiudalfic",148
+"USSG_99","ka02","Kandiustalfic",149
+"USSG_99","kh","Kanhaplic",150
+"USSG_99","la","Lamellic",151
+"USSG_99","la01","Lamellic Ustic",152
+"USSG_99","le","Leptic",153
+"USSG_99","le01","Leptic Torrertic",154
+"USSG_99","le02","Leptic Udic",155
+"USSG_99","le03","Leptic Vertic",156
+"USSG_99","lm","Limnic",157
+"USSG_99","li","Lithic",158
+"USSG_99","li01","Lithic Mollic",159
+"USSG_99","li02","Lithic Petrocalcic",160
+"USSG_99","li03","Lithic Ruptic-Entic",161
+"USSG_99","li04","Lithic Ruptic-Incepti",162
+"USSG_99","li05","Lithic Ultic",163
+"USSG_99","li06","Lithic Ustic",164
+"USSG_99","li07","Lithic Xeric",165
+"USSG_99","mo","Mollic",166
+"USSG_99","ng","Natrargidic",167
+"USSG_99","na","Natric",168
+"USSG_99","nx","Natrixeralfic",169
+"USSG_99","ni","Nitric",170
+"USSG_99","om","Ombroaquic",171
+"USSG_99","ox","Oxic",172
+"USSG_99","oy","Oxyaquic",173
+"USSG_99","oy01","Oxyaquic Ultic",174
+"USSG_99","oy02","Oxyaquic Vertic",175
+"USSG_99","pa","Pachic",176
+"USSG_99","pa01","Pachic Udertic",177
+"USSG_99","pa02","Pachic Vertic",178
+"USSG_99","pa03","Pachic Vitric",179
+"USSG_99","pa04","Pachic Ultic",180
+"USSG_99","pg","Paleargidic",181
+"USSG_99","px","Palexerollic",182
+"USSG_99","pc","Petrocalcic",183
+"USSG_99","pd","Petrocalcidic",184
+"USSG_99","pf","Petroferric",185
+"USSG_99","py","Petrogypsic",186
+"USSG_99","py01","Petrogypsic Ustic",187
+"USSG_99","pn","Petronodic",188
+"USSG_99","pn01","Petronodic Ustic",189
+"USSG_99","pn02","Petronodic Xeric",190
+"USSG_99","pl","Placic",191
+"USSG_99","pm","Plagganthreptic",192
+"USSG_99","pq","Plinthaquic",193
+"USSG_99","pt","Plinthic",194
+"USSG_99","ps","Psammentic",195
+"USSG_99","re","Rendollic",196
+"USSG_99","rh","Rhodic",197
+"USSG_99","ru","Ruptic",198
+"USSG_99","ru01","Ruptic-Alfic",199
+"USSG_99","ru02","Ruptic-Histic",200
+"USSG_99","ru03","Ruptic-Lithic",201
+"USSG_99","ru04","Ruptic-Ultic",202
+"USSG_99","sz","Salic",203
+"USSG_99","sl","Salidic",204
+"USSG_99","sa","Sapric",205
+"USSG_99","so","Sodic",206
+"USSG_99","so01","Sodic Ustic",207
+"USSG_99","so02","Sodic Xeric",208
+"USSG_99","sm","Sombric",209
+"USSG_99","sf","Sphagnic",210
+"USSG_99","sp","Spodic",211
+"USSG_99","sq","Sulfaqueptic",212
+"USSG_99","su","Sulfic",213
+"USSG_99","sr","Sulfuric",214
+"USSG_99","te","Terric",215
+"USSG_99","th","Thaptic",216
+"USSG_99","th01","Thapto-Histic",217
+"USSG_99","tv","Torrertic",218
+"USSG_99","tf","Torrifluventic",219
+"USSG_99","ti","Torriorthentic",220
+"USSG_99","tp","Torripsammentic",221
+"USSG_99","to","Torroxic",222
+"USSG_99","ty","Typic",223
+"USSG_99","ua","Udandic",224
+"USSG_99","uv","Udertic",225
+"USSG_99","ud","Udic",226
+"USSG_99","uf","Udifluventic",227
+"USSG_99","um","Udollic",228
+"USSG_99","ui","Udorthentic",229
+"USSG_99","uo","Udoxic",230
+"USSG_99","ul","Ultic",231
+"USSG_99","uu","Umbric",232
+"USSG_99","uu01","Umbric Xeric",233
+"USSG_99","uf","Ustalfic",234
+"USSG_99","un","Ustandic",235
+"USSG_99","ue","Ustertic",236
+"USSG_99","us","Ustic",237
+"USSG_99","uy","Ustifluventic",238
+"USSG_99","uz","Ustollic",239
+"USSG_99","ux","Ustoxic",240
+"USSG_99","vm","Vermic",241
+"USSG_99","vr","Vertic",242
+"USSG_99","va","Vitrandic",243
+"USSG_99","vi","Vitric",244
+"USSG_99","vt","Vitritorrandic",245
+"USSG_99","vx","Vitrixerandic",246
+"USSG_99","xa","Xanthic",247
+"USSG_99","xl","Xeralfic",248
+"USSG_99","xi","Xereptic",249
+"USSG_99","xv","Xerertic",250
+"USSG_99","xe","Xeric",251
+"USSG_99","xf","Xerofluventic",252
+"USSG_99","xo","Xerollic",253
+"FAO_88","VRy","Gypsic Vertisol",181
+"WRB_Q1","eue","Epieutric",183
+"WRB_Q2","eue","Epieutri-",183
