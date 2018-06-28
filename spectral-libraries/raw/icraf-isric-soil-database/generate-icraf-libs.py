@@ -11,9 +11,9 @@ spec_path = 'spectra.csv'
 desc_path = 'site-description.csv'
 
 # set the output file paths
-osli = 'soil-icraf-isric.sli'
-ohdr = 'soil-icraf-isric.hdr'
-ocsv = 'soil-icraf-isric.csv'
+osli = 'bare-icraf-isric.sli'
+ohdr = 'bare-icraf-isric.hdr'
+ocsv = 'bare-icraf-isric.csv'
 
 # set the order of the final output columns
 cols_final = ['NAME', 'LEVEL_1', 'LEVEL_2', 'LEVEL_3', 'LEVEL_4', 'LAT', 'LON', 'SOURCE', 'NOTES']
@@ -107,8 +107,8 @@ md['LEVEL_1'] = 'pervious'
 md['LEVEL_2'] = 'bare'
 md['LEVEL_3'] = 'soil'
 md['LEVEL_4'] = 'measured'
-md['SOURCE'] = 'icraf-isric-soil-database'
-md['NOTES'] = 'none'
+md['SOURCE'] = 'asd'
+md['NOTES'] = 'icraf-isric-soil-database'
 
 # re-order the labels and write the output
 md[cols_final].to_csv(ocsv, index=False)
