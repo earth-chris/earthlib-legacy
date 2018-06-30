@@ -143,7 +143,7 @@ for j in range(n_bundles):
     output_array[j, :] = spectrum[:, 1]
     
     # add a new name to label in the output spectral library
-    output_spec.append('v-LAI-{:0.32}-LMA-{:0.3f}-CHL-{:0.1f}-N-{:0.1f}'.format(LAI[j], LMA[j], chloro[j], N[j]))
+    output_spec.append('v-LAI-{:0.2}-LMA-{:0.3f}-CHL-{:0.1f}-N-{:0.1f}'.format(LAI[j], LMA[j], chloro[j], N[j]))
     
     # update the metadata list with a string of parameters
     output_metadata.append("{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}".format(
