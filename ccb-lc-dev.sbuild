@@ -18,11 +18,11 @@ From: ubuntu:17.10
     # set the base ccb data directory
     export CCB=/ccb
 
-    # tell ipython where to look for configuration files
-    export IPYTHONDIR=$CCB
-
-    # set the python path for custom installs
-    export PYTHONPATH=$CCB/aei-py
+    # set the python path for custom installs in the container
+    export PYTHONPATH=$PYTHONPATH:$CCB/gee-atmcorr-S2
+    
+    # set the path to the ipython configuration
+    export IPYTHONDIR=$CCBLC/ipython
 
 %post
     # set the default directory for storing configuration files
@@ -33,38 +33,39 @@ From: ubuntu:17.10
     apt-get update -y
     apt-get upgrade  -y
     apt-get install -y \
-	python-gdal \
-	gdal-bin \
-	ipython \
-	python-setuptools \
-	python-dev \
-	python-pip \
-	python-tk \
-	build-essential \
-	libfontconfig1 \
-	mesa-common-dev \
-	python-numpy \
-	python-scipy \
-	python-sklearn \
-	python-pandas \
-	python-geopandas \
-	python-qt4 \
-	python-sip \
-	python-pyside \
-	gcc \
-	gfortran \
-	qt5.1 \
-	git \
-	vim
+    	python-gdal \
+    	gdal-bin \
+    	ipython \
+    	python-setuptools \
+    	python-dev \
+    	python-pip \
+    	python-tk \
+    	build-essential \
+    	libfontconfig1 \
+    	mesa-common-dev \
+    	python-numpy \
+    	python-scipy \
+    	python-sklearn \
+    	python-pandas \
+    	python-geopandas \
+    	python-qt4 \
+    	python-sip \
+    	python-pyside \
+    	gcc \
+    	gfortran \
+    	qt5.1 \
+    	git \
+    	vim \
+    	openssl
 
     # clean up the apt files
     apt-get clean 
     rm -rf /var/lib/apt/lists/*
 
     # install pip packages
-    pip install --upgrade pip
-    pip install natcap.invest[ui] \
+    pip install natcap.invest \
     	matplotlib \
+    	jupyter \
     	qtpy \
     	shapely \
     	Pyro4 \
@@ -75,19 +76,25 @@ From: ubuntu:17.10
     	six \
     	taskgraph \
     	Pyro4 \
+    	Py6S \
         spectral \
-        pyprosail
+        pyprosail \
+        google-api-python-client \
+        pyCrypto \
+        pyOpenSSL>=0.11 \
+        earthengine-api
+        
+    # get some fresh matplotlib
+    pip install --upgrade matplotlib oauth2client
 
     # since pyprosail is broken on default, move some files around
     mv /usr/local/lib/python2.7/dist-packages/PyPROSAIL/_prosail_model.so /usr/local/lib/python2.7/dist-packages/pyprosail/
-
-    # tell ipython where to look for configuration files
-    export IPYTHONDIR=$CCB
-    ipython profile create default
-    mv /ipython_config.py $IPYTHONDIR/profile_default/ipython_config.py
-
-    # install personal git repo
-    git clone https://github.com/christobal54/aei-py.git
+    
+    # install the S2 atmospheric correction package
+    git clone https://github.com/samsammurphy/gee-atmcorr-S2
+    
+    # and the final step is authenticating your earthengine account
+    earthengine authenticate
 
 %files
     # add the ccb-format ipython config file to the ccb directory
