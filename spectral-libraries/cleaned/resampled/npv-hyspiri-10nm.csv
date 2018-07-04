@@ -1,0 +1,11 @@
+NAME,LEVEL_1,LEVEL_2,LEVEL_3,LEVEL_4,LAT,LON,SOURCE,NOTES
+CVARS_na_LemonTrees_LeafLitter,pervious,npv,litter,measured,33.524975,-116.14910800000001,specevo,hyspiri simulation spectra
+MCON_Tower_CWD1_Canopy,pervious,npv,npv,measured,37.066990000000004,-119.1955,specevo,hyspiri simulation spectra
+MCON_Tower_CWD2_Canopy,pervious,npv,npv,measured,37.06695,-119.19554,specevo,hyspiri simulation spectra
+MCON_Tower_LitterNeedles_Canopy,pervious,npv,npv,measured,37.06693,-119.19479,specevo,hyspiri simulation spectra
+SJER_Plot116_NPV_T009,pervious,npv,npv,measured,37.112159999999996,-119.73671000000002,specevo,hyspiri simulation spectra
+SJER_Plot116_NPV_T010,pervious,npv,npv,measured,37.112120000000004,-119.73653,specevo,hyspiri simulation spectra
+SJER_Plot116_NPV_T011,pervious,npv,npv,measured,37.11224,-119.73655,specevo,hyspiri simulation spectra
+SJER_Plot116_NPV_T012,pervious,npv,npv,measured,37.11223,-119.73671999999999,specevo,hyspiri simulation spectra
+SJER_Plot361_NPV_T015,pervious,npv,npv,measured,37.084376,-119.73382600000001,asd,hyspiri simulation spectra
+SJER_Plot361_NPV_T016,pervious,npv,npv,measured,37.084376,-119.73382600000001,asd,hyspiri simulation spectra
