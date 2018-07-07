@@ -102,7 +102,7 @@ class _spectralObject:
         # return output
         return overlap
         
-    def plot(self, inds = [], legend = False):
+    def plot(self, inds = None, legend = False):
         """plots the spectra using a standard plot format
         
         usage: self.plot(inds = [], legend = False)
@@ -116,19 +116,15 @@ class _spectralObject:
         _plt.ylabel('Reflectance (%)')
         
         # check if indices were set and valid. if not, plot all items
-        if inds:
-            if max(inds) > len(self.names):
+        if inds is not None:
+            if _np.max(inds) > len(self.names):
                 inds = range(0, len(self.names))
                 print("[ ERROR! ]: invalid range set. using all spectra")
-            if min(inds) < 0:
+            if _np.min(inds) < 0:
                 inds = range(0, len(self.names))
                 print("[ ERROR! ]: invalid range set. using all spectra")
         else:
             inds = range(0, len(self.names))
-            
-        # turn on the legend if fewer than 10 entries
-        if len(inds) < 10:
-            legend = True
             
         # plot differently if a single index or a list is passed
         # loop through each item to plot
@@ -176,6 +172,61 @@ class _spectralObject:
         # subset band centers to the indices selected, if they exist
         if self.band_centers.ndim != 0:
             self.band_centers = self.band_centers[inds]
+            
+    def write_sli(self, outfile, row_inds=None, spectral_inds=None):
+        """writes the spectral object to an envi spectral library
+        
+        Args:
+            outfile: the output file to write the array to
+            inds: the row-wise indices of the array to write out
+            
+        Returns:
+            None. Writes the data to disk
+        """
+        # set up the output file names for the library and the header
+        base, ext = _os.path.splitext(outfile)
+        if ext.lower() == '.sli':
+            osli = outfile
+            ohdr = '{}.hdr'.format(base)
+        elif ext.lower() == '.hdr':
+            osli = '{}.hdr'.format(base)
+            ohdr = outfile
+        else:
+            osli = '{}.sli'.format(base)
+            ohdr = '{}.hdr'.format(base)
+        
+        # subset the data if specific indices are set
+        spectra = self.spectra
+        names = self.names
+        band_centers = self.band_centers
+        
+        if row_inds is not None:
+            spectra = spectra[row_inds, :]
+            names = _np.array(names)[row_inds]
+        
+        if spectral_inds is not None:
+            spectra = spectra[:, spectral_inds]
+            band_centers = band_centers[spectral_inds]
+            
+        # set up the metadata for the ENVI header file 
+        metadata = {
+            'samples' : len(band_centers),
+            'lines' : len(names),
+            'bands' : 1,
+            'data type' : 4,
+            'header offset' : 0,
+            'interleave' : 'bsq',
+            'byte order' : 0,
+            'sensor type' : 'ccblc',
+            'spectra names' : names,
+            'wavelength units' : self.band_unit,
+            'wavelength' : band_centers
+            }
+        _spectral.envi.write_envi_header(ohdr, metadata, is_library=True)
+        
+        # then write the spectral library
+        with open(osli, 'w') as f: 
+            spectra.astype(_np.float32).tofile(f)
 
 
 # function for checking if a file exists and is readable
