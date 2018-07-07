@@ -1,0 +1,13 @@
+ENVI
+samples = 6
+lines = 4
+bands = 1
+header offset = 0
+file type = ENVI Spectral Library
+data type = 4
+interleave = bsq
+sensor type = ccblc
+byte order = 0
+wavelength units = Micrometers
+spectra names = { chartree , burncham , charbark , difubr }
+wavelength = { 0.482764 , 0.560859 , 0.654205 , 0.863971 , 1.609077 , 2.201533 }
