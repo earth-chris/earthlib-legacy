@@ -1,0 +1,34 @@
+ENVI
+description = {
+  Resampled Spectral Library [Tue Jul 31 16:31:36 2018]}
+samples = 7
+lines   = 80
+bands   = 1
+header offset = 0
+file type = ENVI Spectral Library
+data type = 4
+interleave = bsq
+sensor type = Unknown
+byte order = 0
+wavelength units = Micrometers
+band names = {
+ Resampled (Band 1:bare-santa-barbara.sli)}
+spectra names = {
+ lcxnxx.001-, lcxnxx.006-, lcxnxx.007-, lcxnxx.003-, lcxnxx.002-, 
+ lcxnxx.005-, lcxnxx.004-, lcxnxx.009-, lcxnxx.008-, mugexx.002-, 
+ mugexx.001-, mugexx.003-, mucsye.002-, mucsye.001-, mucsye.004-, 
+ mucsye.005-, mucsye.003-, mugnxx.001-, mugnxx.002-, muakye.002-, 
+ muakye.005-, muakye.004-, muakye.003-, muakye.001-, lbxsxx.011-, 
+ lbxsxx.020-, lbxsxx.021-, lbxsxx.012-, lbxsxx.035-, lbxsxx.033-, 
+ lbxsxx.032-, lbxsxx.023-, lbxsxx.036-, lbxsxx.034-, lbxsxx.026-, 
+ lbxsxx.027-, lbxsxx.019-, lbxsxx.029-, lbxsxx.030-, lbxsxx.022-, 
+ lbxsxx.018-, lbxsxx.028-, lbxsxx.031-, lbxsxx.017-, lbxsxx.037-, 
+ lbxsxx.038-, lbxsxx.010-, lbxsxx.039-, lbxsxx.009-, lbxsxx.013-, 
+ lbxsxx.024-, lbxsxx.002-, lbxsxx.015-, lbxsxx.005-, lbxsxx.016-, 
+ lbxsxx.001-, lbxsxx.003-, lbxsxx.014-, lbxsxx.008-, lbxsxx.025-, 
+ lbxsxx.006-, lbxsxx.007-, lbxsxx.004-, lrxnxx.003-, lrxnxx.001-, 
+ lrxnxx.002-, lrxnxx.014-, lrxnxx.004-, lrxnxx.005-, lrxnxx.011-, 
+ lrxnxx.017-, lrxnxx.015-, lrxnxx.016-, lrxnxx.009-, lrxnxx.006-, 
+ lrxnxx.012-, lrxnxx.008-, lrxnxx.007-, lrxnxx.013-, lrxnxx.010-}
+wavelength = {
+ 0.442491, 0.482764, 0.560859, 0.654205, 0.863971, 1.609077, 2.201533}
