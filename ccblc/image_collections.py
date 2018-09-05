@@ -7,12 +7,18 @@ if 'ee' not in sys.modules:
 
 # landsat 5
 def landsat_5():
-    return ee.ImageCollection('LANDSAT/LT05/C01/T2_SR')
+    bnds = []
+    coll = ee.ImageCollection('LANDSAT/LT05/C01/T2_SR')
+    return bnds, coll
     
 # landsat 7
 def landsat_7():
-    return ee.ImageCollection('LANDSAT/LE07/C01/T2_SR')
+    bnds = []
+    coll = ee.ImageCollection('LANDSAT/LE07/C01/T2_SR')
+    return bnds, coll
     
 # landsat 8
 def landsat_8():
-    return ee.ImageCollection('LANDSAT/LC08/C01/T2_SR')
+    bnds = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7']
+    coll = ee.ImageCollection('LANDSAT/LC08/C01/T2_SR')
+    return bnds, coll

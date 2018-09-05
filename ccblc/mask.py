@@ -10,7 +10,7 @@ def clouds_landsat(img):
     cloud_bit_mask = 2 ** cloud_bit
     
     # label the cloudy pixels a la the selected bits
-    mask = img.select('pixel_qa').bitwiseAnd(cloud_bit_ask).eq(0);
+    mask = img.select('pixel_qa').bitwiseAnd(cloud_bit_mask).eq(0);
     
     # and apply the mask to the image
     return img.mask(mask)
