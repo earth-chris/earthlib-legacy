@@ -40,7 +40,7 @@ def jfsp(path):
 def spectralLibrary(path):
     """
     Reads an ENVI-format spectral library into memory.
-    
+
     :param path: file path to the ENVI spectral library file. Looks for an accompanying .hdr file.
     :return s: a ccblc spectralObject with the spectral library data
     """

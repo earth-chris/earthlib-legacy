@@ -1,5 +1,7 @@
-"""Functions for masking earth engine images
 """
+Functions for masking earth engine images
+"""
+
 
 class Clouds:
     def __init__(self):
