@@ -10,11 +10,11 @@ setup_args = {
     "author": "Christopher Anderson",
     "author_email": "cbanders@stanford.edu",
     "description": "Spectral unmixing package for land cover mapping",
-    "keywords": ["ecologyy", "conservation", "remote sensing", "earth engine"],
+    "keywords": ["ecology", "conservation", "remote sensing", "earth engine", "spectral unmixing"],
     "packages": ["ccblc"],
     "include_package_data": True,
     "platforms": "any",
-    "data_files": [("ccblc", ["ccblc/data/maxent.jar"])],
+    "data_files": [("ccblc", ["ccblc/data/Branner.csv", "ccblc/data/Branner.sli", "ccblc/data/Branner.sli.hdr"])],
 }
 
 setup(**setup_args)
