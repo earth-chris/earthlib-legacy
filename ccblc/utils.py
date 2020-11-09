@@ -9,13 +9,14 @@ import numpy as np
 import spectral
 
 
-def checkFile(infile):
-    """Checks if a file exists and can be read
-
-    Args:
-        infile: the path to the file to check
+def checkFile(path):
     """
-    if os.path.isfile(infile) and os.access(infile, os.R_OK):
+    Checks if a file exists and can be read
+
+    :param path: the file path to check
+    :return bool:
+    """
+    if os.path.isfile(path) and os.access(path, os.R_OK):
         return True
     else:
         return False
@@ -124,9 +125,9 @@ class spectralObject:
         """
 
         # set basic parameters
-        _plt.xlim((self.band_centers.min(), self.band_centers.max()))
-        _plt.xlabel("Wavelength ({})".format(self.band_unit))
-        _plt.ylabel("Reflectance (%)")
+        plt.xlim((self.band_centers.min(), self.band_centers.max()))
+        plt.xlabel("Wavelength ({})".format(self.band_unit))
+        plt.ylabel("Reflectance (%)")
 
         # check if indices were set and valid. if not, plot all items
         if inds is not None:
@@ -143,17 +144,17 @@ class spectralObject:
         # loop through each item to plot
         if type(inds) is list:
             for i in inds:
-                _plt.plot(self.band_centers, self.spectra[i, :], label=self.names[i])
+                plt.plot(self.band_centers, self.spectra[i, :], label=self.names[i])
         else:
-            _plt.plot(self.band_centers, self.spectra[inds, :], label=self.names[inds])
+            plt.plot(self.band_centers, self.spectra[inds, :], label=self.names[inds])
 
         # add the legend with each spectrum's name
         if legend:
-            _plt.legend(fontsize="small", framealpha=0.5, fancybox=True)
+            plt.legend(fontsize="small", framealpha=0.5, fancybox=True)
 
         # display the plot
-        _plt.tight_layout()
-        _plt.show()
+        plt.tight_layout()
+        plt.show()
 
     def bn(self, inds=None):
         """brightness normalizes the spectra

@@ -1,10 +1,6 @@
 """
 Functions for reading specifically formatted data
 """
-import numpy as np
-import spectral
-
-from ccblc.utils import spectralObject, checkFile
 
 
 # function to read ascii spectra from the joint fire science program
@@ -17,11 +13,12 @@ def jfsp(path):
     :param path: file path to the JFSP spectra text file
     :return s: a ccblc spectralObject with the JFSP reflectance data
     """
+    from ccblc.utils import checkFile, spectralObject
 
     # create the spectral object
     s = spectralObject(1, type="asd")
-    s.spectra_stdevm = _np.zeros(s.spectra.shape)
-    s.spectra_stdevp = _np.zeros(s.spectra.shape)
+    s.spectra_stdevm = np.zeros(s.spectra.shape)
+    s.spectra_stdevp = np.zeros(s.spectra.shape)
 
     # open the file and read the data
     with open(path, "r") as f:
@@ -36,7 +33,7 @@ def jfsp(path):
         return s
 
 
-# function to read an envi spectral library file
+# function to read ENVI spectral libraries
 def spectralLibrary(path):
     """
     Reads an ENVI-format spectral library into memory.
@@ -44,6 +41,11 @@ def spectralLibrary(path):
     :param path: file path to the ENVI spectral library file. Looks for an accompanying .hdr file.
     :return s: a ccblc spectralObject with the spectral library data
     """
+    import numpy as np
+    import spectral
+
+    from ccblc.utils import checkFile, spectralObject
+
     # check for header files
     if checkFile(path[:-4] + ".hdr"):
         hdr = path[:-4] + ".hdr"
@@ -60,7 +62,7 @@ def spectralLibrary(path):
     s = spectralObject(
         slib.params.nrows,
         slib.params.ncols,
-        band_centers=_np.asarray(slib.bands.centers),
+        band_centers=np.asarray(slib.bands.centers),
         band_unit=slib.bands.band_unit,
         band_quantity=slib.bands.band_quantity,
     )
@@ -71,10 +73,3 @@ def spectralLibrary(path):
 
     # return the final object
     return s
-
-
-# clean up namespace
-del np
-del spectral
-del spectralObject
-del checkFile

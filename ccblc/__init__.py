@@ -1,1 +1,1 @@
-from . import __version__, Read, Mask
+from . import Mask, Read, __version__
