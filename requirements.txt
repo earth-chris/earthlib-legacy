@@ -1,3 +1,4 @@
 earthengine-api
+matplotlib
 numpy
 spectral
