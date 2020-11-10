@@ -45,6 +45,18 @@ def spectralLibrary(path):
     return s
 
 
+def endmembers():
+    """
+    Reads the ccb-lc spectral endmember library
+
+    :return s: a ccblc spectralObject with the endmember library reflectance data
+    """
+    from .utils import _endmember_path
+
+    s = spectralLibrary(_endmember_path)
+    return s
+
+
 # ascii spectra from the joint fire science program (https://www.frames.gov/assessing-burn-severity/spectral-library/overview)
 def jfsp(path):
     """

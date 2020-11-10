@@ -15,6 +15,7 @@ _package_path = os.path.realpath(__file__)
 _package_dir = os.path.dirname(_package_path)
 _collections_path = os.path.join(_package_dir, "data", "collections.json")
 _metadata_path = os.path.join(_package_dir, "data", "spectra.csv")
+_endmember_path = os.path.join(_package_dir, "data", "spectra.sli")
 
 # read the collections data into memory
 with open(_collections_path, "r+") as f:
