@@ -14,8 +14,18 @@ setup_args = {
     "packages": ["ccblc"],
     "include_package_data": True,
     "platforms": "any",
-    "data_files": [("ccblc", ["ccblc/data/Branner.csv", "ccblc/data/Branner.sli", "ccblc/data/Branner.sli.hdr"])],
-    "install_requires": ["matplotlib", "numpy", "spectral"]
+    "data_files": [
+        (
+            "ccblc",
+            [
+                "ccblc/data/Branner.csv",
+                "ccblc/data/Branner.sli",
+                "ccblc/data/Branner.sli.hdr",
+                "ccblc/data/collections.json",
+            ],
+        )
+    ],
+    "install_requires": ["matplotlib", "numpy", "spectral"],
 }
 
 setup(**setup_args)
