@@ -58,17 +58,6 @@ def listSensors():
     return sensors
 
 
-def listBands(sensor):
-    """
-    Returns a list of the band names for a specific sensor.
-
-    :param sensor: the sensor type
-    :return bands: a list of band names for that sensor
-    """
-    bands = collections[sensor]["band_names"]
-    return bands
-
-
 def listTypes(level=2):
     """
     Returns a list of the spectral classification types.
