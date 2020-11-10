@@ -1,14 +1,30 @@
 """
 Utility functions for working with spectral libraries and earth engine routines
 """
+import json
 import os
 import sys
 
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 import spectral
 
+# get file paths for the package data
+_package_path = os.path.realpath(__file__)
+_package_dir = os.path.dirname(_package_path)
+_collections_path = os.path.join(_package_dir, "data", "collections.json")
+_metadata_path = os.path.join(_package_dir, "data", "spectra.csv")
 
+# read the collections data into memory
+with open(_collections_path, "r+") as f:
+    collections = json.load(f)
+
+# read the spectral metadata into memory
+spectra = pd.read_csv(_metadata_path)
+
+
+# helper / utility functions
 def checkFile(path):
     """
     Checks if a file exists and can be read.
@@ -20,6 +36,26 @@ def checkFile(path):
         return True
     else:
         return False
+
+
+def listCollections():
+    """
+    Returns a list of the supported collections
+    :returns sensors: a list of supported sensors using the names referenced by this package
+    """
+    sensors = list(collections.keys())
+    return sensors
+
+
+def listClasses(level=2):
+    """
+    Returns a list of the spectral classification groups
+    :param level: the level of spectral classification specificity to return. Supports integers 1-4.
+    :returns classes: a list of spectral data types referenced throughout this package
+    """
+    key = f"LEVEL_{level}"
+    classes = list(spectra[key].unique())
+    return classes
 
 
 class spectralObject:
