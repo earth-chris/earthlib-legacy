@@ -97,6 +97,38 @@ def getTypeLevel(Type):
     return 0
 
 
+def getCollection(sensor):
+    """
+    Returns the earth engine collection name for a specific satellite sensor.
+
+    :param sensor: the name of the sensor (from ccblc.listSensors()).
+    :return collection: a string with the earth engine collection
+    """
+    collection = collections[sensor]["collection"]
+    return collection
+
+
+def getScaler(sensor):
+    """
+    Returns the scaling factor to convert sensor data to percent reflectance (0-1).
+
+    :param sensor: the name of the sensor (from ccblc.listSensors()).
+    """
+    scaler = collections[sensor]["scale"]
+    return scaler
+
+
+def getBands(sensor):
+    """
+    Returns a list of available band names by sensor
+
+    :param sensor: the name of the sensor (from ccblc.listSensors()).
+    :return bands: a list of sensor-specific band names
+    """
+    bands = collections[sensor]["band_names"]
+    return bands
+
+
 def getBandIndices(custom_bands, sensor):
     """
     Cross-references a list of bands passed as strings to the 0-based integer indices
@@ -132,12 +164,16 @@ def selectSpectra(Type, sensor, n=0, bands=None):
     # get the level of the group selected
     level = getTypeLevel(Type)
     if level == 0:
-        LOGGER.warning(f"Invalid group parameter: {Type}. Get valid values from ccblc.listTypes().")
+        LOGGER.warning(
+            f"Invalid group parameter: {Type}. Get valid values from ccblc.listTypes()."
+        )
         return None
 
     # qc the collection selected
     if sensor not in listSensors():
-        LOGGER.warning(f"Invalid sensor parameter: {sensor}. Get valid values from ccblc.listSensors().")
+        LOGGER.warning(
+            f"Invalid sensor parameter: {sensor}. Get valid values from ccblc.listSensors()."
+        )
         return None
 
     # read the spectral library into memory
@@ -145,7 +181,7 @@ def selectSpectra(Type, sensor, n=0, bands=None):
 
     # subset to specific bands, if set
     if bands is None:
-        bands = range(len(collections[sensor]["band_names"]))
+        bands = range(len(getBands(sensor)))
     else:
         if type(bands[0]) is str:
             bands = getBandIndices(bands, sensor)
@@ -153,7 +189,9 @@ def selectSpectra(Type, sensor, n=0, bands=None):
     # create a band resampler for this collection
     sensor_centers = np.array(collections[sensor]["band_centers"])[bands]
     sensor_fwhm = np.array(collections[sensor]["band_widths"])[bands]
-    resampler = spectral.BandResampler(endmembers.band_centers, sensor_centers, fwhm2=sensor_fwhm)
+    resampler = spectral.BandResampler(
+        endmembers.band_centers, sensor_centers, fwhm2=sensor_fwhm
+    )
 
     # select the endmembers from just the type passed
     key = f"LEVEL_{level}"
@@ -176,7 +214,13 @@ def selectSpectra(Type, sensor, n=0, bands=None):
 
 class spectralObject:
     def __init__(
-        self, n_spectra=1, n_wl=2151, sensor=None, band_unit=None, band_centers=None, band_quantity="Wavelength"
+        self,
+        n_spectra=1,
+        n_wl=2151,
+        sensor=None,
+        band_unit=None,
+        band_centers=None,
+        band_quantity="Wavelength",
     ):
         """
         A custom object that reads, stores, writes, and plots spectral data.
@@ -336,7 +380,9 @@ class spectralObject:
             inds = range(0, self.spectra.shape[-1])
 
         # perform the bn
-        self.spectra = self.spectra[:, inds] / np.expand_dims(np.sqrt((self.spectra[:, inds] ** 2).sum(1)), 1)
+        self.spectra = self.spectra[:, inds] / np.expand_dims(
+            np.sqrt((self.spectra[:, inds] ** 2).sum(1)), 1
+        )
 
         # subset band centers to the indices selected, if they exist
         if self.band_centers.ndim != 0:

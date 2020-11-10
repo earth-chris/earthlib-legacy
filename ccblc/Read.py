@@ -149,7 +149,13 @@ def usgs(path):
             reflectance /= 100.0
 
         # create the spectral object
-        s = spectralObject(1, n_values, band_centers=band_centers, band_unit=band_unit, band_quantity="Wavelength")
+        s = spectralObject(
+            1,
+            n_values,
+            band_centers=band_centers,
+            band_unit=band_unit,
+            band_quantity="Wavelength",
+        )
 
         # assign relevant values
         s.spectra[0] = reflectance
