@@ -17,6 +17,7 @@ dependencies:
   - jupyter
   - matplotlib
   - numpy
+  - pandas
   - pre-commit
   - psutil
   - pytest

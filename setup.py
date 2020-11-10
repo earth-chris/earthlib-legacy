@@ -25,7 +25,7 @@ setup_args = {
             ],
         )
     ],
-    "install_requires": ["matplotlib", "numpy", "spectral"],
+    "install_requires": ["matplotlib", "numpy", "pandas", "spectral"],
 }
 
 setup(**setup_args)
