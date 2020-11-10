@@ -11,7 +11,7 @@ import spectral
 
 def checkFile(path):
     """
-    Checks if a file exists and can be read
+    Checks if a file exists and can be read.
 
     :param path: the file path to check
     :return bool:
@@ -23,7 +23,20 @@ def checkFile(path):
 
 
 class spectralObject:
-    def __init__(self, n_spectra=1, n_wl=2151, sensor=None, band_unit=None, band_quantity=None, band_centers=None):
+    def __init__(
+        self, n_spectra=1, n_wl=2151, sensor=None, band_unit=None, band_centers=None, band_quantity="Wavelength"
+    ):
+        """
+        A custom object that reads, stores, writes, and plots spectral data.
+
+        :param n_spectra: the number of spectra included in the library
+        :param n_wl: the number of wavelengths for each spectrum
+        :param sensor: the sensor name
+        :param band_unit: the unit of measurement (typically micrometers or nanometers)
+        :param band_centers: the center wavelength for each band
+        :param band_quantity: the quantity measured by each band
+        :return s: a spectral object
+        """
 
         # set to asd type if no params set to change n_wl
         if n_wl == 2151:
@@ -59,22 +72,19 @@ class spectralObject:
         # return an np array size of n spectra x n wavelengths
         self.spectra = np.zeros([n_spectra, n_wl])
 
-    def remove_water_bands(self, set_nan=True):
-        """sets reflectance data from water absorption bands
-        (i.e. 1350 - 1460 nm and 1790 - 1960 nm) to NaN (or 0)
+    def remove_water_bands(self, set_nan=False):
+        """
+        Sets reflectance data from water absorption bands to 0 or NaN (1.35-1.46 um and 1.79-1.96 um).
 
-        Args:
-            set_nan: set this to true to set the water bands to NaN. False sets to 0
-
-        Returns:
-            None. updates the self.spectra array
+        :param set_nan: set the water bands to NaN. False sets values to 0.
+        :return none: updates the self.spectra array
         """
         if set_nan:
             update_val = np.nan
         else:
             update_val = 0
 
-        if self.band_unit == "micrometers":
+        if self.band_unit.lower() == "micrometers":
             water_bands = [[1.35, 1.46], [1.79, 1.96]]
         else:
             water_bands = [[1350.0, 1460.0], [1790.0, 1960.0]]
@@ -92,20 +102,16 @@ class spectralObject:
         self.spectra[:, nd] = update_val
 
     def get_shortwave_bands(self):
-        """returns an index of the bands that encompass
-        the shortwave range (350 - 2500 nm)
+        """
+        Returns an index of the bands that encompass the shortwave range (350 - 2500 nm)
 
-        Args:
-            None
-
-        Returns:
-            overlap: an index of bands to subset to the shortwave range
+        :return overlap: an index of bands to subset to the shortwave range
         """
         # set range to return in nanometers
         shortwave_range = [350.0, 2500.0]
 
         # normalize if wavelength units are different
-        if self.band_unit == "Micrometers":
+        if self.band_unit.lower() == "micrometers":
             shortwave_range /= 1000.0
 
         # find overlapping range
@@ -117,11 +123,12 @@ class spectralObject:
         return overlap
 
     def plot(self, inds=None, legend=False):
-        """plots the spectra using a standard plot format
+        """
+        Plots the spectra using a standard format
 
-        usage: self.plot(inds = [], legend = False)
-          where inds = optional 0-based indices for spectra to plot
-                legend = set this to force a legend to be created
+        :param inds: optional 0-based indices for which spectra to plot
+        :param legend: add a legend with the spectra names
+        :return plt: the matplotlib pyplot object
         """
 
         # set basic parameters
@@ -133,10 +140,10 @@ class spectralObject:
         if inds is not None:
             if np.max(inds) > len(self.names):
                 inds = range(0, len(self.names))
-                print("[ ERROR! ]: invalid range set. using all spectra")
+                print("Invalid range set. using all spectra")
             if np.min(inds) < 0:
                 inds = range(0, len(self.names))
-                print("[ ERROR! ]: invalid range set. using all spectra")
+                print("Invalid range set. using all spectra")
         else:
             inds = range(0, len(self.names))
 
@@ -156,23 +163,23 @@ class spectralObject:
         plt.tight_layout()
         plt.show()
 
+        return plt
+
     def bn(self, inds=None):
-        """brightness normalizes the spectra
+        """
+        Brightness normalizes the spectra
 
-        Args:
-            inds: the indices to use for BN
-
-        Returns:
-            None. Updates the self.spectra array
+        :param inds: the band indices to use for normalization
+        :return none: updates the self.spectra array
         """
         # check if indices were set and valid. if not, use all bands
         if inds:
             if max(inds) > self.spectra.shape[-1]:
                 inds = range(0, self.spectra.shape[-1])
-                print("[ ERROR ]: invalid range set. using all spectra")
+                print("Invalid range set. using all spectra")
             if min(inds) < 0:
                 inds = range(0, self.spectra.shape[-1])
-                print("[ ERROR ]: invalid range set. using all spectra")
+                print("Invalid range set. using all spectra")
         else:
             inds = range(0, self.spectra.shape[-1])
 
@@ -183,24 +190,22 @@ class spectralObject:
         if self.band_centers.ndim != 0:
             self.band_centers = self.band_centers[inds]
 
-    def write_sli(self, outfile, row_inds=None, spectral_inds=None):
-        """writes the spectral object to an envi spectral library
+    def write_sli(self, path, row_inds=None, spectral_inds=None):
+        """
+        Writes the spectral object to an ENVI spectral library file
 
-        Args:
-            outfile: the output file to write the array to
-            inds: the row-wise indices of the array to write out
-
-        Returns:
-            None. Writes the data to disk
+        :param path: the output file to write the array to
+        :param inds: the row-wise indices of the array to write out
+        :return none: writes the data to disk
         """
         # set up the output file names for the library and the header
-        base, ext = os.path.splitext(outfile)
+        base, ext = os.path.splitext(path)
         if ext.lower() == ".sli":
-            osli = outfile
+            osli = path
             ohdr = "{}.hdr".format(base)
         elif ext.lower() == ".hdr":
             osli = "{}.hdr".format(base)
-            ohdr = outfile
+            ohdr = path
         else:
             osli = "{}.sli".format(base)
             ohdr = "{}.hdr".format(base)
