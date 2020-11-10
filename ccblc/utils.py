@@ -41,22 +41,37 @@ def checkFile(path):
 
 def listCollections():
     """
-    Returns a list of the supported collections
+    Returns a list of the supported collections.
+
     :returns sensors: a list of supported sensors using the names referenced by this package
     """
     sensors = list(collections.keys())
     return sensors
 
 
-def listClasses(level=2):
+def listGroups(level=2):
     """
-    Returns a list of the spectral classification groups
+    Returns a list of the spectral classification groups.
+
     :param level: the level of spectral classification specificity to return. Supports integers 1-4.
     :returns classes: a list of spectral data types referenced throughout this package
     """
     key = f"LEVEL_{level}"
-    classes = list(spectra[key].unique())
-    return classes
+    groups = list(spectra[key].unique())
+    return groups
+
+
+def selectSpectra(group, collection, n=0, ee=False):
+    """
+    Subsets the ccblc spectral endmember library to a specific class and resamples the spectra
+    to the wavelengths of a specific collection. This also performs random spectra selection.
+
+    :param group: the type of spectra to select
+    :param collection: the sensor type to resample wavelengths to
+    :param n: the number of random spectra to sample. n=0 returns all spectra
+    :param ee: flag to return the spectra as a list of ee.List() objects. Default returns a list of numpy arrays.
+    :return spectra: a list of spectral endmembers resampled to a specific sensor's wavelengths.
+    """
 
 
 class spectralObject:
