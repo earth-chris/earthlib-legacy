@@ -33,7 +33,9 @@ collections = {
         ],
         "band_centers": [0.443, 0.482, 0.561, 0.655, 0.865, 1.609, 2.201],
         "band_widths": [0.016, 0.060, 0.057, 0.037, 0.028, 0.085, 0.187],
+        "scale": 0.0001,
     },
+    # from http://www.gisagmaps.com/landsat-8-sentinel-2-bands/
     "Sentinel-2": {
         "collection": "COPERNICUS/S2_SR",
         "band_names": [
@@ -64,6 +66,7 @@ collections = {
         ],
         "band_centers": [0.443, 0.494, 0.560, 0.665, 0.704, 0.740, 0.781, 0.834, 0.864, 1.612, 2.194],
         "band_widths": [0.036, 0.095, 0.045, 0.039, 0.020, 0.018, 0.028, 0.141, 0.033, 0.142, 0.240],
+        "scale": 0.0001,
     },
 }
 
