@@ -4,6 +4,10 @@ A script to create a formatted json file with sensor/collection parameters
 import json
 
 
+# set the output file path
+output_path = "collections.json"
+
+# create the dictionary to write as json
 collections = {
     # from http://www.gisagmaps.com/landsat-8-sentinel-2-bands/
     "Landsat8": {
@@ -32,3 +36,8 @@ collections = {
         "band_widths": [0.016, 0.060, 0.057, 0.037, 0.028, 0.085, 0.187],
     }
 }
+
+
+# write the output file
+with open(output_path, "w+") as f:
+    f.write(json.dumps(collections, indent=2, sort_keys=True))
