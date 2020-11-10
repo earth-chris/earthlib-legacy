@@ -18,9 +18,9 @@ setup_args = {
         (
             "ccblc",
             [
-                "ccblc/data/Branner.csv",
-                "ccblc/data/Branner.sli",
-                "ccblc/data/Branner.sli.hdr",
+                "ccblc/data/spectra.csv",
+                "ccblc/data/spectra.sli",
+                "ccblc/data/spectra.sli.hdr",
                 "ccblc/data/collections.json",
             ],
         )
