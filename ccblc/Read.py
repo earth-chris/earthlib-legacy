@@ -4,7 +4,7 @@ Functions for reading specifically formatted data
 
 
 # function to read ascii spectra from the joint fire science program
-# (https://www.frames.gov/partner-sites/assessing-burn-severity/spectral/spectral-library-southern-california/)
+# (https://www.frames.gov/assessing-burn-severity/spectral-library/overview)
 def jfsp(path):
     """
     Reads the ASCII format spectral data from the joint-fire-science-program
