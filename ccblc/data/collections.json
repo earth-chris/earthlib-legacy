@@ -1,7 +1,6 @@
 {
   "Landsat8": {
     "band_centers": [
-      0.443,
       0.482,
       0.561,
       0.655,
@@ -10,7 +9,6 @@
       2.201
     ],
     "band_descriptions": [
-      "ultra blue",
       "blue",
       "green",
       "red",
@@ -19,18 +17,14 @@
       "shortwave infrared 2"
     ],
     "band_names": [
-      "B1",
       "B2",
       "B3",
       "B4",
       "B5",
       "B6",
-      "B7",
-      "B10",
-      "B11"
+      "B7"
     ],
     "band_widths": [
-      0.016,
       0.06,
       0.057,
       0.037,
@@ -38,11 +32,11 @@
       0.085,
       0.187
     ],
-    "collection": "LANDSAT/LC08/C01/T1_SR"
+    "collection": "LANDSAT/LC08/C01/T1_SR",
+    "scale": 0.0001
   },
   "Sentinel-2": {
     "band_centers": [
-      0.443,
       0.494,
       0.56,
       0.665,
@@ -55,7 +49,6 @@
       2.194
     ],
     "band_descriptions": [
-      "ultra blue",
       "blue",
       "green",
       "red",
@@ -68,7 +61,6 @@
       "shortwave infrared 2"
     ],
     "band_names": [
-      "B1",
       "B2",
       "B3",
       "B4",
@@ -81,7 +73,6 @@
       "B12"
     ],
     "band_widths": [
-      0.036,
       0.095,
       0.045,
       0.039,
@@ -93,6 +84,7 @@
       0.142,
       0.24
     ],
-    "collection": "COPERNICUS/S2_SR"
+    "collection": "COPERNICUS/S2_SR",
+    "scale": 0.0001
   }
 }
