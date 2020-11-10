@@ -69,29 +69,29 @@ def listBands(sensor):
     return bands
 
 
-def listGroups(level=2):
+def listTypes(level=2):
     """
-    Returns a list of the spectral classification groups.
+    Returns a list of the spectral classification types.
 
     :param level: the level of spectral classification specificity to return. Supports integers 1-4.
     :returns classes: a list of spectral data types referenced throughout this package
     """
     key = f"LEVEL_{level}"
-    groups = list(metadata[key].unique())
-    return groups
+    types = list(metadata[key].unique())
+    return types
 
 
-def getGroupLevel(group):
+def getTypeLevel(Type):
     """
-    Checks whether a single group is available in the endmember library.
+    Checks whether a spectral data type is available in the endmember library.
 
-    :param group: the type of spectra to select
+    :param Type: the type of spectra to select
     :return level: the metadata "level" of the group for subsetting. returns 0 if not found.
     """
     for i in range(4):
         level = i + 1
-        available_groups = listGroups(level=level)
-        if group in available_groups:
+        available_types = listTypes(level=level)
+        if Type in available_types:
             return level
 
     return 0
@@ -114,12 +114,12 @@ def getBandIndices(custom_bands, sensor):
     return indices
 
 
-def selectSpectra(group, sensor, n=0, bands=None):
+def selectSpectra(Type, sensor, n=0, bands=None):
     """
     Subsets the ccblc spectral endmember library to a specific class and resamples the spectra
     to the wavelengths of a specific satellite sensor. This also performs random spectra selection.
 
-    :param group: the type of spectra to select
+    :param Type: the type of spectra to select
     :param sensor: the sensor type to resample wavelengths to
     :param n: the number of random spectra to sample. n=0 returns all spectra
     :param bands: a list of bands to use. Accepts 0-based indices or a list of band names (e.g. ["B2", "B3", "B4"])
@@ -130,15 +130,15 @@ def selectSpectra(group, sensor, n=0, bands=None):
     from . import Read
 
     # get the level of the group selected
-    level = getGroupLevel(group)
+    level = getTypeLevel(Type)
     if level == 0:
-        LOGGER.warning(f"Invalid group parameter: {group}. Get valid values from ccblc.listGroups().")
-        raise
+        LOGGER.warning(f"Invalid group parameter: {Type}. Get valid values from ccblc.listTypes().")
+        return None
 
     # qc the collection selected
     if sensor not in listSensors():
         LOGGER.warning(f"Invalid sensor parameter: {sensor}. Get valid values from ccblc.listSensors().")
-        raise
+        return None
 
     # read the spectral library into memory
     endmembers = Read.spectralLibrary(_endmember_path)
@@ -155,9 +155,9 @@ def selectSpectra(group, sensor, n=0, bands=None):
     sensor_fwhm = np.array(collections[sensor]["band_widths"])[bands]
     resampler = spectral.BandResampler(endmembers.band_centers, sensor_centers, fwhm2=sensor_fwhm)
 
-    # select the endmembers from just the group passed
+    # select the endmembers from just the type passed
     key = f"LEVEL_{level}"
-    indices = metadata[key] == group
+    indices = metadata[key] == Type
     spectra_raw = endmembers.spectra[indices, :]
 
     # subset them further if the n parameter is passed
