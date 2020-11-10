@@ -10,7 +10,13 @@ setup_args = {
     "author": "Christopher Anderson",
     "author_email": "cbanders@stanford.edu",
     "description": "Spectral unmixing package for land cover mapping",
-    "keywords": ["ecology", "conservation", "remote sensing", "earth engine", "spectral unmixing"],
+    "keywords": [
+        "ecology",
+        "conservation",
+        "remote sensing",
+        "earth engine",
+        "spectral unmixing",
+    ],
     "packages": ["ccblc"],
     "include_package_data": True,
     "platforms": "any",
@@ -25,7 +31,7 @@ setup_args = {
             ],
         )
     ],
-    "install_requires": ["matplotlib", "numpy", "pandas", "spectral"],
+    "install_requires": ["folium", "matplotlib", "numpy", "pandas", "spectral"],
 }
 
 setup(**setup_args)

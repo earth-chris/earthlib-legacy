@@ -1,4 +1,5 @@
 earthengine-api
+folium
 matplotlib
 numpy
 pandas
