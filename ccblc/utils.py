@@ -2,6 +2,7 @@
 Utility functions for working with spectral libraries and earth engine routines
 """
 import json
+import logging
 import os
 import sys
 
@@ -9,6 +10,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import spectral
+
+# set up logging
+logging.basicConfig(
+    level=logging.WARNING,
+    format=("%(asctime)s %(levelname)s %(name)s [%(funcName)s] | %(message)s"),
+    stream=sys.stdout,
+)
+LOGGER = logging.getLogger("ccblc")
 
 # get file paths for the package data
 _package_path = os.path.realpath(__file__)
@@ -22,7 +31,7 @@ with open(_collections_path, "r+") as f:
     collections = json.load(f)
 
 # read the spectral metadata into memory
-spectra = pd.read_csv(_metadata_path)
+metadata = pd.read_csv(_metadata_path)
 
 
 # helper / utility functions
@@ -39,14 +48,25 @@ def checkFile(path):
         return False
 
 
-def listCollections():
+def listSensors():
     """
-    Returns a list of the supported collections.
+    Returns a list of the supported sensor image collections.
 
     :returns sensors: a list of supported sensors using the names referenced by this package
     """
     sensors = list(collections.keys())
     return sensors
+
+
+def listBands(sensor):
+    """
+    Returns a list of the band names for a specific sensor.
+
+    :param sensor: the sensor type
+    :return bands: a list of band names for that sensor
+    """
+    bands = collections[sensor]["band_names"]
+    return bands
 
 
 def listGroups(level=2):
@@ -57,21 +77,101 @@ def listGroups(level=2):
     :returns classes: a list of spectral data types referenced throughout this package
     """
     key = f"LEVEL_{level}"
-    groups = list(spectra[key].unique())
+    groups = list(metadata[key].unique())
     return groups
 
 
-def selectSpectra(group, collection, n=0, ee=False):
+def getGroupLevel(group):
     """
-    Subsets the ccblc spectral endmember library to a specific class and resamples the spectra
-    to the wavelengths of a specific collection. This also performs random spectra selection.
+    Checks whether a single group is available in the endmember library.
 
     :param group: the type of spectra to select
-    :param collection: the sensor type to resample wavelengths to
+    :return level: the metadata "level" of the group for subsetting. returns 0 if not found.
+    """
+    for i in range(4):
+        level = i + 1
+        available_groups = listGroups(level=level)
+        if group in available_groups:
+            return level
+
+    return 0
+
+
+def getBandIndices(custom_bands, sensor):
+    """
+    Cross-references a list of bands passed as strings to the 0-based integer indices
+
+    :param custom_bands: a list of band names
+    :param sensor: a string sensor type for indexing the supported collections
+    :return indices: a list of integer band indices
+    """
+    sensor_bands = collections[sensor]["band_names"]
+    indices = list()
+    for band in custom_bands:
+        if band in sensor_bands:
+            indices.append(sensor_bands.index(band))
+    indices.sort()
+    return indices
+
+
+def selectSpectra(group, sensor, n=0, bands=None):
+    """
+    Subsets the ccblc spectral endmember library to a specific class and resamples the spectra
+    to the wavelengths of a specific satellite sensor. This also performs random spectra selection.
+
+    :param group: the type of spectra to select
+    :param sensor: the sensor type to resample wavelengths to
     :param n: the number of random spectra to sample. n=0 returns all spectra
-    :param ee: flag to return the spectra as a list of ee.List() objects. Default returns a list of numpy arrays.
+    :param bands: a list of bands to use. Accepts 0-based indices or a list of band names (e.g. ["B2", "B3", "B4"])
     :return spectra: a list of spectral endmembers resampled to a specific sensor's wavelengths.
     """
+    import spectral
+
+    from . import Read
+
+    # get the level of the group selected
+    level = getGroupLevel(group)
+    if level == 0:
+        LOGGER.warning(f"Invalid group parameter: {group}. Get valid values from ccblc.listGroups().")
+        raise
+
+    # qc the collection selected
+    if sensor not in listSensors():
+        LOGGER.warning(f"Invalid sensor parameter: {sensor}. Get valid values from ccblc.listSensors().")
+        raise
+
+    # read the spectral library into memory
+    endmembers = Read.spectralLibrary(_endmember_path)
+
+    # subset to specific bands, if set
+    if bands is None:
+        bands = range(len(collections[sensor]["band_names"]))
+    else:
+        if type(bands[0]) is str:
+            bands = getBandIndices(bands, sensor)
+
+    # create a band resampler for this collection
+    sensor_centers = np.array(collections[sensor]["band_centers"])[bands]
+    sensor_fwhm = np.array(collections[sensor]["band_widths"])[bands]
+    resampler = spectral.BandResampler(endmembers.band_centers, sensor_centers, fwhm2=sensor_fwhm)
+
+    # select the endmembers from just the group passed
+    key = f"LEVEL_{level}"
+    indices = metadata[key] == group
+    spectra_raw = endmembers.spectra[indices, :]
+
+    # subset them further if the n parameter is passed
+    if n > 0:
+        random_indices = np.random.randint(indices.sum(), size=n)
+        spectra_raw = spectra_raw[random_indices, :]
+
+    # loop through each spectrum and resample to the sensor wavelengths
+    resampled = list()
+    for i in range(spectra_raw.shape[0]):
+        spectrum = resampler(spectra_raw[i, :])
+        resampled.append(spectrum)
+
+    return resampled
 
 
 class spectralObject:
