@@ -54,6 +54,8 @@ def jfsp(path):
     :param path: file path to the JFSP spectra text file
     :return s: a ccblc spectralObject with the JFSP reflectance data
     """
+    import numpy as np
+
     from ccblc.utils import spectralObject
 
     # create the spectral object
@@ -63,7 +65,7 @@ def jfsp(path):
 
     # open the file and read the data
     with open(path, "r") as f:
-        header = f.readline()
+        f.readline()
         for i, line in enumerate(f):
             line = line.strip().split()
             s.spectra[0, i] = line[1]
