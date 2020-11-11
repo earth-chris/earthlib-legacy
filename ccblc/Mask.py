@@ -23,3 +23,18 @@ def Sentinel2(img):
     qa = img.select("QA60")
     mask = qa.bitwiseAnd(cirrusBitMask).eq(0).And(qa.bitwiseAnd(cloudsBitMask).eq(0))
     return img.mask(mask)
+
+
+def bySensor(sensor):
+    """
+    Returns the appropriate mask function to use by sensor type.
+
+    :param sensor:
+    :return function: the mask function associated with a sensor to pass to an ee .map() call
+    """
+    lookup = {
+        "Landsat8": Landsat8,
+        "Sentinel2": Sentinel2,
+    }
+    function = lookup[sensor]
+    return function
