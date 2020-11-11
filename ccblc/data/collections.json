@@ -35,7 +35,7 @@
     "collection": "LANDSAT/LC08/C01/T1_SR",
     "scale": 0.0001
   },
-  "Sentinel-2": {
+  "Sentinel2": {
     "band_centers": [
       0.494,
       0.56,
