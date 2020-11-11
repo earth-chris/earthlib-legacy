@@ -32,7 +32,7 @@ collections = {
         "scale": 0.0001,
     },
     # from http://www.gisagmaps.com/landsat-8-sentinel-2-bands/
-    "Sentinel-2": {
+    "Sentinel2": {
         "collection": "COPERNICUS/S2_SR",
         "band_names": [
             "B2",
