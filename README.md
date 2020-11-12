@@ -30,7 +30,7 @@ pip install . -r requirements.txt
 
 ### via conda
 
-I recommend working with `ccblc` in `conda` (download from [here](https://docs.conda.io/)). The `environment.yml` file in this repository contains a series of packages that are either required (`earthengine-api`) or just convenient (`jupyter`, `folium`) to have.
+I recommend working with `ccblc` in `conda` (download from [here](https://docs.conda.io/en/latest/miniconda.html)). The `environment.yml` file in this repository contains a series of packages that are either required (`earthengine-api`) or just convenient (`jupyter`, `folium`) to have.
 
 ```bash
 git clone https://github.com/earth-chris/ccb-lc.git
