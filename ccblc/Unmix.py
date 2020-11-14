@@ -38,6 +38,44 @@ def setSensor(sensor, n=30, bands=None):
     urban = [ee.List(urban_spectra.tolist()) for urban_spectra in urban_list]
 
 
+def computeModeledSpectra(endmembers, fractions):
+    """
+    Constructs a modeled spectrum for each image pixel based on the estimated endmember fractions
+
+    :param endmembers: a list of ee.List() items, each representing an endmember spectrum
+    :param fractions: an ee.Image output from .unmix() with the same number of bands as items in `endmembers`
+    :return modeled_reflectance: an ee.Image with n_bands equal to the number of endmember bands
+    """
+    import ee
+
+    # compute the number of endmember bands
+    nb = endmembers[0].length()
+    band_range = range(nb)
+    band_names = [f"M{band:02d}" for band in band_range]
+
+    # create a list to store each reflectance fraction
+    refl_fraction_images = list()
+
+    # loop through each endmember and mulitply the fraction estimated by the reflectance value
+    for i, endmember in enumerate(endmembers):
+        refl_fraction_list = [
+            ee.Image(endmember.get(band)).multiply(fractions.select[i])
+            for band in range(nb)
+        ]
+        refl_fraction_images.append(
+            ee.ImageCollection.fromImages(refl_fraction_list).toBands()
+        )
+
+    # convert these images to an image collection and sum them together
+    modeled_reflectance = (
+        ee.ImageCollection.fromImages(refl_fraction_images)
+        .sum()
+        .select(band_range, band_names)
+    )
+
+    return modeled_reflectance
+
+
 def VIS(img):
     """
     Unmixes according to the Vegetation-Impervious-Soil (VIS) approach.
