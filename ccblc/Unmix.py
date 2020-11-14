@@ -33,18 +33,11 @@ def setSensor(sensor, bands=None):
     global urban
 
     # then convert them to ee lists
-    pv = dict()
-    npv = dict()
-    soil = dict()
-    burn = dict()
-    urban = dict()
-
-    for i in range(n):
-        pv[f"{i:02d}"] = ee.List(pv_list[i].tolist())
-        npv[f"{i:02d}"] = ee.List(npv_list[i].tolist())
-        soil[f"{i:02d}"] = ee.List(soil_list[i].tolist())
-        burn[f"{i:02d}"] = ee.List(burn_list[i].tolist())
-        urban[f"{i:02d}"] = ee.List(urban_list[i].tolist())
+    pv = [ee.List(pv_spectra) for pv_spectra in pv_list]
+    npv = [ee.List(npv_spectra) for npv_spectra in npv_list]
+    soil = [ee.List(soil_spectra) for soil_spectra in soil_list]
+    burn = [ee.List(burn_spectra) for burn_spectra in burn_list]
+    urban = [ee.List(urban_spectra) for urban_spectra in urban_list]
 
 
 def VIS(img):
