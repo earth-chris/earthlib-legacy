@@ -80,6 +80,32 @@ def computeModeledSpectra(endmembers, fractions):
     return modeled_reflectance
 
 
+def computeSpectralRMSE(measured, modeled):
+    """
+    Computes the root mean squared error between measured and modeled spectra
+
+    :param measured: an ee.Image of measured reflectance
+    :param modeled: an ee.Image of modeled reflectance
+    :return rmse: a floating point ee.Image with pixel-wise RMSE values
+    """
+    import ee
+
+    # harmonize band info to ensure element-wise computation
+    band_names = list(measured.bandNames().getInfo())
+    band_range = list(range(len(band_names)))
+
+    # compute rmse
+    rmse = (
+        measured.select(band_range, band_names)
+        .subtract(modeled.select(band_range, band_names))
+        .pow(2)
+        .sum()
+        .sqrt()
+    )
+
+    return rmse
+
+
 def VIS(img):
     """
     Unmixes according to the Vegetation-Impervious-Soil (VIS) approach.
@@ -101,7 +127,8 @@ def VIS(img):
         )
         endmembers = [soil_spectra, pv_spectra, urban_spectra]
         modeled_refl = computeModeledSpectra(endmembers, unmixed_iter)
-        unmixed.append(unmixed_iter.addBands(modeled_refl))
+        rmse = computeSpectralRMSE(img, modeled_refl)
+        unmixed.append(unmixed_iter.addBands(rmse))
 
     # generate an image collection
     coll = ee.ImageCollection.fromImages(unmixed)
