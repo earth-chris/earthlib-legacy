@@ -49,8 +49,8 @@ def computeModeledSpectra(endmembers, fractions):
     import ee
 
     # compute the number of endmember bands
-    nb = endmembers[0].length()
-    band_range = range(nb)
+    nb = int(endmembers[0].length().getInfo())
+    band_range = list(range(nb))
     band_names = [f"M{band:02d}" for band in band_range]
 
     # create a list to store each reflectance fraction
@@ -58,18 +58,22 @@ def computeModeledSpectra(endmembers, fractions):
 
     # loop through each endmember and mulitply the fraction estimated by the reflectance value
     for i, endmember in enumerate(endmembers):
+        fraction = fractions.select([i])
         refl_fraction_list = [
-            ee.Image(endmember.get(band)).multiply(fractions.select[i])
-            for band in range(nb)
+            fraction.multiply(ee.Image(endmember.get(band).getInfo()))
+            for band in band_range
         ]
         refl_fraction_images.append(
-            ee.ImageCollection.fromImages(refl_fraction_list).toBands()
+            ee.ImageCollection.fromImages(refl_fraction_list)
+            .toBands()
+            .select(band_range, band_names)
         )
 
-    # convert these images to an image collection and sum them together
+    # convert these images to an image collection and sum them together to reconstruct the spectrum
     modeled_reflectance = (
         ee.ImageCollection.fromImages(refl_fraction_images)
         .sum()
+        .toFloat()
         .select(band_range, band_names)
     )
 
@@ -90,17 +94,22 @@ def VIS(img):
 
     # loop through each iteration and unmix each
     for soil_spectra, pv_spectra, urban_spectra in zip(soil, pv, urban):
-        unmixed_iter = img.unmix(
-            [soil_spectra, pv_spectra, urban_spectra], True, True
-        ).toFloat()
-        unmixed.append(unmixed_iter)
+        unmixed_iter = (
+            img.unmix([soil_spectra, pv_spectra, urban_spectra], True, True)
+            .toFloat()
+            .select([0, 1, 2], ["soil", "pv", "impervious"])
+        )
+        endmembers = [soil_spectra, pv_spectra, urban_spectra]
+        modeled_refl = computeModeledSpectra(endmembers, unmixed_iter)
+        unmixed.append(unmixed_iter.addBands(modeled_refl))
 
     # generate an image collection
     coll = ee.ImageCollection.fromImages(unmixed)
 
     # reduce it to a single image and return
-    unmixed = coll.mean().select([0, 1, 2], ["soil", "pv", "impervious"])
+    unmixed = coll.mean()
 
+    # return unmixed
     return unmixed
 
 
