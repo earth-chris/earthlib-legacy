@@ -99,8 +99,10 @@ def computeSpectralRMSE(measured, modeled):
         measured.select(band_range, band_names)
         .subtract(modeled.select(band_range, band_names))
         .pow(2)
-        .sum()
+        .reduce(ee.Reducer.sum())
         .sqrt()
+        .select([0], ["RMSE"])
+        .toFloat()
     )
 
     return rmse
