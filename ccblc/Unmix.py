@@ -120,9 +120,9 @@ def computeWeight(fractions, rmse_sum):
 
     # compute the relative weight
     rmse = fractions.select(["RMSE"])
-    ratio = rmse.divide(rmse_sum).toFloat()
+    ratio = rmse.divide(rmse_sum).toFloat().select([0], ["ratio"])
     weight = ee.Image(1).subtract(ratio).select([0], ["weight"])
-    unweighted = fractions.addBands([weight])
+    unweighted = fractions.addBands([weight, ratio])
 
     return unweighted
 
@@ -191,7 +191,6 @@ def VIS(img):
     # reduce it to a single image and return
     unmixed = ee.ImageCollection.fromImages(scaled).sum().toFloat()
 
-    # return unmixed
     return unmixed
 
 
@@ -209,16 +208,34 @@ def SVN(img):
 
     # loop through each iteration and unmix each
     for soil_spectra, pv_spectra, npv_spectra in zip(soil, pv, npv):
-        unmixed_iter = img.unmix(
-            [soil_spectra, pv_spectra, npv_spectra], True, True
-        ).toFloat()
-        unmixed.append(unmixed_iter)
+        unmixed_iter = (
+            img.unmix([soil_spectra, pv_spectra, npv_spectra], True, True)
+            .toFloat()
+            .select([0, 1, 2], ["soil", "pv", "npv"])
+        )
+        endmembers = [soil_spectra, pv_spectra, npv_spectra]
+        modeled_refl = computeModeledSpectra(endmembers, unmixed_iter)
+        rmse = computeSpectralRMSE(img, modeled_refl)
+        unmixed.append(unmixed_iter.addBands(rmse))
 
-    # generate an image collection
-    coll = ee.ImageCollection.fromImages(unmixed)
+    # use the sum of rmse to weight each estimate
+    rmse_sum = ee.Image(
+        ee.ImageCollection.fromImages(unmixed)
+        .select(["RMSE"])
+        .sum()
+        .select([0], ["SUM"])
+        .toFloat()
+    )
+    unscaled = [computeWeight(fractions, rmse_sum) for fractions in unmixed]
+
+    # use these weights to scale each unmixing estimate
+    weight_sum = ee.Image(
+        ee.ImageCollection.fromImages(unscaled).select(["weight"]).sum().toFloat()
+    )
+    scaled = [weightedAverage(fractions, weight_sum) for fractions in unscaled]
 
     # reduce it to a single image and return
-    unmixed = coll.mean().select([0, 1, 2], ["soil", "pv", "npv"])
+    unmixed = ee.ImageCollection.fromImages(scaled).sum().toFloat()
 
     return unmixed
 
@@ -239,15 +256,35 @@ def BVNS(img):
     for burn_spectra, pv_spectra, npv_spectra, soil_spectra in zip(
         burn, pv, npv, soil
     ):
-        unmixed_iter = img.unmix(
-            [burn_spectra, pv_spectra, npv_spectra, soil_spectra], True, True
-        ).toFloat()
-        unmixed.append(unmixed_iter)
+        unmixed_iter = (
+            img.unmix(
+                [burn_spectra, pv_spectra, npv_spectra, soil_spectra], True, True
+            )
+            .toFloat()
+            .select([0, 1, 2, 3], ["burned", "pv", "npv", "soil"])
+        )
+        endmembers = [burn_spectra, pv_spectra, npv_spectra, soil_spectra]
+        modeled_refl = computeModeledSpectra(endmembers, unmixed_iter)
+        rmse = computeSpectralRMSE(img, modeled_refl)
+        unmixed.append(unmixed_iter.addBands(rmse))
 
-    # generate an image collection
-    coll = ee.ImageCollection.fromImages(unmixed)
+    # use the sum of rmse to weight each estimate
+    rmse_sum = ee.Image(
+        ee.ImageCollection.fromImages(unmixed)
+        .select(["RMSE"])
+        .sum()
+        .select([0], ["SUM"])
+        .toFloat()
+    )
+    unscaled = [computeWeight(fractions, rmse_sum) for fractions in unmixed]
+
+    # use these weights to scale each unmixing estimate
+    weight_sum = ee.Image(
+        ee.ImageCollection.fromImages(unscaled).select(["weight"]).sum().toFloat()
+    )
+    scaled = [weightedAverage(fractions, weight_sum) for fractions in unscaled]
 
     # reduce it to a single image and return
-    unmixed = coll.mean().select([0, 1, 2, 3], ["burned", "pv", "npv", "soil"])
+    unmixed = ee.ImageCollection.fromImages(scaled).sum().toFloat()
 
     return unmixed
