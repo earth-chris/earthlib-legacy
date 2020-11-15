@@ -108,6 +108,46 @@ def computeSpectralRMSE(measured, modeled):
     return rmse
 
 
+def computeWeight(fractions, rmse_sum):
+    """
+    Computes the relative weight for an image's RMSE based on the sum of the global RMSE
+
+    :param fractions: a multi-band ee.Image object with an 'RMSE' band
+    :param rmse_sum: a single-band ee.Image object with the global RMSE value
+    :return unweighted: appends the fractions image with a 'weight' band
+    """
+    import ee
+
+    # compute the relative weight
+    rmse = fractions.select(["RMSE"])
+    ratio = rmse.divide(rmse_sum).toFloat()
+    weight = ee.Image(1).subtract(ratio).select([0], ["weight"])
+    unweighted = fractions.addBands([weight])
+
+    return unweighted
+
+
+def weightedAverage(fractions, weight_sum):
+    """
+    Computes an RMSE-weighted fractional cover image
+
+    :param fractions: a multi-band ee.Image object with a 'weight' band
+    :param weight_sum: a single-band ee.Image object with the global weight sum
+    :return weighted: scales the fractions image
+    """
+    import ee
+
+    # harmonize band info
+    band_names = list(fractions.bandNames().getInfo())
+    band_names.pop(band_names.index("weight"))
+    band_range = list(range(len(band_names)))
+
+    scaler = fractions.select(["weight"]).divide(weight_sum)
+    weighted = fractions.select(band_range, band_names).multiply(scaler)
+
+    return weighted
+
+
 def VIS(img):
     """
     Unmixes according to the Vegetation-Impervious-Soil (VIS) approach.
@@ -135,8 +175,18 @@ def VIS(img):
     # generate an image collection
     coll = ee.ImageCollection.fromImages(unmixed)
 
+    # use the sum of rmse to weight each estimate
+    rmse_sum = ee.Image(coll.select(["RMSE"]).sum().select([0], ["SUM"]).toFloat())
+    unscaled = [computeWeight(fractions, rmse_sum) for fractions in unmixed]
+
+    # use these weights to scale each unmixing estimate
+    weight_sum = ee.Image(
+        ee.ImageCollection.fromImages(unscaled).select(["weight"]).sum().toFloat()
+    )
+    scaled = [weightedAverage(fractions, weight_sum) for fractions in unscaled]
+
     # reduce it to a single image and return
-    unmixed = coll.mean()
+    unmixed = ee.ImageCollection.fromImages(scaled).sum().toFloat()
 
     # return unmixed
     return unmixed
