@@ -172,11 +172,14 @@ def VIS(img):
         rmse = computeSpectralRMSE(img, modeled_refl)
         unmixed.append(unmixed_iter.addBands(rmse))
 
-    # generate an image collection
-    coll = ee.ImageCollection.fromImages(unmixed)
-
     # use the sum of rmse to weight each estimate
-    rmse_sum = ee.Image(coll.select(["RMSE"]).sum().select([0], ["SUM"]).toFloat())
+    rmse_sum = ee.Image(
+        ee.ImageCollection.fromImages(unmixed)
+        .select(["RMSE"])
+        .sum()
+        .select([0], ["SUM"])
+        .toFloat()
+    )
     unscaled = [computeWeight(fractions, rmse_sum) for fractions in unmixed]
 
     # use these weights to scale each unmixing estimate
