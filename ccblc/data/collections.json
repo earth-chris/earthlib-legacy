@@ -35,6 +35,46 @@
     "collection": "LANDSAT/LC08/C01/T1_SR",
     "scale": 0.0001
   },
+  "MODIS": {
+    "band_centers": [
+      0.469,
+      0.555,
+      0.645,
+      0.858,
+      1.24,
+      1.64,
+      2.13
+    ],
+    "band_descriptions": [
+      "blue",
+      "green",
+      "red",
+      "near infrared",
+      "near infrared 2",
+      "shortwave infrared 1",
+      "shortwave infrared 2"
+    ],
+    "band_names": [
+      "sur_refl_b03",
+      "sur_refl_b04",
+      "sur_refl_b01",
+      "sur_refl_b02",
+      "sur_refl_b05",
+      "sur_refl_b06",
+      "sur_refl_b07"
+    ],
+    "band_widths": [
+      0.02,
+      0.02,
+      0.05,
+      0.035,
+      0.02,
+      0.024,
+      0.05
+    ],
+    "collection": "MODIS/006/MOD09GA",
+    "scale": 0.0001
+  },
   "Sentinel2": {
     "band_centers": [
       0.494,
