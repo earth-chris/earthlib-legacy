@@ -84,6 +84,38 @@ collections = {
         ],
         "scale": 0.0001,
     },
+    "MODIS": {
+        "collection": "MODIS/006/MOD09GA",
+        "band_names": [
+            "sur_refl_b03",
+            "sur_refl_b04",
+            "sur_refl_b01",
+            "sur_refl_b02",
+            "sur_refl_b05",
+            "sur_refl_b06",
+            "sur_refl_b07",
+        ],
+        "band_descriptions": [
+            "blue",
+            "green",
+            "red",
+            "near infrared",
+            "near infrared 2",
+            "shortwave infrared 1",
+            "shortwave infrared 2",
+        ],
+        "band_centers": [
+            0.469,
+            0.555,
+            0.645,
+            0.858,
+            1.240,
+            1.640,
+            2.130,
+        ],
+        "band_widths": [0.020, 0.020, 0.050, 0.035, 0.020, 0.024, 0.050],
+        "scale": 0.0001,
+    },
 }
 
 

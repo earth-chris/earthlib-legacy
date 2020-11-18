@@ -25,6 +25,18 @@ def Sentinel2(img):
     return img.mask(mask)
 
 
+def MODIS(img):
+    import ee
+
+    cloudShadowBitMask = ee.Number(2).pow(2).int()
+    cloudsBitMask = ee.Number(2).pow(0).int()
+    qa = img.select("state_1km")
+    mask = (
+        qa.bitwiseAnd(cloudShadowBitMask).eq(0).And(qa.bitwiseAnd(cloudsBitMask).eq(0))
+    )
+    return img.mask(mask)
+
+
 def bySensor(sensor):
     """
     Returns the appropriate mask function to use by sensor type.
@@ -35,6 +47,7 @@ def bySensor(sensor):
     lookup = {
         "Landsat8": Landsat8,
         "Sentinel2": Sentinel2,
+        "MODIS": MODIS,
     }
     function = lookup[sensor]
     return function
