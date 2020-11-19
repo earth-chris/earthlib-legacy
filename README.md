@@ -60,7 +60,7 @@ This package uses spectral library data from a range of sources. These include:
 
 # Contact
 
-All (c) 2018+ Christopher B. Anderson
+All (c) 2018+ Christopher B. Anderson  & Lingling Liu
 
 - [E-mail](mailto:cbanders@stanford.edu)
 - [Google Scholar](https://scholar.google.com/citations?user=LoGxS40AAAAJ&hl=en)
