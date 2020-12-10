@@ -9,12 +9,12 @@ def spectralLibrary(path):
     Reads an ENVI-format spectral library into memory.
 
     :param path: file path to the ENVI spectral library file. Looks for an accompanying .hdr file.
-    :return s: a ccblc spectralObject with the spectral library data
+    :return s: an earthlib spectralObject with the spectral library data
     """
     import numpy as np
     import spectral
 
-    from ccblc.utils import checkFile, spectralObject
+    from earthlib.utils import checkFile, spectralObject
 
     # check for header files
     if checkFile(path[:-4] + ".hdr"):
@@ -47,9 +47,9 @@ def spectralLibrary(path):
 
 def endmembers():
     """
-    Reads the ccb-lc spectral endmember library
+    Reads the earthlib spectral endmember library
 
-    :return s: a ccblc spectralObject with the endmember library reflectance data
+    :return s: an earthlib spectralObject with the endmember library reflectance data
     """
     from .utils import _endmember_path
 
@@ -64,11 +64,11 @@ def jfsp(path):
     and returns an object with the mean and +/- standard deviation reflectance data
 
     :param path: file path to the JFSP spectra text file
-    :return s: a ccblc spectralObject with the JFSP reflectance data
+    :return s: an earthlib spectralObject with the JFSP reflectance data
     """
     import numpy as np
 
-    from ccblc.utils import spectralObject
+    from earthlib.utils import spectralObject
 
     # create the spectral object
     s = spectralObject(1, type="asd")
@@ -94,11 +94,11 @@ def usgs(path):
     Reads the ascii format spectral data from USGS and returns an object with the mean and +/- standard deviation
 
     :param path: file path the the USGS spectra text file
-    :return s: a ccblc spectralObject with the USGS reflectance data
+    :return s: an earthlib spectralObject with the USGS reflectance data
     """
     import numpy as np
 
-    from ccblc.utils import spectralObject
+    from earthlib.utils import spectralObject
 
     # open the file and read header info
     with open(path, "r") as f:

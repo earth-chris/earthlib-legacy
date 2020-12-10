@@ -1,8 +1,12 @@
-# CCB-LC
+# The Earth Library
 
-The Stanford Center for Conservation Biology's Land Cover mapping system.
+`eli` is a spectral library and a set of software tools for satellite-base land cover mapping.
 
-This work is in early production and has not yet been formally described. Soon, friends.
+The spectral library contains several thousand unique spectral endmembers representing green vegetation, soil, non-photosynthetic vegetation, urban materials, and char. The reflectance cover the visible to the shortwave infrared (400-2450 nm) at 10 nm band widths.
+
+The software tools resample these data to match the wavelenths of popular satellite and airborne earth observing sensors and to run spectral mixture analysis in Google Earth Engine via the `earthengine` python package.
+
+This work is in development and has not yet been formally described. Soon, friends.
 
 ### Table of Contents
 
@@ -17,33 +21,33 @@ This work is in early production and has not yet been formally described. Soon, 
 This library can be installed via pip directly from Github.
 
 ```bash
-pip install git+https://github.com/earth-chris/ccb-lc.git
+pip install git+https://github.com/earth-chris/earthlib.git
 ```
 
 You can also clone the source repository and install it locally.
 
 ```bash
-git clone https://github.com/earth-chris/ccb-lc.git
-cd ccb-lc
+git clone https://github.com/earth-chris/earthlib.git
+cd earthlib
 pip install . -r requirements.txt
 ```
 
 ### via conda
 
-I recommend working with `ccblc` in `conda` (download from [here](https://docs.conda.io/en/latest/miniconda.html)). The `environment.yml` file in this repository contains a series of packages that are either required (`earthengine-api`) or just convenient (`jupyter`, `folium`) to have.
+I recommend working with `earthlib` in `conda` (download from [here](https://docs.conda.io/en/latest/miniconda.html)). The `environment.yml` file in this repository contains a series of packages that are either required (`earthengine-api`) or just convenient (`jupyter`, `folium`) to have.
 
 ```bash
-git clone https://github.com/earth-chris/ccb-lc.git
-cd ccb-lc
+git clone https://github.com/earth-chris/earthlib.git
+cd earthlib
 conda env update
 ```
 
 ### using iPython defaults
 
-If you're interested in using the ccb default `ipython` profile, which contains a few plotting defaults, you can set an environment variable to do this for you. From the base `ccb-lc` directory, run the following:
+If you're interested in using our custom `ipython` profile, which contains a few plotting defaults, you can set an environment variable to do this for you. From the base `earthlib` directory, run the following:
 
 ```bash
-conda activate ccblc
+conda activate earthlib
 conda env config vars set IPYTHONDIR=$PWD/ipython
 ```
 
@@ -60,8 +64,4 @@ This package uses spectral library data from a range of sources. These include:
 
 # Contact
 
-All (c) 2018+ Christopher B. Anderson  & Lingling Liu
-
-- [E-mail](mailto:cbanders@stanford.edu)
-- [Google Scholar](https://scholar.google.com/citations?user=LoGxS40AAAAJ&hl=en)
-- [Personal website](https://earth-chris.github.io/)
+All (c) 2018+ [Christopher B. Anderson](mailto:cbanders@stanford.edu) & [Lingling Liu](mailto:lingling.liu@stanford.edu). This work is supported by the Stanford Center for Conservation Biology and the Natural Capital Project.

@@ -17,7 +17,7 @@ logging.basicConfig(
     format=("%(asctime)s %(levelname)s %(name)s [%(funcName)s] | %(message)s"),
     stream=sys.stdout,
 )
-LOGGER = logging.getLogger("ccblc")
+LOGGER = logging.getLogger("earthlib")
 
 # get file paths for the package data
 _package_path = os.path.realpath(__file__)
@@ -90,7 +90,7 @@ def getCollection(sensor):
     """
     Returns the earth engine collection name for a specific satellite sensor.
 
-    :param sensor: the name of the sensor (from ccblc.listSensors()).
+    :param sensor: the name of the sensor (from earthlib.listSensors()).
     :return collection: a string with the earth engine collection
     """
     collection = collections[sensor]["collection"]
@@ -101,7 +101,7 @@ def getScaler(sensor):
     """
     Returns the scaling factor to convert sensor data to percent reflectance (0-1).
 
-    :param sensor: the name of the sensor (from ccblc.listSensors()).
+    :param sensor: the name of the sensor (from earthlib.listSensors()).
     """
     scaler = collections[sensor]["scale"]
     return scaler
@@ -111,7 +111,7 @@ def getBands(sensor):
     """
     Returns a list of available band names by sensor
 
-    :param sensor: the name of the sensor (from ccblc.listSensors()).
+    :param sensor: the name of the sensor (from earthlib.listSensors()).
     :return bands: a list of sensor-specific band names
     """
     bands = collections[sensor]["band_names"]
@@ -137,7 +137,7 @@ def getBandIndices(custom_bands, sensor):
 
 def selectSpectra(Type, sensor, n=0, bands=None):
     """
-    Subsets the ccblc spectral endmember library to a specific class and resamples the spectra
+    Subsets the earthlib spectral endmember library to a specific class and resamples the spectra
     to the wavelengths of a specific satellite sensor. This also performs random spectra selection.
 
     :param Type: the type of spectra to select
@@ -154,14 +154,14 @@ def selectSpectra(Type, sensor, n=0, bands=None):
     level = getTypeLevel(Type)
     if level == 0:
         LOGGER.warning(
-            f"Invalid group parameter: {Type}. Get valid values from ccblc.listTypes()."
+            f"Invalid group parameter: {Type}. Get valid values from earthlib.listTypes()."
         )
         return None
 
     # qc the collection selected
     if sensor not in listSensors():
         LOGGER.warning(
-            f"Invalid sensor parameter: {sensor}. Get valid values from ccblc.listSensors()."
+            f"Invalid sensor parameter: {sensor}. Get valid values from earthlib.listSensors()."
         )
         return None
 
@@ -419,7 +419,7 @@ class spectralObject:
             "header offset": 0,
             "interleave": "bsq",
             "byte order": 0,
-            "sensor type": "ccblc",
+            "sensor type": "earthlib",
             "spectra names": names,
             "wavelength units": self.band_unit,
             "wavelength": band_centers,
