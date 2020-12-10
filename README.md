@@ -1,12 +1,12 @@
 # The Earth Library
 
-`eli` is a spectral library and a set of software tools for satellite-base land cover mapping.
+`earthlib` is a spectral library and a set of software tools for satellite-base land cover mapping. `import earthlib as eli`
 
 The spectral library contains several thousand unique spectral endmembers representing green vegetation, soil, non-photosynthetic vegetation, urban materials, and char. The reflectance cover the visible to the shortwave infrared (400-2450 nm) at 10 nm band widths.
 
 The software tools resample these data to match the wavelenths of popular satellite and airborne earth observing sensors and to run spectral mixture analysis in Google Earth Engine via the `earthengine` python package.
 
-This work is in development and has not yet been formally described. Soon, friends.
+This work is in development and has not yet been formally described.
 
 ### Table of Contents
 
