@@ -1,11 +1,11 @@
 from setuptools import setup
 
-version = open("ccblc/__version__.py").read().strip('"\n')
+version = open("earthlib/__version__.py").read().strip('"\n')
 
 setup_args = {
-    "name": "ccblc",
+    "name": "earthlib",
     "version": version,
-    "url": "https://github.com/earth-chris/ccb-lc",
+    "url": "https://github.com/earth-chris/earthlib",
     "license": "MIT",
     "author": "Christopher Anderson",
     "author_email": "cbanders@stanford.edu",
@@ -17,17 +17,17 @@ setup_args = {
         "earth engine",
         "spectral unmixing",
     ],
-    "packages": ["ccblc"],
+    "packages": ["earthlib"],
     "include_package_data": True,
     "platforms": "any",
     "data_files": [
         (
-            "ccblc",
+            "earthlib",
             [
-                "ccblc/data/spectra.csv",
-                "ccblc/data/spectra.sli",
-                "ccblc/data/spectra.sli.hdr",
-                "ccblc/data/collections.json",
+                "earthlib/data/spectra.csv",
+                "earthlib/data/spectra.sli",
+                "earthlib/data/spectra.sli.hdr",
+                "earthlib/data/collections.json",
             ],
         )
     ],

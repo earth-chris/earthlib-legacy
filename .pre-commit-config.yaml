@@ -6,7 +6,7 @@ repos:
     rev: stable
     hooks:
       - id: black
-        args: ["ccblc", "--line-length=87", "--target-version=py37"]
+        args: ["earthlib", "--line-length=87", "--target-version=py37"]
 
   - repo: https://github.com/pycqa/flake8
     rev: master

@@ -1,4 +1,4 @@
-name: ccblc
+name: earthlib
 
 channels:
   - conda-forge

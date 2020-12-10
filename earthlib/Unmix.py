@@ -8,7 +8,7 @@ def setSensor(sensor, n=30, bands=None):
     """
     Specifies the sensor to retrieve endmembers for.
 
-    :param sensor: the name of the sensor (from ccblc.listSensors()).
+    :param sensor: the name of the sensor (from earthlib.listSensors()).
     :param n: the number of iterations for unmixing
     :param bands: the bands to select.
     :return none: sets a series of global endmember variables
