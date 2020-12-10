@@ -1,6 +1,7 @@
 from setuptools import setup
 
 version = open("earthlib/__version__.py").read().strip('"\n')
+long_description = open("README.md", "r", encoding="utf-8").read()
 
 setup_args = {
     "name": "earthlib",
@@ -9,7 +10,9 @@ setup_args = {
     "license": "MIT",
     "author": "Christopher Anderson",
     "author_email": "cbanders@stanford.edu",
-    "description": "Spectral unmixing package for land cover mapping",
+    "description": "Spectral unmixing library for satellite land cover mapping",
+    "long_description": long_description,
+    "long_description_content_type": "text/markdown",
     "keywords": [
         "ecology",
         "conservation",
@@ -32,6 +35,12 @@ setup_args = {
         )
     ],
     "install_requires": ["folium", "matplotlib", "numpy", "pandas", "spectral"],
+    "python_requires": ">=3.4",
+    "classifiers": [
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
 }
 
 setup(**setup_args)
