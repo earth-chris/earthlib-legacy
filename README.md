@@ -1,8 +1,8 @@
-<img src="plots/earth-unmixed.png">
-
 # The Earth Library
 
-`earthlib` is a spectral library and a set of software tools for satellite-base land cover mapping. `import earthlib as eli`
+<img src="plots/earth-unmixed.png">
+
+`earthlib` is a spectral library and a set of software tools for satellite-base land cover mapping. `import earthlib as eli`.
 
 The spectral library contains several thousand unique spectral endmembers representing green vegetation, soil, non-photosynthetic vegetation, urban materials, and char. The reflectance data cover the visible to the shortwave infrared wavelengths (400-2450 nm) at 10 nm band widths.
 
@@ -20,10 +20,10 @@ This work is still in development and has not yet been formally described.
 
 ### via pip
 
-This library can be installed via pip directly from Github.
+This library can be installed via `pip`.
 
 ```bash
-pip install git+https://github.com/earth-chris/earthlib.git
+pip install earthlib
 ```
 
 You can also clone the source repository and install it locally.
@@ -43,6 +43,8 @@ git clone https://github.com/earth-chris/earthlib.git
 cd earthlib
 conda env update
 ```
+
+Once the environment has been created, you can activate it with `conda activate earthlib`.
 
 ### using iPython defaults
 
