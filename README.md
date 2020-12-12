@@ -2,7 +2,7 @@
 
 <img src="plots/earth-unmixed.png">
 
-`earthlib` is a spectral library and a set of software tools for satellite-base land cover mapping. `import earthlib as eli`.
+`earthlib` is a spectral library and a set of software tools for satellite-base land cover mapping.
 
 The spectral library contains several thousand unique spectral endmembers representing green vegetation, soil, non-photosynthetic vegetation, urban materials, and char. The reflectance data cover the visible to the shortwave infrared wavelengths (400-2450 nm) at 10 nm band widths.
 
