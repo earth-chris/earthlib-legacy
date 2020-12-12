@@ -1,12 +1,14 @@
+<img src="plots/earth-unmixed.png">
+
 # The Earth Library
 
 `earthlib` is a spectral library and a set of software tools for satellite-base land cover mapping. `import earthlib as eli`
 
-The spectral library contains several thousand unique spectral endmembers representing green vegetation, soil, non-photosynthetic vegetation, urban materials, and char. The reflectance cover the visible to the shortwave infrared (400-2450 nm) at 10 nm band widths.
+The spectral library contains several thousand unique spectral endmembers representing green vegetation, soil, non-photosynthetic vegetation, urban materials, and char. The reflectance data cover the visible to the shortwave infrared wavelengths (400-2450 nm) at 10 nm band widths.
 
-The software tools resample these data to match the wavelenths of popular satellite and airborne earth observing sensors and to run spectral mixture analysis in Google Earth Engine via the `earthengine` python package.
+The software tools i) resample these data to match the wavelenths of popular satellite and airborne earth observing sensors and ii) to run spectral mixture analysis in Google Earth Engine via the `earthengine` python package. The goal is to help characterize spatial and temporal patterns in global vegetation cover, as well as patterns of soil cover, burned area, non-photosynthetic vegetation, and impervious surfaces, using any satellite data source.
 
-This work is in development and has not yet been formally described.
+This work is still in development and has not yet been formally described.
 
 ### Table of Contents
 
