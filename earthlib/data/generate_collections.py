@@ -31,6 +31,30 @@ collections = {
         "band_widths": [0.060, 0.057, 0.037, 0.028, 0.085, 0.187],
         "scale": 0.0001,
     },
+
+collections = {
+    "Landsat7": {
+        "collection": "LANDSAT/LE07/C01/T1_SR",
+        "band_names": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B7",
+        ],
+        "band_descriptions": [
+            "blue",
+            "green",
+            "red",
+            "near infrared",
+            "shortwave infrared 1",
+            "shortwave infrared 2",
+        ],
+        "band_centers": [0.485, 0.56, 0.66, 0.835, 1.65, 2.22],
+        "band_widths": [0.07, 0.08, 0.06, 0.13, 0.2, 0.26],
+        "scale": 0.0001,
+    },
     # from http://www.gisagmaps.com/landsat-8-sentinel-2-bands/
     "Sentinel2": {
         "collection": "COPERNICUS/S2_SR",
