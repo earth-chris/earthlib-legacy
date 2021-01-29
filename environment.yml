@@ -26,5 +26,4 @@ dependencies:
   - shapely
   - pip
   - pip:
-    - -r requirements.txt
-    - .
+    - -e .
