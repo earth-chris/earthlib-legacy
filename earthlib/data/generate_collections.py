@@ -31,8 +31,6 @@ collections = {
         "band_widths": [0.060, 0.057, 0.037, 0.028, 0.085, 0.187],
         "scale": 0.0001,
     },
-
-collections = {
     "Landsat7": {
         "collection": "LANDSAT/LE07/C01/T1_SR",
         "band_names": [
@@ -55,7 +53,6 @@ collections = {
         "band_widths": [0.07, 0.08, 0.06, 0.13, 0.2, 0.26],
         "scale": 0.0001,
     },
-collections = {
     "Landsat4": {
         "collection": "LANDSAT/LT04/C01/T1_SR",
         "band_names": [
@@ -78,7 +75,6 @@ collections = {
         "band_widths": [0.07, 0.08, 0.06, 0.13, 0.2, 0.27],
         "scale": 0.0001,
     },
-collections = {
     "Landsat5": {
         "collection": "LANDSAT/LT05/C01/T1_SR",
         "band_names": [
