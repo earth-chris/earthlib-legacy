@@ -97,6 +97,25 @@ collections = {
         "band_widths": [0.07, 0.08, 0.06, 0.13, 0.2, 0.27],
         "scale": 0.0001,
     },
+    # DN values
+    "ALOS/AVNIR-2 ORI": {
+        "collection": "JAXA/ALOS/AVNIR-2/ORI",
+        "band_names": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+        ],
+        "band_descriptions": [
+            "blue",
+            "green",
+            "red",
+            "near infrared",
+        ],
+        "band_centers": [0.46, 0.56, 0.65, 0.825],
+        "band_widths": [0.08, 0.08, 0.08, 0.13],
+        "scale": 1,
+    },
     # from http://www.gisagmaps.com/landsat-8-sentinel-2-bands/
     "Sentinel2": {
         "collection": "COPERNICUS/S2_SR",
