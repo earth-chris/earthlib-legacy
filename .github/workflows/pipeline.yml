@@ -1,0 +1,44 @@
+name: docs
+on:
+  push:
+    branches:
+      - master
+      - main
+jobs:
+  deploy-docs:
+    runs-on: ubuntu-latest
+    name: "Build docs"
+    env: 
+        PYTHON_VERSION: 3.7
+        CONDA_ENV: earthlib
+    steps:
+      - uses: actions/checkout@v2
+      
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      
+      - name: Set up conda cache
+        uses: actions/cache@v2
+        env:
+          # increments to reset cache if environment.yml hasn't changed
+          CACHE_NUMBER: 0
+        with:
+          path: ~/conda_pkgs_dir
+          key:
+              ${{ runner.os }}-conda-${{ env.CACHE_NUMBER }}-${{hashFiles('environment.yml') }}
+          restore-keys:
+              ${{ runner.os }}-conda
+      
+      - name: Set up conda environment
+        uses: conda-incubator/setup-miniconda@v2
+        timeout-minutes: 30
+        with:
+          activate-environment: ${{ env.CONDA_ENV }}
+          auto-update-conda: true
+          python-version: ${{ env.PYTHON_VERSION }}
+          environment-file: environment.yml
+          use-only-tar-bz2: true # for dependency caching
+
+      - name: Deploy docs
+        run: conda run --name ${{ env.CONDA_ENV }} mkdocs gh-deploy --force
