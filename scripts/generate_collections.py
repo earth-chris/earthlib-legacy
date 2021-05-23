@@ -1,10 +1,10 @@
-"""
-A script to create a formatted json file with sensor/collection parameters
-"""
+"""A script to create a formatted json file with sensor/collection parameters."""
+
 import json
+import os
 
 # set the output file path
-output_path = "collections.json"
+output_path = os.path.join("earthlib", "data", "collections.json")
 
 # create the dictionary to write as json
 collections = {
