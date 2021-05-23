@@ -5,5 +5,6 @@ from .utils import (
     getScaler,
     listSensors,
     listTypes,
+    metadata,
     selectSpectra,
 )
