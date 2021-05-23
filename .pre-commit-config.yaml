@@ -3,19 +3,25 @@ default_language_version:
 
 repos:
   - repo: https://github.com/ambv/black
-    rev: stable
+    rev: 21.5b1
     hooks:
       - id: black
-        args: ["earthlib", "--line-length=87", "--target-version=py37"]
+        args: ["earthlib", "--line-length=88", "--target-version=py37"]
 
   - repo: https://github.com/pycqa/flake8
-    rev: master
+    rev: 3.9.2
     hooks:
       - id: flake8
         args: ["--select=C,E,F,W,B,B950", "--max-line-length=88", "--ignore=E203,E501,W503,F401,F403,E266,F821", "--exclude=bin,ipython,legacy,plots"]
 
+  - repo: https://github.com/timothycrosley/isort
+    rev: 5.8.0
+    hooks:
+      - id: isort
+        args: ["-l 88", "--profile", "black", "."]
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.4.0
+    rev: v4.0.1
     hooks:
       - id: check-yaml
       - id: detect-private-key

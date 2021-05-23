@@ -1,6 +1,6 @@
 # The Earth Library
 
-<img src="docs/img/earth-unmixed.png">
+<img src="img/earth-unmixed.png">
 
 ---
 

@@ -1,6 +1,5 @@
-"""
-Utility functions for working with spectral libraries and earth engine routines
-"""
+"""Utility functions for working with spectral libraries and earth engine routines."""
+
 import json
 import logging
 import os
@@ -36,11 +35,13 @@ metadata = pd.read_csv(_metadata_path)
 
 # helper / utility functions
 def checkFile(path):
-    """
-    Checks if a file exists and can be read.
+    """Verifies whether a file exists and can be read.
 
-    :param path: the file path to check
-    :return bool:
+    Args:
+        path: the file path to check.
+
+    Returns:
+        boolean.
     """
     if os.path.isfile(path) and os.access(path, os.R_OK):
         return True
@@ -49,21 +50,26 @@ def checkFile(path):
 
 
 def listSensors():
-    """
-    Returns a list of the supported sensor image collections.
+    """Returns a list of the supported sensor image collections.
 
-    :returns sensors: a list of supported sensors using the names referenced by this package
+    Args:
+        None
+
+    Returns:
+        sensors: a list of supported sensors using the names referenced by this package.
     """
     sensors = list(collections.keys())
     return sensors
 
 
 def listTypes(level=2):
-    """
-    Returns a list of the spectral classification types.
+    """Returns a list of the spectral classification types.
 
-    :param level: the level of spectral classification specificity to return. Supports integers 1-4.
-    :returns classes: a list of spectral data types referenced throughout this package
+    Args:
+        level: the level of spectral classification specificity to return. Supports integers 1-4.
+
+    Returns:
+        classes: a list of spectral data types referenced throughout this package.
     """
     key = f"LEVEL_{level}"
     types = list(metadata[key].unique())
@@ -71,11 +77,13 @@ def listTypes(level=2):
 
 
 def getTypeLevel(Type):
-    """
-    Checks whether a spectral data type is available in the endmember library.
+    """Checks whether a spectral data type is available in the endmember library.
 
-    :param Type: the type of spectra to select
-    :return level: the metadata "level" of the group for subsetting. returns 0 if not found.
+    Args:
+        Type: the type of spectra to select.
+
+    Returns:
+        level: the metadata "level" of the group for subsetting. returns 0 if not found.
     """
     for i in range(4):
         level = i + 1
@@ -87,44 +95,53 @@ def getTypeLevel(Type):
 
 
 def getCollection(sensor):
-    """
-    Returns the earth engine collection name for a specific satellite sensor.
+    """Returns the earth engine collection name for a specific satellite sensor.
 
-    :param sensor: the name of the sensor (from earthlib.listSensors()).
-    :return collection: a string with the earth engine collection
+    Args:
+        sensor: the name of the sensor (from earthlib.listSensors()).
+
+    Returns:
+        collection: a string with the earth engine collection.
     """
     collection = collections[sensor]["collection"]
     return collection
 
 
 def getScaler(sensor):
-    """
-    Returns the scaling factor to convert sensor data to percent reflectance (0-1).
+    """Returns the scaling factor to convert sensor data to percent reflectance (0-1).
 
-    :param sensor: the name of the sensor (from earthlib.listSensors()).
+    Args:
+        sensor: the name of the sensor (from earthlib.listSensors()).
+
+    Returns:
+        scaler: the scale factor to multiply.
     """
     scaler = collections[sensor]["scale"]
     return scaler
 
 
 def getBands(sensor):
-    """
-    Returns a list of available band names by sensor
+    """Returns a list of available band names by sensor.
 
-    :param sensor: the name of the sensor (from earthlib.listSensors()).
-    :return bands: a list of sensor-specific band names
+    Args:
+        sensor: the name of the sensor (from earthlib.listSensors()).
+
+    Returns:
+        bands: a list of sensor-specific band names.
     """
     bands = collections[sensor]["band_names"]
     return bands
 
 
 def getBandIndices(custom_bands, sensor):
-    """
-    Cross-references a list of bands passed as strings to the 0-based integer indices
+    """Cross-references a list of bands passed as strings to the 0-based integer indices
 
-    :param custom_bands: a list of band names
-    :param sensor: a string sensor type for indexing the supported collections
-    :return indices: a list of integer band indices
+    Args:
+        custom_bands: a list of band names.
+        sensor: a string sensor type for indexing the supported collections.
+
+    Returns:
+        indices: list of integer band indices.
     """
     sensor_bands = collections[sensor]["band_names"]
     indices = list()
@@ -136,15 +153,19 @@ def getBandIndices(custom_bands, sensor):
 
 
 def selectSpectra(Type, sensor, n=0, bands=None):
-    """
-    Subsets the earthlib spectral endmember library to a specific class and resamples the spectra
-    to the wavelengths of a specific satellite sensor. This also performs random spectra selection.
+    """Subsets the earthlib spectral endmember library.
 
-    :param Type: the type of spectra to select
-    :param sensor: the sensor type to resample wavelengths to
-    :param n: the number of random spectra to sample. n=0 returns all spectra
-    :param bands: a list of bands to use. Accepts 0-based indices or a list of band names (e.g. ["B2", "B3", "B4"])
-    :return spectra: a list of spectral endmembers resampled to a specific sensor's wavelengths.
+    Selects endmembers from specific class, then resamples the spectra to the wavelengths
+    of a specific satellite sensor. This also performs random spectra selection.
+
+    Args:
+        Type: the type of spectra to select.
+        sensor: the sensor type to resample wavelengths to.
+        n: the number of random spectra to sample. n=0 returns all spectra.
+        bands: list of bands to use. Accepts 0-based indices or a list of band names (e.g. ["B2", "B3", "B4"]).
+
+    Returns:
+        spectra: list of spectral endmembers resampled to a specific sensor's wavelengths.
     """
     import spectral
 
@@ -211,16 +232,18 @@ class spectralObject:
         band_centers=None,
         band_quantity="Wavelength",
     ):
-        """
-        A custom object that reads, stores, writes, and plots spectral data.
+        """Custom object to read, store, write, and plot spectral data.
 
-        :param n_spectra: the number of spectra included in the library
-        :param n_wl: the number of wavelengths for each spectrum
-        :param sensor: the sensor name
-        :param band_unit: the unit of measurement (typically micrometers or nanometers)
-        :param band_centers: the center wavelength for each band
-        :param band_quantity: the quantity measured by each band
-        :return s: a spectral object
+        Args:
+            n_spectra: the number of spectra included in the library
+            n_wl: the number of wavelengths for each spectrum
+            sensor: the sensor name
+            band_unit: the unit of measurement (typically micrometers or nanometers)
+            band_centers: the center wavelength for each band
+            band_quantity: the quantity measured by each band
+
+        Returns:
+            s: a spectral object.
         """
 
         # set to asd type if no params set to change n_wl
@@ -258,12 +281,17 @@ class spectralObject:
         self.spectra = np.zeros([n_spectra, n_wl])
 
     def remove_water_bands(self, set_nan=False):
-        """
-        Sets reflectance data from water absorption bands to 0 or NaN (1.35-1.46 um and 1.79-1.96 um).
+        """Sets reflectance data from water absorption bands to eithr 0 or NaN.
 
-        :param set_nan: set the water bands to NaN. False sets values to 0.
-        :return none: updates the self.spectra array
+        Wavelenths in the ranges of (1.35-1.46 um and 1.79-1.96 um) will be masked.
+
+        Args:
+            set_nan: set the water bands to NaN. False sets values to 0.
+
+        Returns:
+            None: updates the self.spectra array
         """
+
         if set_nan:
             update_val = np.nan
         else:
@@ -287,10 +315,15 @@ class spectralObject:
         self.spectra[:, nd] = update_val
 
     def get_shortwave_bands(self):
-        """
-        Returns an index of the bands that encompass the shortwave range (350 - 2500 nm)
+        """Returns indices of the bands that encompass the shortwave range.
 
-        :return overlap: an index of bands to subset to the shortwave range
+        This refers to the range (350 - 2500 nm).
+
+        Args:
+            None.
+
+        Returns:
+            overlap: an index of bands to subset to the shortwave range.
         """
         # set range to return in nanometers
         shortwave_range = [350.0, 2500.0]
@@ -308,12 +341,14 @@ class spectralObject:
         return overlap
 
     def plot(self, inds=None, legend=False):
-        """
-        Plots the spectra using a standard format
+        """Plots the spectra using a standard format
 
-        :param inds: optional 0-based indices for which spectra to plot
-        :param legend: add a legend with the spectra names
-        :return plt: the matplotlib pyplot object
+        Args:
+            inds: optional 0-based indices for which spectra to plot
+            legend: add a legend with the spectra names
+
+        Returns:
+            plt: the matplotlib pyplot object
         """
 
         # set basic parameters
@@ -333,7 +368,6 @@ class spectralObject:
             inds = range(0, len(self.names))
 
         # plot differently if a single index or a list is passed
-        # loop through each item to plot
         if type(inds) is list:
             for i in inds:
                 plt.plot(self.band_centers, self.spectra[i, :], label=self.names[i])
@@ -351,11 +385,13 @@ class spectralObject:
         return plt
 
     def bn(self, inds=None):
-        """
-        Brightness normalizes the spectra
+        """Brightness normalizes the spectra.
 
-        :param inds: the band indices to use for normalization
-        :return none: updates the self.spectra array
+        Args:
+            inds: the band indices to use for normalization.
+
+        Returns:
+            none: updates the self.spectra array.
         """
         # check if indices were set and valid. if not, use all bands
         if inds:
@@ -378,12 +414,14 @@ class spectralObject:
             self.band_centers = self.band_centers[inds]
 
     def write_sli(self, path, row_inds=None, spectral_inds=None):
-        """
-        Writes the spectral object to an ENVI spectral library file
+        """Writes the spectral object to an ENVI spectral library file.
 
-        :param path: the output file to write the array to
-        :param inds: the row-wise indices of the array to write out
-        :return none: writes the data to disk
+        Args:
+            path: the output file to write the array to.
+            inds: the row-wise indices of the array to write out.
+
+        Returns:
+            None: writes the data to disk.
         """
         # set up the output file names for the library and the header
         base, ext = os.path.splitext(path)

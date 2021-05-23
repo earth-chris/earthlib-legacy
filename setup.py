@@ -2,6 +2,7 @@ from setuptools import setup
 
 version = open("earthlib/__version__.py").read().strip('"\n')
 long_description = open("README.md", "r", encoding="utf-8").read()
+requirements = open("requirements.txt", "r", encoding="utf-8").read().strip().split()
 
 setup_args = {
     "name": "earthlib",
@@ -34,7 +35,7 @@ setup_args = {
             ],
         )
     ],
-    "install_requires": ["folium", "matplotlib", "numpy", "pandas", "spectral"],
+    "install_requires": requirements,
     "python_requires": ">=3.4",
     "classifiers": [
         "Programming Language :: Python :: 3",

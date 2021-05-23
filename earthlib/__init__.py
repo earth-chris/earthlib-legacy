@@ -5,5 +5,9 @@ from .utils import (
     getScaler,
     listSensors,
     listTypes,
+    metadata,
     selectSpectra,
 )
+
+# expose the full spectral library
+library = Read.endmembers()
