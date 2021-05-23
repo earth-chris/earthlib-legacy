@@ -1,6 +1,6 @@
 # The Earth Library
 
-<img src="plots/earth-unmixed.png">
+<img src="docs/figures/earth-unmixed.png">
 
 `earthlib` is a spectral library and a set of software tools for satellite-base land cover mapping.
 
