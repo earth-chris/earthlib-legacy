@@ -1,6 +1,4 @@
-"""
-Functions for reading specifically formatted data
-"""
+"""Functions for reading specifically formatted data."""
 
 
 # for ENVI spectral libraries

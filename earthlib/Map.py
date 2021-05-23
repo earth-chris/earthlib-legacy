@@ -1,6 +1,4 @@
-"""
-Functions for interacting with earth engine map data in folium
-"""
+"""Functions for interacting with earth engine map data in folium."""
 
 
 def addLayer(self, eeImage, visParams={}, name="Layer"):

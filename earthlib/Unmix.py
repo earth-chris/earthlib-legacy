@@ -1,6 +1,4 @@
-"""
-Routines for performing spectral unmixing on earth engine images
-"""
+"""Routines for performing spectral unmixing on earth engine images."""
 
 
 # this routine must be run before any of the specific unmixing routines are set
@@ -14,6 +12,7 @@ def setSensor(sensor, n=30, bands=None):
     :return none: sets a series of global endmember variables
     """
     import ee
+
     from .utils import selectSpectra
 
     # get them as a python array
@@ -253,13 +252,9 @@ def BVNS(img):
     unmixed = list()
 
     # loop through each iteration and unmix each
-    for burn_spectra, pv_spectra, npv_spectra, soil_spectra in zip(
-        burn, pv, npv, soil
-    ):
+    for burn_spectra, pv_spectra, npv_spectra, soil_spectra in zip(burn, pv, npv, soil):
         unmixed_iter = (
-            img.unmix(
-                [burn_spectra, pv_spectra, npv_spectra, soil_spectra], True, True
-            )
+            img.unmix([burn_spectra, pv_spectra, npv_spectra, soil_spectra], True, True)
             .toFloat()
             .select([0, 1, 2, 3], ["burned", "pv", "npv", "soil"])
         )

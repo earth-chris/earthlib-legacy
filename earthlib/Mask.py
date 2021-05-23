@@ -1,6 +1,4 @@
-"""
-Functions for masking earth engine images
-"""
+"""Functions for masking earth engine images."""
 
 
 def Landsat8(img):

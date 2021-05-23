@@ -1,6 +1,5 @@
-"""
-Utility functions for working with spectral libraries and earth engine routines
-"""
+"""Utility functions for working with spectral libraries and earth engine routines"""
+
 import json
 import logging
 import os
