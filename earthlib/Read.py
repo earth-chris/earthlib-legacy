@@ -49,10 +49,10 @@ def endmembers():
     """Reads the earthlib spectral endmember library.
 
     Args:
-        None
+        None.
 
     Returns:
-        s: an earthlib spectralObject with the endmember library reflectance data
+        s: an earthlib spectralObject with the endmember library reflectance data.
     """
 
     s = spectralLibrary(_endmember_path)
@@ -68,7 +68,7 @@ def jfsp(path):
     Reference: https://www.frames.gov/assessing-burn-severity/spectral-library/overview
 
     Args:
-        path: file path to the JFSP spectra text file
+        path: file path to the JFSP spectra text file.
 
     Returns:
         s: an earthlib spectralObject with the JFSP reflectance data.
@@ -98,7 +98,7 @@ def usgs(path):
     and +/- standard deviation. Reference: https://www.sciencebase.gov/catalog/item/5807a2a2e4b0841e59e3a18d
 
     Args:
-        path: file path the the USGS spectra text file
+        path: file path the the USGS spectra text file.
 
     Returns:
         s: an earthlib spectralObject with the USGS reflectance data.
