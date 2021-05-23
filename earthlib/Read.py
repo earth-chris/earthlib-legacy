@@ -4,6 +4,7 @@ import numpy as _np
 import spectral as _spectral
 
 from earthlib.utils import _endmember_path
+from earthlib.utils import checkFile as _checkFile
 from earthlib.utils import spectralObject as _spectralObject
 
 
@@ -19,10 +20,10 @@ def spectralLibrary(path):
     """
 
     # check for header files
-    if checkFile(path[:-4] + ".hdr"):
+    if _checkFile(path[:-4] + ".hdr"):
         hdr = path[:-4] + ".hdr"
     else:
-        if checkFile(path + ".hdr"):
+        if _checkFile(path + ".hdr"):
             hdr = path + ".hdr"
         else:
             return None
