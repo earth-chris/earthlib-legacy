@@ -1,3 +1,0 @@
-- square array created with fractions constrained in [0, 1] range
-- iterative endmember selection rmse and fractions constrained (0.025 rmse threshold). 
-- all burn endmembers forced to be included in the output library due to data volume.
