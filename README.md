@@ -31,7 +31,7 @@ You can also clone the source repository and install it locally.
 ```bash
 git clone https://github.com/earth-chris/earthlib.git
 cd earthlib
-pip install . -r requirements.txt
+pip install -e .
 ```
 
 ### via conda
@@ -46,14 +46,6 @@ conda env update
 
 Once the environment has been created, you can activate it with `conda activate earthlib`.
 
-### using iPython defaults
-
-If you're interested in using our custom `ipython` profile, which contains a few plotting defaults, you can set an environment variable to do this for you. From the base `earthlib` directory, run the following:
-
-```bash
-conda activate earthlib
-conda env config vars set IPYTHONDIR=$PWD/ipython
-```
 
 # Data Sources
 
