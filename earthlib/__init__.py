@@ -8,3 +8,6 @@ from .utils import (
     metadata,
     selectSpectra,
 )
+
+# expose the full spectral library
+library = Read.endmembers()
