@@ -34,7 +34,7 @@ nav:
 
 # theme
 theme:
-    logo: 'img/symbol-cfo.svg'
+    logo: 'img/symbol-earthlib.svg'
     icon:
       repo: 'fontawesome/brands/github'
     name: 'material'
