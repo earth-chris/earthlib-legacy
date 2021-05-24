@@ -1,6 +1,6 @@
 # The Earth Library
 
-<img src="img/earth-unmixed.png">
+![earthlib unmixed](img/earth-unmixed.png)
 
 ---
 

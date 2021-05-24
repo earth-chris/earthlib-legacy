@@ -1,8 +1,6 @@
 # Data Sources
 
-## Satellite instruments
-
-<img src="img/supported-sensors.png" alt="earthlib satellite instrument">
+![earthlib satellite instruments](img/supported-sensors.png)
 
 The Earth Library is a collection of collections, merging spectral measurments and models from a range of raw data sources. `earthlib` provides routines for resampling this collection to match the wavelenghts of the sensors in the series above.
 
@@ -21,22 +19,12 @@ The following data sources were filtered and resampled prior to inclusion in `ea
 Below are plots for the primary groups of spectra included in `earthlib`.
 
 
-### Photosynthetic vegetation
+![earthlib photosynthetic vegetation spectra](img/spectra-vegetation-mean-stdv.png)
 
-<img src="img/spectra-vegetation-mean-stdv.png" alt="earthlib photosynthetic vegetation spectra">
+![earthlib non-photosynthetic vegetation spectra](img/spectra-npv-mean-stdv.png)
 
-### Non-photosynthetic vegetation
+![earthlib bare ground spectra](img/spectra-bare-mean-stdv.png)
 
-<img src="img/spectra-npv-mean-stdv.png" alt="earthlib non-photosynthetic vegetation spectra">
+![earthlib burned spectra](img/spectra-burn-mean-stdv.png)
 
-### Bare ground
-
-<img src="img/spectra-bare-mean-stdv.png" alt="earthlib bare ground spectra">
-
-### Burned surfaces
-
-<img src="img/spectra-burned-mean-stdv.png" alt="earthlib burned spectra">
-
-### Built environment
-
-<img src="img/spectra-urban-mean-stdv.png" alt="earthlib vegetation spectra">
+![earthlib vegetation spectra](img/spectra-urban-mean-stdv.png)
