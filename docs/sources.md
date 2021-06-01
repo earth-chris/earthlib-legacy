@@ -1,9 +1,9 @@
 # Data Sources
 
-The Earth Library is a collection of collections, merging spectral measurments and models from a range of raw data sources. `earthlib` provides routines for resampling this collection to match the wavelenghts of the sensors in the series above.
+The Earth Library is a collection of collections, merging spectral measurments and models from a range of data sources. `earthlib` provides routines for resampling this collection to match the wavelenghts of many common optical imaging sensors.
 
 
-## Spectral Libraries
+## Spectral libraries
 
 The following data sources were filtered and resampled prior to inclusion in `earthlib`.
 
@@ -13,6 +13,7 @@ The following data sources were filtered and resampled prior to inclusion in `ea
 - UCSB's [Urban Reflectance Spectra](https://ecosis.org/package/urban-reflectance-spectra-from-santa-barbara--ca)
 - UW/BNL/NASA HySPIRI [airborne calibration spectra](https://ecosis.org/package/uw-bnl-nasa-hyspiri-airborne-campaign-leaf-and-canopy-spectra-and-trait-data)
 - [USGS Spectral Library Version 7](https://www.sciencebase.gov/catalog/item/5807a2a2e4b0841e59e3a18d)
+
 
 Below are plots for the primary land cover spectra included in `earthlib`.
 
@@ -25,6 +26,7 @@ Below are plots for the primary land cover spectra included in `earthlib`.
 ![earthlib burned spectra](img/spectra-burn-mean-stdv.png)
 
 ![earthlib vegetation spectra](img/spectra-urban-mean-stdv.png)
+
 
 ## Supported sensors
 
