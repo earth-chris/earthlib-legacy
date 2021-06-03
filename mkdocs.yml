@@ -24,6 +24,7 @@ extra:
 # site navigation
 nav:
     - Home: 'index.md'
+    - Introduction: 'introduction.md'
     - Data Sources: 'sources.md'
     - Code Documentation:
         - earthlib.Map: 'module/Map.md'
