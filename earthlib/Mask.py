@@ -35,8 +35,8 @@ def Sentinel2(img):
     cirrusBitMask = _ee.Number(2).pow(11).int()
     cloudsBitMask = _ee.Number(2).pow(10).int()
     qa = img.select("QA60")
-    mask = qa.bitwiseAnd(cirrusBitMask).eq(0).And(qa.bitwiseAnd(cloudsBitMask).eq(0))
-    return img.mask(mask)
+    mask = qa.bitwiseAnd(cloudsBitMask).eq(0).And(qa.bitwiseAnd(cirrusBitMask).eq(0))
+    return img.updateMask(mask)
 
 
 def MODIS(img):
