@@ -1,6 +1,7 @@
 """Routines for performing spectral unmixing on earth engine images."""
 
 import ee as _ee
+from tqdm import tqdm as _tqdm
 
 from .utils import selectSpectra as _selectSpectra
 
@@ -12,7 +13,7 @@ def Initialize(sensor, n=30, bands=None):
     Args:
         sensor: the name of the sensor (from earthlib.listSensors()).
         n: the number of iterations for unmixing.
-        bands: the bands to select.
+        bands: a list of bands to select (from earthlib.getBands(sensor)).
 
     Returns:
         None: creates a series of global endmember variables.
@@ -38,6 +39,77 @@ def Initialize(sensor, n=30, bands=None):
     soil = [_ee.List(soil_spectra.tolist()) for soil_spectra in soil_list]
     burn = [_ee.List(burn_spectra.tolist()) for burn_spectra in burn_list]
     urban = [_ee.List(urban_spectra.tolist()) for urban_spectra in urban_list]
+
+
+def fractionalCover(
+    img,
+    endmembers,
+    endmember_names,
+    shade_normalize=False,
+):
+    """Computes the percent cover of each endmember spectra.
+
+    Args:
+        img: the ee.Image to unmix.
+        endmembers: lists of ee.List objects, each element corresponding to a sub.
+        endmember_names: list of names for each endmember. must match the number of lists passed.
+        shade_normalize: flag to apply shade normalization during unmixing.
+
+    Returns:
+        unmixed: a 3-band image file in order of (soil-veg-impervious).
+    """
+
+    n_bands = len(list(img.bandNames().getInfo()))
+    n_classes = len(endmembers)
+    n_endmembers = len(endmembers[0])
+    band_numbers = list(range(n_classes))
+    shade = _ee.List([0] * n_bands)
+
+    # create a list of images to append and later convert to an image collection
+    unmixed = list()
+
+    # loop through each iteration and unmix each
+    for spectra in _tqdm(list(zip(*endmembers)), total=n_endmembers, desc="Unmixing"):
+
+        if shade_normalize:
+            spectra += (shade,)
+
+        unmixed_iter = img.unmix(spectra, True, True).toFloat()
+
+        # run the forward model to evaluate the fractional cover fit
+        modeled_reflectance = computeModeledSpectra(spectra, unmixed_iter)
+        rmse = computeSpectralRMSE(img, modeled_reflectance)
+
+        # normalize by the observed shade fraction
+        if shade_normalize:
+            shade_fraction = unmixed_iter.select([n_classes]).subtract(1).abs()
+            unmixed_iter = unmixed_iter.divide(shade_fraction)
+
+        # rename the bands and append an rmse band
+        unmixed.append(
+            unmixed_iter.select(band_numbers, endmember_names).addBands(rmse)
+        )
+
+    # use the sum of rmse to weight each estimate
+    rmse_sum = _ee.Image(
+        _ee.ImageCollection.fromImages(unmixed)
+        .select(["RMSE"])
+        .sum()
+        .select([0], ["SUM"])
+        .toFloat()
+    )
+    unscaled = [computeWeight(fractions, rmse_sum) for fractions in unmixed]
+
+    # use these weights to scale each unmixing estimate
+    weight_sum = _ee.Image(
+        _ee.ImageCollection.fromImages(unscaled).select(["weight"]).sum().toFloat()
+    )
+    scaled = [weightedAverage(fractions, weight_sum) for fractions in unscaled]
+
+    # reduce it to a single image and return
+    unmixed = _ee.ImageCollection.fromImages(scaled).sum().toFloat()
+
+    return unmixed
 
 
 def computeModeledSpectra(endmembers, fractions):
@@ -153,142 +225,61 @@ def weightedAverage(fractions, weight_sum):
     return weighted
 
 
-def VIS(img):
+def VIS(img, **normalization):
     """Unmixes according to the Vegetation-Impervious-Soil (VIS) approach.
 
     Args:
         img: the ee.Image to unmix.
+        **normalization: keyword arguments to pass to fractionalCover(),
+            like shade_normalize=True.
 
     Returns:
         unmixed: a 3-band image file in order of (soil-veg-impervious).
     """
 
-    # create a list of images to append and later convert to an image collection
-    unmixed = list()
+    endmembers = [soil, pv, urban]
+    endmember_names = ["soil", "pv", "impervious"]
 
-    # loop through each iteration and unmix each
-    for soil_spectra, pv_spectra, urban_spectra in zip(soil, pv, urban):
-        unmixed_iter = (
-            img.unmix([soil_spectra, pv_spectra, urban_spectra], True, True)
-            .toFloat()
-            .select([0, 1, 2], ["soil", "pv", "impervious"])
-        )
-        endmembers = [soil_spectra, pv_spectra, urban_spectra]
-        modeled_refl = computeModeledSpectra(endmembers, unmixed_iter)
-        rmse = computeSpectralRMSE(img, modeled_refl)
-        unmixed.append(unmixed_iter.addBands(rmse))
-
-    # use the sum of rmse to weight each estimate
-    rmse_sum = _ee.Image(
-        _ee.ImageCollection.fromImages(unmixed)
-        .select(["RMSE"])
-        .sum()
-        .select([0], ["SUM"])
-        .toFloat()
-    )
-    unscaled = [computeWeight(fractions, rmse_sum) for fractions in unmixed]
-
-    # use these weights to scale each unmixing estimate
-    weight_sum = _ee.Image(
-        _ee.ImageCollection.fromImages(unscaled).select(["weight"]).sum().toFloat()
-    )
-    scaled = [weightedAverage(fractions, weight_sum) for fractions in unscaled]
-
-    # reduce it to a single image and return
-    unmixed = _ee.ImageCollection.fromImages(scaled).sum().toFloat()
+    unmixed = fractionalCover(img, endmembers, endmember_names, **normalization)
 
     return unmixed
 
 
-def SVN(img):
+def SVN(img, **normalization):
     """Unmixes using Soil-Vegetation-NonphotosyntheticVegetation (SVN) endmembers.
 
     Args:
         img: the ee.Image to unmix.
+        **normalization: keyword arguments to pass to fractionalCover(),
+            like shade_normalize=True.
 
     Returns:
         unmixed: a 3-band image file in order of (soil-veg-npv).
     """
 
-    # create a list of images to append and later convert to an image collection
-    unmixed = list()
+    endmembers = [soil, pv, npv]
+    endmember_names = ["soil", "pv", "npv"]
 
-    # loop through each iteration and unmix each
-    for soil_spectra, pv_spectra, npv_spectra in zip(soil, pv, npv):
-        unmixed_iter = (
-            img.unmix([soil_spectra, pv_spectra, npv_spectra], True, True)
-            .toFloat()
-            .select([0, 1, 2], ["soil", "pv", "npv"])
-        )
-        endmembers = [soil_spectra, pv_spectra, npv_spectra]
-        modeled_refl = computeModeledSpectra(endmembers, unmixed_iter)
-        rmse = computeSpectralRMSE(img, modeled_refl)
-        unmixed.append(unmixed_iter.addBands(rmse))
-
-    # use the sum of rmse to weight each estimate
-    rmse_sum = _ee.Image(
-        _ee.ImageCollection.fromImages(unmixed)
-        .select(["RMSE"])
-        .sum()
-        .select([0], ["SUM"])
-        .toFloat()
-    )
-    unscaled = [computeWeight(fractions, rmse_sum) for fractions in unmixed]
-
-    # use these weights to scale each unmixing estimate
-    weight_sum = _ee.Image(
-        _ee.ImageCollection.fromImages(unscaled).select(["weight"]).sum().toFloat()
-    )
-    scaled = [weightedAverage(fractions, weight_sum) for fractions in unscaled]
-
-    # reduce it to a single image and return
-    unmixed = _ee.ImageCollection.fromImages(scaled).sum().toFloat()
+    unmixed = fractionalCover(img, endmembers, endmember_names, **normalization)
 
     return unmixed
 
 
-def BVNS(img):
-    """Unmixes using Burned-Vegetation-NonphotosyntheticVegetation-Soil (BVNS) endmembers.
+def BVN(img, **normalization):
+    """Unmixes using Burned-Vegetation-NonphotosyntheticVegetation (BVN) endmembers.
 
     Args:
         img: the ee.Image to unmix.
+    **normalization: keyword arguments to pass to fractionalCover(),
+        like shade_normalize=True.
 
     Returns:
         unmixed: a 4-band image file in order of (burned-veg-npv-soil).
     """
 
-    # create a list of images to append and later convert to an image collection
-    unmixed = list()
+    endmembers = [burn, pv, npv]
+    endmember_names = ["burned", "pv", "npv"]
 
-    # loop through each iteration and unmix each
-    for burn_spectra, pv_spectra, npv_spectra, soil_spectra in zip(burn, pv, npv, soil):
-        unmixed_iter = (
-            img.unmix([burn_spectra, pv_spectra, npv_spectra, soil_spectra], True, True)
-            .toFloat()
-            .select([0, 1, 2, 3], ["burned", "pv", "npv", "soil"])
-        )
-        endmembers = [burn_spectra, pv_spectra, npv_spectra, soil_spectra]
-        modeled_refl = computeModeledSpectra(endmembers, unmixed_iter)
-        rmse = computeSpectralRMSE(img, modeled_refl)
-        unmixed.append(unmixed_iter.addBands(rmse))
-
-    # use the sum of rmse to weight each estimate
-    rmse_sum = _ee.Image(
-        _ee.ImageCollection.fromImages(unmixed)
-        .select(["RMSE"])
-        .sum()
-        .select([0], ["SUM"])
-        .toFloat()
-    )
-    unscaled = [computeWeight(fractions, rmse_sum) for fractions in unmixed]
-
-    # use these weights to scale each unmixing estimate
-    weight_sum = _ee.Image(
-        _ee.ImageCollection.fromImages(unscaled).select(["weight"]).sum().toFloat()
-    )
-    scaled = [weightedAverage(fractions, weight_sum) for fractions in unscaled]
-
-    # reduce it to a single image and return
-    unmixed = _ee.ImageCollection.fromImages(scaled).sum().toFloat()
+    unmixed = fractionalCover(img, endmembers, endmember_names, **normalization)
 
     return unmixed
