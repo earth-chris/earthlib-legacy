@@ -42,7 +42,10 @@ def Initialize(sensor, n=30, bands=None):
 
 
 def fractionalCover(
-    img, endmembers, endmember_names, shade_normalize=False, brightness_normalize=False
+    img,
+    endmembers,
+    endmember_names,
+    shade_normalize=False,
 ):
     """Computes the percent cover of each endmember spectra.
 
