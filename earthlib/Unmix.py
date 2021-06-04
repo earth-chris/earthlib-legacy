@@ -262,8 +262,8 @@ def SVN(img, **normalization):
     return unmixed
 
 
-def BVNS(img, **normalization):
-    """Unmixes using Burned-Vegetation-NonphotosyntheticVegetation-Soil (BVNS) endmembers.
+def BVN(img, **normalization):
+    """Unmixes using Burned-Vegetation-NonphotosyntheticVegetation (BVN) endmembers.
 
     Args:
         img: the ee.Image to unmix.
@@ -274,8 +274,8 @@ def BVNS(img, **normalization):
         unmixed: a 4-band image file in order of (burned-veg-npv-soil).
     """
 
-    endmembers = [burn, pv, npv, soil]
-    endmember_names = ["burned", "pv", "npv", "soil"]
+    endmembers = [burn, pv, npv]
+    endmember_names = ["burned", "pv", "npv"]
 
     unmixed = fractionalCover(img, endmembers, endmember_names, **normalization)
 
