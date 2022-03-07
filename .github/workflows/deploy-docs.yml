@@ -1,0 +1,21 @@
+name: deploy-docs
+
+on:
+  workflow_run:
+    branches: [ "main" ]
+    workflows: ["run-pytest"]
+    types:
+        - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+      - run: pip install .
+      - run: pip install -r requirements-dev.txt
+      - run: mkdocs gh-deploy --force
