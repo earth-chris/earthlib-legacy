@@ -1,32 +1,9 @@
-name: earthlib
-
-channels:
-  - conda-forge
-  - defaults
-
-dependencies:
-  - python>=3.7
-  - black
-  - earthengine-api
-  - flake8
-  - folium
-  - gdal
-  - geopandas
-  - ipython
-  - isort
-  - jupyter
-  - matplotlib
-  - numpy
-  - pandas
-  - pre-commit
-  - psutil
-  - pytest
-  - pytest-cov
-  - rtree
-  - shapely
-  - pip
-  - pip:
-    - -e .
-    - mkdocs-material
-    - mkdocs-jupyter
-    - mkdocstrings
+python>=3.7
+earthengine-api
+folium
+matplotlib
+numpy
+pandas
+psutil
+spectral
+tqdm
