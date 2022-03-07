@@ -27,9 +27,9 @@
 
 The library contains several thousand unique spectral endmembers representing green vegetation, soil, non-photosynthetic vegetation, urban materials, and burned materials. The reflectance data cover the visible to the shortwave infrared wavelengths (400-2450 nm) at 10 nm band widths.
 
-The software tools (1) resample these data to match the wavelenths of popular satellite and airborne earth observing sensors and (2) run [spectral mixture analysis](introduction.md) in Google Earth Engine via the `earthengine` python package.
+The software tools (1) resample these data to match the wavelenths of popular satellite and airborne earth observing sensors and (2) run [spectral mixture analysis](docs/introduction.md) in Google Earth Engine via the `earthengine` python package.
 
-The goal is to quantify spatial and temporal patterns of change in global vegetation cover, as well as patterns of soil cover, burned area, non-photosynthetic vegetation, and impervious surfaces. With `earthlib`, you can do this using most public satellite [data sources](sources.md).
+The goal is to quantify spatial and temporal patterns of change in global vegetation cover, as well as patterns of soil cover, burned area, non-photosynthetic vegetation, and impervious surfaces. With `earthlib`, you can do this using most public satellite [data sources](docs/sources.md).
 
 
 ## Installation
