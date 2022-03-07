@@ -10,6 +10,8 @@ import numpy as np
 import pandas as pd
 import spectral
 
+from . import Read
+
 # set up logging
 logging.basicConfig(
     level=logging.WARNING,
@@ -145,9 +147,15 @@ def getBandIndices(custom_bands, sensor):
     """
     sensor_bands = collections[sensor]["band_names"]
     indices = list()
-    for band in custom_bands:
-        if band in sensor_bands:
-            indices.append(sensor_bands.index(band))
+
+    if type(custom_bands) in (list, tuple):
+        for band in custom_bands:
+            if band in sensor_bands:
+                indices.append(sensor_bands.index(band))
+
+    elif type(custom_bands) == str:
+        indices.append(sensor_bands.index(custom_bands))
+
     indices.sort()
     return indices
 
@@ -167,9 +175,6 @@ def selectSpectra(Type, sensor, n=0, bands=None):
     Returns:
         spectra: list of spectral endmembers resampled to a specific sensor's wavelengths.
     """
-    import spectral
-
-    from . import Read
 
     # get the level of the group selected
     level = getTypeLevel(Type)
@@ -307,12 +312,14 @@ class spectralObject:
         lt = np.where(self.band_centers < water_bands[0][1])
         nd = np.intersect1d(gt[0], lt[0])
         self.spectra[:, nd] = update_val
+        self.band_centers = np.delete(self.band_centers, nd)
 
         # then swir1-swir2 transition
         gt = np.where(self.band_centers > water_bands[1][0])
         lt = np.where(self.band_centers < water_bands[1][1])
         nd = np.intersect1d(gt[0], lt[0])
         self.spectra[:, nd] = update_val
+        self.band_centers = np.delete(self.band_centers, nd)
 
     def get_shortwave_bands(self):
         """Returns indices of the bands that encompass the shortwave range.
@@ -325,6 +332,7 @@ class spectralObject:
         Returns:
             overlap: an index of bands to subset to the shortwave range.
         """
+
         # set range to return in nanometers
         shortwave_range = [350.0, 2500.0]
 
@@ -398,9 +406,11 @@ class spectralObject:
             if max(inds) > self.spectra.shape[-1]:
                 inds = range(0, self.spectra.shape[-1])
                 print("Invalid range set. using all spectra")
+
             if min(inds) < 0:
                 inds = range(0, self.spectra.shape[-1])
                 print("Invalid range set. using all spectra")
+
         else:
             inds = range(0, self.spectra.shape[-1])
 
@@ -423,6 +433,7 @@ class spectralObject:
         Returns:
             None: writes the data to disk.
         """
+
         # set up the output file names for the library and the header
         base, ext = os.path.splitext(path)
         if ext.lower() == ".sli":

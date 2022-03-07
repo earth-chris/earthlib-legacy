@@ -8,7 +8,7 @@
 
 ![GitHub](https://img.shields.io/github/license/earth-chris/earthlib)
 ![PyPI](https://img.shields.io/pypi/v/earthlib)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/earth-chris/earthlib/docs)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/earth-chris/earthlib/run-pytest)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/earthlib)
 ![GitHub last commit](https://img.shields.io/github/last-commit/earth-chris/earthlib)
 
