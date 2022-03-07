@@ -2,6 +2,17 @@
 
 ![earthlib unmixed](img/earth-unmixed.png)
 
+<p align="center">
+  <em>A global reference library for land cover spectra, and tools for working with it.</em>
+</p>
+
+![GitHub](https://img.shields.io/github/license/earth-chris/earthlib)
+![PyPI](https://img.shields.io/pypi/v/earthlib)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/earth-chris/earthlib/docs)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/earthlib)
+![GitHub last commit](https://img.shields.io/github/last-commit/earth-chris/earthlib)
+
+
 ---
 
 **Documentation**: [earth-chris.github.io/earthlib](https://earth-chris.github.io/earthlib)
@@ -10,7 +21,7 @@
 
 ---
 
-# Introduction
+## Introduction
 
 `earthlib` is a spectral library and a set of software tools for satellite-base land cover mapping.
 
@@ -21,7 +32,7 @@ The software tools (1) resample these data to match the wavelenths of popular sa
 The goal is to quantify spatial and temporal patterns of change in global vegetation cover, as well as patterns of soil cover, burned area, non-photosynthetic vegetation, and impervious surfaces. With `earthlib`, you can do this using most public satellite [data sources](sources.md).
 
 
-# Installation
+## Installation
 
 This library can be installed via `pip`.
 
@@ -50,6 +61,8 @@ conda env update
 Once the environment has been created, you can activate it with `conda activate earthlib`.
 
 
-# Contact
+## Contact
 
-All (c) 2018+ [Christopher B. Anderson](mailto:cbanders@stanford.edu) & [Lingling Liu](mailto:lingling.liu@stanford.edu). This work is supported by the Stanford Center for Conservation Biology and the Natural Capital Project.
+![Twitter Follow](https://img.shields.io/twitter/follow/earth_chris)
+
+This work is supported by the Stanford Center for Conservation Biology and the Natural Capital Project.

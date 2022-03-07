@@ -33,3 +33,15 @@ Below are plots for the primary land cover spectra included in `earthlib`.
 ![earthlib satellite instruments](img/supported-sensors.png)
 
 In the figure above, the black lines indicate the full-width of each band, and the colored squares mark the center wavelength for each band. `NEON`, an imaging spectrometer system, measures the full shortwave spectrum (*400-2500 nm*) using over 400 spectral bands to measure continuous spectral variance (these bands have been resampled to match the range/centers of the `earthlib` reference library).
+
+
+### Measurement types
+
+The `earthlib` spectral library are provided in units of surface reflectance: scaled as floating point values from 0-1. Data from the most commonly-used sensors—like Landsat, Sentinel & MODIS—are provided in Earth Engine as surface reflectance products. These datasets can be unmixed once the data have been rescaled: they're typically provided as unsigned integer values from 0-10000.
+
+A few data sources are not available as surface reflectance products: `ASTER` data are provided in radiance (a physical measurement unit, uncorrected for atmospheric composition); `ALOS-AVNIR-2` data are provided in DN (raw sensor measurments). Though we provide paths to these collections and the wavelengths of these sensors, these data cannot be unmixed as-is using `earthlib`. You would have to first convert from DN to radiance (in the case of `ALOS-AVNIR-2`) then apply atmospheric correction (to convert from radiance to reflectance). This workflow isn't supported by `earthlib`.
+
+
+### Sensors unavailable in Earth Engine
+
+`earthlib` provides sensor definitions for `NEON` data (a set of airborne imaging spectrometers) and for a set of data from Planet's Dove constellation (`PlanetScope`, `Dove-R`, `SuperDove`). These are not available as default Earth Engine collections. You can, however, upload data from these providers as custom user data or from community-contributed datasets. So you can unmix these datasets if you have access to them as Earth Engine Image/Collection assets, but there is no default collection ID provided by `earthlib`.
