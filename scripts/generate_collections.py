@@ -298,7 +298,7 @@ collections = {
             "near infrared",
         ],
         "band_centers": [0.49, 0.566, 0.666, 0.869],
-        "band_widths": [0.053, 0.038, 0.32, 0.042],
+        "band_widths": [0.053, 0.038, 0.032, 0.042],
         "scale": 0.0001,
     },
     "SuperDove": {
