@@ -1,4 +1,12 @@
-"""A script to create a formatted json file with sensor/collection parameters."""
+"""
+A script to create a formatted json file with sensor/collection parameters.
+
+Sources:
+  Earth Engine Dataset descriptions (e.g. https://developers.google.com/earth-engine/datasets/catalog/NOAA_VIIRS_001_VNP09GA#bands)
+  http://www.gisagmaps.com/landsat-8-sentinel-2-bands/
+  https://lpdaac.usgs.gov/data/get-started-data/collection-overview/missions/s-npp-nasa-viirs-overview/
+  https://assets.planet.com/docs/Planet_Combined_Imagery_Product_Specs_letter_screen.pdf
+"""
 
 import json
 import os
@@ -10,7 +18,72 @@ output_path = os.path.join(repo_directory, "earthlib", "data", "collections.json
 
 # create the dictionary to write as json
 collections = {
-    # from http://www.gisagmaps.com/landsat-8-sentinel-2-bands/
+    "Landsat4": {
+        "collection": "LANDSAT/LT04/C01/T1_SR",
+        "band_names": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B7",
+        ],
+        "band_descriptions": [
+            "blue",
+            "green",
+            "red",
+            "near infrared",
+            "shortwave infrared 1",
+            "shortwave infrared 2",
+        ],
+        "band_centers": [0.485, 0.56, 0.66, 0.835, 1.65, 2.215],
+        "band_widths": [0.07, 0.08, 0.06, 0.13, 0.2, 0.27],
+        "scale": 0.0001,
+    },
+    "Landsat5": {
+        "collection": "LANDSAT/LT05/C01/T1_SR",
+        "band_names": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B7",
+        ],
+        "band_descriptions": [
+            "blue",
+            "green",
+            "red",
+            "near infrared",
+            "shortwave infrared 1",
+            "shortwave infrared 2",
+        ],
+        "band_centers": [0.485, 0.56, 0.66, 0.835, 1.65, 2.215],
+        "band_widths": [0.07, 0.08, 0.06, 0.13, 0.2, 0.27],
+        "scale": 0.0001,
+    },
+    "Landsat7": {
+        "collection": "LANDSAT/LE07/C01/T1_SR",
+        "band_names": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B7",
+        ],
+        "band_descriptions": [
+            "blue",
+            "green",
+            "red",
+            "near infrared",
+            "shortwave infrared 1",
+            "shortwave infrared 2",
+        ],
+        "band_centers": [0.485, 0.56, 0.66, 0.835, 1.65, 2.22],
+        "band_widths": [0.07, 0.08, 0.06, 0.13, 0.2, 0.26],
+        "scale": 0.0001,
+    },
     "Landsat8": {
         "collection": "LANDSAT/LC08/C01/T1_SR",
         "band_names": [
@@ -33,7 +106,6 @@ collections = {
         "band_widths": [0.060, 0.057, 0.037, 0.028, 0.085, 0.187],
         "scale": 0.0001,
     },
-    # from http://www.gisagmaps.com/landsat-8-sentinel-2-bands/
     "Sentinel2": {
         "collection": "COPERNICUS/S2_SR",
         "band_names": [
@@ -116,6 +188,143 @@ collections = {
             2.130,
         ],
         "band_widths": [0.020, 0.020, 0.050, 0.035, 0.020, 0.024, 0.050],
+        "scale": 0.0001,
+    },
+    "VIIRS": {
+        "collection": "NOAA/VIIRS/001/VNP09GA",
+        "band_names": [
+            "M2",
+            "M3",
+            "M4",
+            "M5",
+            "M7",
+            "M8",
+            "M10",
+            "M11",
+        ],
+        "band_descriptions": [
+            "blue",
+            "cyan",
+            "green",
+            "red",
+            "near infrared",
+            "shortwave infrared 1",
+            "shortwave infrared 1",
+            "shortwave infrared 2",
+        ],
+        "band_centers": [0.445, 0.490, 0.555, 0.673, 0.865, 1.24, 1.61, 2.25],
+        "band_widths": [0.018, 0.02, 0.02, 0.02, 0.039, 0.02, 0.06, 0.05],
+        "scale": 0.0001,
+    },
+    # in DN
+    "AVNIR2": {
+        "collection": "JAXA/ALOS/AVNIR-2/ORI",
+        "band_names": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+        ],
+        "band_descriptions": [
+            "blue",
+            "green",
+            "red",
+            "near infrared",
+        ],
+        "band_centers": [0.46, 0.56, 0.65, 0.825],
+        "band_widths": [0.08, 0.08, 0.08, 0.13],
+        "scale": 1,
+    },
+    # in radiance
+    "ASTER": {
+        "collection": "ASTER/AST_L1T_003",
+        "band_names": [
+            "B01",
+            "B02",
+            "B3N",
+            "B04",
+            "B05",
+            "B06",
+            "B07",
+            "B08",
+            "B09",
+        ],
+        "band_descriptions": [
+            "green",
+            "red",
+            "near infrared",
+            "shortwave infrared 1",
+            "shortwave infrared 2",
+            "shortwave infrared 2",
+            "shortwave infrared 2",
+            "shortwave infrared 2",
+            "shortwave infrared 2",
+        ],
+        "band_centers": [0.56, 0.66, 0.82, 1.65, 2.165, 2.205, 2.26, 2.33, 2.395],
+        "band_widths": [0.08, 0.06, 0.08, 0.1, 0.04, 0.04, 0.05, 0.07, 0.07],
+        "scale": 1,
+    },
+    # Planet collections
+    "PlanetScope": {
+        "collection": None,
+        "band_names": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+        ],
+        "band_descriptions": [
+            "blue",
+            "green",
+            "red",
+            "near infrared",
+        ],
+        "band_centers": [0.485, 0.545, 0.63, 0.82],
+        "band_widths": [0.06, 0.09, 0.08, 0.08],
+        "scale": 0.0001,
+    },
+    "DoveR": {
+        "collection": None,
+        "band_names": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+        ],
+        "band_descriptions": [
+            "blue",
+            "green",
+            "red",
+            "near infrared",
+        ],
+        "band_centers": [0.49, 0.566, 0.666, 0.869],
+        "band_widths": [0.053, 0.038, 0.32, 0.042],
+        "scale": 0.0001,
+    },
+    "SuperDove": {
+        "collection": None,
+        "band_names": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B6",
+            "B7",
+            "B8",
+        ],
+        "band_descriptions": [
+            "coastal blue"
+            "blue",
+            "green",
+            "green 2",
+            "yellow",
+            "red",
+            "red edge"
+            "near infrared",
+        ],
+        "band_centers": [0.441, 0.49, 0.531, 0.565, 0.61, 0.665, 0.705, 0.865],
+        "band_widths": [0.021, 0.05, 0.036, 0.036, 0.02, 0.03, 0.016, 0.04],
         "scale": 0.0001,
     },
     "NEON": {
