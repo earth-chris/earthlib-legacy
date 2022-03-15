@@ -108,6 +108,5 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-# zed stuff
-.zedstate
-*/.zedstate
+# downloaded data
+data/
