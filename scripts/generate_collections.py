@@ -159,15 +159,15 @@ collections = {
         "scale": 0.0001,
     },
     "MODIS": {
-        "collection": "MODIS/006/MOD09GA",
+        "collection": "MODIS/006/MCD43A4",
         "band_names": [
-            "sur_refl_b03",
-            "sur_refl_b04",
-            "sur_refl_b01",
-            "sur_refl_b02",
-            "sur_refl_b05",
-            "sur_refl_b06",
-            "sur_refl_b07",
+            "Nadir_Reflectance_Band3",
+            "Nadir_Reflectance_Band4",
+            "Nadir_Reflectance_Band1",
+            "Nadir_Reflectance_Band2",
+            "Nadir_Reflectance_Band5",
+            "Nadir_Reflectance_Band6",
+            "Nadir_Reflectance_Band7",
         ],
         "band_descriptions": [
             "blue",
@@ -314,14 +314,13 @@ collections = {
             "B8",
         ],
         "band_descriptions": [
-            "coastal blue"
+            "coastal blue",
             "blue",
             "green",
             "green 2",
             "yellow",
             "red",
-            "red edge"
-            "near infrared",
+            "red edge" "near infrared",
         ],
         "band_centers": [0.441, 0.49, 0.531, 0.565, 0.61, 0.665, 0.705, 0.865],
         "band_widths": [0.021, 0.05, 0.036, 0.036, 0.02, 0.03, 0.016, 0.04],
