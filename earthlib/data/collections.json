@@ -267,13 +267,13 @@
       "shortwave infrared 2"
     ],
     "band_names": [
-      "sur_refl_b03",
-      "sur_refl_b04",
-      "sur_refl_b01",
-      "sur_refl_b02",
-      "sur_refl_b05",
-      "sur_refl_b06",
-      "sur_refl_b07"
+      "Nadir_Reflectance_Band3",
+      "Nadir_Reflectance_Band4",
+      "Nadir_Reflectance_Band1",
+      "Nadir_Reflectance_Band2",
+      "Nadir_Reflectance_Band5",
+      "Nadir_Reflectance_Band6",
+      "Nadir_Reflectance_Band7"
     ],
     "band_widths": [
       0.02,
@@ -284,7 +284,7 @@
       0.024,
       0.05
     ],
-    "collection": "MODIS/006/MOD09GA",
+    "collection": "MODIS/006/MCD43A4",
     "scale": 0.0001
   },
   "NEON": {
@@ -1931,7 +1931,8 @@
       0.865
     ],
     "band_descriptions": [
-      "coastal blueblue",
+      "coastal blue",
+      "blue",
       "green",
       "green 2",
       "yellow",

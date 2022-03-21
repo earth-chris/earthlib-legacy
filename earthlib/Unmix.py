@@ -45,7 +45,7 @@ def fractionalCover(
     img,
     endmembers,
     endmember_names,
-    shade_normalize=False,
+    shade_normalize=True,
 ):
     """Computes the percent cover of each endmember spectra.
 
