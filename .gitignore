@@ -109,4 +109,4 @@ venv.bak/
 .mypy_cache/
 
 # downloaded data
-.data/
+/data
