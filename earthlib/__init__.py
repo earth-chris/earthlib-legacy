@@ -1,4 +1,4 @@
-from . import Map, Mask, Read, Unmix, __version__
+from . import Map, Mask, Preprocessing, Read, Unmix, __version__
 from .utils import (
     getBands,
     getCollection,
