@@ -1,22 +1,110 @@
-"""Routines to prepare input datasets prior to unmixing"""
-
+"""Routines to prepare datasets prior to unmixing"""
 import math
 import re
+from typing import Callable
 
 import ee
 
-CONSTANTS = {"pi": f"{math.pi:0.8f}"}
-BRDF_COEFFICIENTS_L8 = {
-    "B2": {"fiso": 0.0774, "fgeo": 0.0079, "fvol": 0.0372},
-    "B3": {"fiso": 0.1306, "fgeo": 0.0178, "fvol": 0.0580},
-    "B4": {"fiso": 0.1690, "fgeo": 0.0227, "fvol": 0.0574},
-    "B5": {"fiso": 0.3093, "fgeo": 0.0330, "fvol": 0.1535},
-    "B6": {"fiso": 0.3430, "fgeo": 0.0453, "fvol": 0.1154},
-    "B7": {"fiso": 0.2658, "fgeo": 0.0387, "fvol": 0.0639},
-}
+from earthlib.config import (
+    BRDF_COEFFICIENTS_L8,
+    BRDF_COEFFICIENTS_L457,
+    BRDF_COEFFICIENTS_S2,
+)
+from earthlib.errors import SensorError
 
 
-def brdfCorrectL8(image, coefficientsByBand=BRDF_COEFFICIENTS_L8, scaleFactor=3):
+def brdfCorrectBySensor(sensor: str) -> Callable:
+    """Get the appropriate BRDF correction function by sensor type.
+
+    Args:
+        sensor: sensor name to return (e.g. "Landsat8", "Sentinel2").
+
+    Returns:
+        the BRDF correction function associated with a sensor to pass to a .map() call
+    """
+    lookup = {
+        "Landsat4": brdfCorrectL457,
+        "Landsat5": brdfCorrectL457,
+        "Landsat7": brdfCorrectL457,
+        "Landsat8": brdfCorrectL8,
+        "Sentinel2": brdfCorrectS2,
+    }
+    try:
+        function = lookup[sensor]
+        return function
+    except KeyError:
+        supported = ", ".join(lookup.keys())
+        raise SensorError(
+            f"BRDF adjustment not supported for '{sensor}'. Supported: {supported}"
+        )
+
+
+def brdfCorrectL457(
+    image: ee.Image,
+    coefficientsByBand: dict = BRDF_COEFFICIENTS_L457,
+    scaleFactor: float = 1,
+) -> ee.Image:
+    """Apply BRDF adjustments to a Landsat ETM+ image
+
+    As described in https://www.sciencedirect.com/science/article/pii/S0034425716300220
+        and https://groups.google.com/g/google-earth-engine-developers/c/KDqlUCj4LTs/m/hQ5mGodsAQAJ
+
+    Args:
+        image: Landsat 4/5/7 surface reflectance image
+        coefficientsByBand: the Ross/Li model parameters
+        scaleFactor: a scaling factor to tune the volumetric scattering adjustment
+
+    Returns:
+        a BRDF-corrected image
+    """
+    return brdfCorrectWrapper(image, coefficientsByBand, scaleFactor)
+
+
+def brdfCorrectL8(
+    image: ee.Image,
+    coefficientsByBand: dict = BRDF_COEFFICIENTS_L8,
+    scaleFactor: float = 3,
+) -> ee.Image:
+    """Apply BRDF adjustments to a Landsat8 image
+
+    As described in https://www.sciencedirect.com/science/article/pii/S0034425716300220
+        and https://groups.google.com/g/google-earth-engine-developers/c/KDqlUCj4LTs/m/hQ5mGodsAQAJ
+
+    Args:
+        image: Landsat8 surface reflectance image
+        coefficientsByBand: the Ross/Li model parameters
+        scaleFactor: a scaling factor to tune the volumetric scattering adjustment
+
+    Returns:
+        a BRDF-corrected image
+    """
+    return brdfCorrectWrapper(image, coefficientsByBand, scaleFactor)
+
+
+def brdfCorrectS2(
+    image: ee.Image,
+    coefficientsByBand: dict = BRDF_COEFFICIENTS_S2,
+    scaleFactor: float = 2,
+) -> ee.Image:
+    """Apply BRDF adjustments to a Sentinel2 image
+
+    As described in https://www.sciencedirect.com/science/article/pii/S0034425717302791
+
+    Args:
+        image: Sentinel-2 surface reflectance image
+        coefficientsByBand: the Ross/Li model parameters
+        scaleFactor: a scaling factor to tune the volumetric scattering adjustment
+
+    Returns:
+        a BRDF-corrected image
+    """
+    return brdfCorrectWrapper(image, coefficientsByBand, scaleFactor)
+
+
+def brdfCorrectWrapper(
+    image: ee.Image, coefficientsByBand: dict = None, scaleFactor: float = 1
+) -> ee.Image:
+    """Wrapper to support keyword arguments that can't be passed during .map() calls"""
     inputBandNames = image.bandNames()
     corners = findCorners(image)
     image = viewAngles(image, corners)
@@ -28,11 +116,19 @@ def brdfCorrectL8(image, coefficientsByBand=BRDF_COEFFICIENTS_L8, scaleFactor=3)
     image = liThin(image, "kgeo", "i.sunZen", "i.viewZen", "i.relativeSunViewAz")
     image = liThin(image, "kgeo0", "i.sunZenOut", 0, 0)
     image = adjustBands(image, coefficientsByBand, scaleFactor)
+    return image.select(inputBandNames).toInt16()
 
-    return image.select(inputBandNames)
 
+def viewAngles(image: ee.Image, corners: dict) -> ee.Image:
+    """Compute sensor view angles
 
-def viewAngles(image, corners):
+    Args:
+        image: an ee.Image
+        corners: a dictionary with corner coords. get from findCorners()
+
+    Returns:
+        adds 'viewAz' and 'viewZen' bands to `image`
+    """
     maxDistanceToSceneEdge = 1000000
     maxSatelliteZenith = 7.5
     upperCenter = pointBetween(corners["upperLeft"], corners["upperRight"])
@@ -42,7 +138,6 @@ def viewAngles(image, corners):
     image = set(
         image, "viewAz", ee.Image(ee.Number(math.pi / 2).subtract((slopePerp).atan()))
     )
-
     leftLine = toLine(corners["upperLeft"], corners["lowerLeft"])
     rightLine = toLine(corners["upperRight"], corners["lowerRight"])
     leftDistance = ee.FeatureCollection(leftLine).distance(maxDistanceToSceneEdge)
@@ -56,8 +151,17 @@ def viewAngles(image, corners):
     return image
 
 
-def solarPosition(image):
-    # Ported from http:#pythonfmask.Org/en/latest/_modules/fmask/landsatangles.html
+def solarPosition(image: ee.Image) -> ee.Image:
+    """Compute solar position from the time of collection
+
+    From https://www.pythonfmask.org/en/latest/_modules/fmask/landsatangles.html
+
+    Args:
+        image: an ee.Image with a "system:time_start" attribute
+
+    Returns:
+        adds a series of solar geometry bands to `image`
+    """
     date = ee.Date(ee.Number(image.get("system:time_start")))
     secondsInHour = 3600
     image = set(image, "longDeg", ee.Image.pixelLonLat().select("longitude"))
@@ -122,7 +226,16 @@ def solarPosition(image):
 
 
 def sunZenOut(image):
-    # https:#nex.nasa.gov/nex/static/media/publication/HLS.v1.0.UserGuide.pdf
+    """Compute the solar zenith angle from an image center
+
+    From https://hls.gsfc.nasa.gov/wp-content/uploads/2016/08/HLS.v1.0.UserGuide.pdf
+
+    Args:
+        image: an ee.Image with a "system:footprint" attribute
+
+    Returns:
+        adds a "sunZenOut" band to `image`
+    """
     image = set(
         image,
         "centerLat",
@@ -150,7 +263,10 @@ def sunZenOut(image):
     return image
 
 
-def rossThick(image, bandName, sunZen, viewZen, relativeSunViewAz):
+def rossThick(
+    image: ee.Image, bandName: str, sunZen: str, viewZen: str, relativeSunViewAz: str
+) -> ee.Image:
+    """From https://modis.gsfc.nasa.gov/data/atbd/atbd_mod09.pdf"""
     args = {
         "sunZen": sunZen,
         "viewZen": viewZen,
@@ -168,15 +284,16 @@ def rossThick(image, bandName, sunZen, viewZen, relativeSunViewAz):
     return image
 
 
-def liThin(image, bandName, sunZen, viewZen, relativeSunViewAz):
-    # From https:#modis.gsfc.nasa.gov/data/atbd/atbd_mod09.pdf
+def liThin(
+    image: ee.Image, bandName: str, sunZen: str, viewZen: str, relativeSunViewAz: str
+) -> ee.Image:
+    """From https://modis.gsfc.nasa.gov/data/atbd/atbd_mod09.pdf"""
     args = {
         "sunZen": sunZen,
         "viewZen": viewZen,
         "relativeSunViewAz": relativeSunViewAz,
         "hb": 2,
     }
-
     image = anglePrime(image, "sunZenPrime", sunZen)
     image = anglePrime(image, "viewZenPrime", viewZen)
     image = cosPhaseAngle(
@@ -216,7 +333,8 @@ def liThin(image, bandName, sunZen, viewZen, relativeSunViewAz):
     return image
 
 
-def anglePrime(image, name, angle):
+def anglePrime(image: ee.Image, name: str, angle: str) -> ee.Image:
+    """Prime angle is computed from sun/sensor zenith and used to estimate phase angle"""
     args = {"br": 1, "angle": angle}
     image = set(image, "tanAnglePrime", "{br} * tan({angle})", args)
     image = setIf(image, "tanAnglePrime", "i.tanAnglePrime < 0", 0)
@@ -224,7 +342,10 @@ def anglePrime(image, name, angle):
     return image
 
 
-def cosPhaseAngle(image, name, sunZen, viewZen, relativeSunViewAz):
+def cosPhaseAngle(
+    image: ee.Image, name: str, sunZen: str, viewZen: str, relativeSunViewAz: str
+) -> ee.Image:
+    """Phase angle estimates the relative deviation between sun/sensor geometry"""
     args = {
         "sunZen": sunZen,
         "viewZen": viewZen,
@@ -243,14 +364,19 @@ def cosPhaseAngle(image, name, sunZen, viewZen, relativeSunViewAz):
     return image
 
 
-def adjustBands(image, coefficientsByBand, scaleFactor=1):
+def adjustBands(
+    image: ee.Image, coefficientsByBand: dict, scaleFactor: float = 1
+) -> ee.Image:
+    """Apply estimated BRDF adjustments band-by-band"""
     for bandName in coefficientsByBand:
         image = applyCFactor(image, bandName, coefficientsByBand[bandName], scaleFactor)
-
     return image
 
 
-def applyCFactor(image, bandName, coefficients, scaleFactor):
+def applyCFactor(
+    image: ee.Image, bandName: str, coefficients: dict, scaleFactor: float
+) -> ee.Image:
+    """Apply BRDF C-factor adjustments to a single band"""
     image = brdf(image, "brdf", "kvol", "kgeo", coefficients, scaleFactor)
     image = brdf(image, "brdf0", "kvol0", "kgeo0", coefficients, scaleFactor)
     image = set(image, "cFactor", "i.brdf0 / i.brdf", coefficients)
@@ -260,8 +386,15 @@ def applyCFactor(image, bandName, coefficients, scaleFactor):
     return image
 
 
-def brdf(image, bandName, kvolBand, kgeoBand, coefficients, scaleFactor):
-    """check this multiplication factor.  Is there an 'optimal' value?  Without a factor here, there is not enough correction."""
+def brdf(
+    image: ee.Image,
+    bandName: str,
+    kvolBand: str,
+    kgeoBand: str,
+    coefficients: dict,
+    scaleFactor: float,
+) -> ee.Image:
+    """Apply the BRDF volumetric scattering adjustment"""
     args = merge_dicts(
         coefficients,
         {
@@ -273,15 +406,19 @@ def brdf(image, bandName, kvolBand, kgeoBand, coefficients, scaleFactor):
     return image
 
 
-def x(point):
+def x(point: ee.Geometry.Point):
+    """Get the X location from a point geometry"""
     return ee.Number(ee.List(point).get(0))
 
 
-def y(point):
+def y(point: ee.Geometry.Point):
+    """Get the Y location from a point geometry"""
     return ee.Number(ee.List(point).get(1))
 
 
-def findCorners(image):
+def findCorners(image: ee.Image) -> dict:
+    """Get corner coordinates from an images 'system:footprint' attribute"""
+
     def get_xs(coord):
         return x(coord)
 
@@ -302,7 +439,6 @@ def findCorners(image):
     coords = footprint.coordinates()
     xs = coords.map(get_xs)
     ys = coords.map(get_ys)
-
     lowerLeft = findCorner(x(bounds.get(0)), xs)
     lowerRight = findCorner(y(bounds.get(1)), ys)
     upperRight = findCorner(x(bounds.get(2)), xs)
@@ -315,29 +451,43 @@ def findCorners(image):
     }
 
 
-def pointBetween(pointA, pointB):
+def pointBetween(
+    pointA: ee.Geometry.Point, pointB: ee.Geometry.Point
+) -> ee.Geometry.Point:
+    """Compute the cetroid of two points"""
     return ee.Geometry.LineString([pointA, pointB]).centroid().coordinates()
 
 
-def slopeBetween(pointA, pointB):
+def slopeBetween(
+    pointA: ee.Geometry.Point, pointB: ee.Geometry.Point
+) -> ee.Geometry.Point:
+    """Compute the slope of the distance between two points"""
     return ((y(pointA)).subtract(y(pointB))).divide((x(pointA)).subtract(x(pointB)))
 
 
-def toLine(pointA, pointB):
+def toLine(
+    pointA: ee.Geometry.Point, pointB: ee.Geometry.Point
+) -> ee.Geometry.LineString:
+    """Create a LineString from two Points"""
     return ee.Geometry.LineString([pointA, pointB])
 
 
 def set(
-    image,
-    name,
-    toAdd,
-    args=None,
-):
+    image: ee.Image,
+    name: str,
+    toAdd: str,
+    args: dict = None,
+) -> ee.Image:
+    """Append the value of `toAdd` as a band `name` to `image`"""
     toAdd = toImage(image, toAdd, args)
     return image.addBands(toAdd.rename(name), None, True)
 
 
-def setIf(image, name, condition, TrueValue, FalseValue=0):
+def setIf(
+    image: ee.Image, name: str, condition: str, TrueValue: float, FalseValue: float = 0
+) -> ee.Image:
+    """Create a conditional mask and add it as a band to `image`"""
+
     def invertMask(mask):
         return mask.multiply(-1).add(1)
 
@@ -349,26 +499,27 @@ def setIf(image, name, condition, TrueValue, FalseValue=0):
     return image
 
 
-def toImage(image, band, args=None):
+def toImage(image: ee.Image, band: str, args: dict = None) -> ee.Image:
+    """Convenience function to convert scalars or expressions to new bands"""
     if type(band) is str:
         if "." in band or " " in band or "{" in band:
             band = image.expression(format(band, args), {"i": image})
         else:
             band = image.select(band)
-
     return ee.Image(band)
 
 
-def format(s, args, constants=CONSTANTS):
+def format(s: str, args: dict, constants: dict = {"pi": f"{math.pi:0.8f}"}) -> str:
+    """Format a string to strip out {} values"""
     args = args or {}
     allArgs = merge_dicts(constants, args)
     vars = re.findall(r"\{([A-Za-z0-9_]+)\}", s)
     for var in vars:
         replacement_var = str(allArgs[var])
         s = s.replace("{" + f"{var}" + "}", replacement_var)
-
     return s
 
 
-def merge_dicts(d1, d2):
+def merge_dicts(d1: dict, d2: dict) -> dict:
+    """Create one dictionary from two"""
     return {**d1, **d2}
