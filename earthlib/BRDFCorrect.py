@@ -41,7 +41,6 @@ def bySensor(sensor: str) -> Callable:
 
 def Landsat457(
     image: ee.Image,
-    coefficientsByBand: dict = BRDF_COEFFICIENTS_L457,
     scaleFactor: float = 1,
 ) -> ee.Image:
     """Apply BRDF adjustments to a Landsat ETM+ image
@@ -51,18 +50,16 @@ def Landsat457(
 
     Args:
         image: Landsat 4/5/7 surface reflectance image
-        coefficientsByBand: the Ross/Li model parameters
         scaleFactor: a scaling factor to tune the volumetric scattering adjustment
 
     Returns:
         a BRDF-corrected image
     """
-    return brdfCorrectWrapper(image, coefficientsByBand, scaleFactor)
+    return brdfCorrectWrapper(image, BRDF_COEFFICIENTS_L457, scaleFactor)
 
 
 def Landsat8(
     image: ee.Image,
-    coefficientsByBand: dict = BRDF_COEFFICIENTS_L8,
     scaleFactor: float = 3,
 ) -> ee.Image:
     """Apply BRDF adjustments to a Landsat8 image
@@ -72,18 +69,16 @@ def Landsat8(
 
     Args:
         image: Landsat8 surface reflectance image
-        coefficientsByBand: the Ross/Li model parameters
         scaleFactor: a scaling factor to tune the volumetric scattering adjustment
 
     Returns:
         a BRDF-corrected image
     """
-    return brdfCorrectWrapper(image, coefficientsByBand, scaleFactor)
+    return brdfCorrectWrapper(image, BRDF_COEFFICIENTS_L8, scaleFactor)
 
 
 def Sentinel2(
     image: ee.Image,
-    coefficientsByBand: dict = BRDF_COEFFICIENTS_S2,
     scaleFactor: float = 2,
 ) -> ee.Image:
     """Apply BRDF adjustments to a Sentinel2 image
@@ -92,13 +87,12 @@ def Sentinel2(
 
     Args:
         image: Sentinel-2 surface reflectance image
-        coefficientsByBand: the Ross/Li model parameters
         scaleFactor: a scaling factor to tune the volumetric scattering adjustment
 
     Returns:
         a BRDF-corrected image
     """
-    return brdfCorrectWrapper(image, coefficientsByBand, scaleFactor)
+    return brdfCorrectWrapper(image, BRDF_COEFFICIENTS_S2, scaleFactor)
 
 
 def brdfCorrectWrapper(
