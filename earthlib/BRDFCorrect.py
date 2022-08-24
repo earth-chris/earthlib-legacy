@@ -23,9 +23,9 @@ def bySensor(sensor: str) -> Callable:
         the BRDF correction function associated with a sensor to pass to a .map() call
     """
     lookup = {
-        "Landsat4": Landsat4,
-        "Landsat5": Landsat5,
-        "Landsat7": Landsat7,
+        "Landsat4": Landsat457,
+        "Landsat5": Landsat457,
+        "Landsat7": Landsat457,
         "Landsat8": Landsat8,
         "Sentinel2": Sentinel2,
     }
@@ -39,60 +39,18 @@ def bySensor(sensor: str) -> Callable:
         )
 
 
-def Landsat4(
+def Landsat457(
     image: ee.Image,
     coefficientsByBand: dict = BRDF_COEFFICIENTS_L457,
     scaleFactor: float = 1,
 ) -> ee.Image:
-    """Apply BRDF adjustments to a Landsat 4 image
+    """Apply BRDF adjustments to a Landsat ETM+ image
 
     As described in https://www.sciencedirect.com/science/article/pii/S0034425716300220
         and https://groups.google.com/g/google-earth-engine-developers/c/KDqlUCj4LTs/m/hQ5mGodsAQAJ
 
     Args:
-        image: Landsat 4 surface reflectance image
-        coefficientsByBand: the Ross/Li model parameters
-        scaleFactor: a scaling factor to tune the volumetric scattering adjustment
-
-    Returns:
-        a BRDF-corrected image
-    """
-    return brdfCorrectWrapper(image, coefficientsByBand, scaleFactor)
-
-
-def Landsat5(
-    image: ee.Image,
-    coefficientsByBand: dict = BRDF_COEFFICIENTS_L457,
-    scaleFactor: float = 1,
-) -> ee.Image:
-    """Apply BRDF adjustments to a Landsat 5 TM image
-
-    As described in https://www.sciencedirect.com/science/article/pii/S0034425716300220
-        and https://groups.google.com/g/google-earth-engine-developers/c/KDqlUCj4LTs/m/hQ5mGodsAQAJ
-
-    Args:
-        image: Landsat 5 surface reflectance image
-        coefficientsByBand: the Ross/Li model parameters
-        scaleFactor: a scaling factor to tune the volumetric scattering adjustment
-
-    Returns:
-        a BRDF-corrected image
-    """
-    return brdfCorrectWrapper(image, coefficientsByBand, scaleFactor)
-
-
-def Landsat7(
-    image: ee.Image,
-    coefficientsByBand: dict = BRDF_COEFFICIENTS_L457,
-    scaleFactor: float = 1,
-) -> ee.Image:
-    """Apply BRDF adjustments to a Landsat 7 ETM+ image
-
-    As described in https://www.sciencedirect.com/science/article/pii/S0034425716300220
-        and https://groups.google.com/g/google-earth-engine-developers/c/KDqlUCj4LTs/m/hQ5mGodsAQAJ
-
-    Args:
-        image: Landsat 7 surface reflectance image
+        image: Landsat 4/5/7 surface reflectance image
         coefficientsByBand: the Ross/Li model parameters
         scaleFactor: a scaling factor to tune the volumetric scattering adjustment
 
