@@ -27,6 +27,7 @@ nav:
     - Introduction: 'introduction.md'
     - Data Sources: 'sources.md'
     - Code Documentation:
+        - earthlib.BRDFCorrect: 'module/BRDFCorrect.md'
         - earthlib.Map: 'module/Map.md'
         - earthlib.Mask: 'module/Mask.md'
         - earthlib.Read: 'module/Read.md'
