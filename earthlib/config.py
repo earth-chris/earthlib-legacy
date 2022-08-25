@@ -1,5 +1,24 @@
-"""Default configuration parameters for preprocessing routines"""
+"""Default configuration paths and parameters"""
 
+import json
+import os
+
+import pandas as pd
+
+# file paths for the package data
+package_path = os.path.realpath(__file__)
+package_dir = os.path.dirname(package_path)
+collections_path = os.path.join(package_dir, "data", "collections.json")
+metadata_path = os.path.join(package_dir, "data", "spectra.csv")
+endmember_path = os.path.join(package_dir, "data", "spectra.sli")
+
+# read critical data into memory
+metadata = pd.read_csv(metadata_path)
+with open(collections_path, "r+") as f:
+    collections = json.load(f)
+
+
+# BRDF correction coefficients
 # https://www.sciencedirect.com/science/article/pii/S0034425716300220
 BRDF_COEFFICIENTS_L457 = {
     "B1": {"fiso": 0.0774, "fgeo": 0.0079, "fvol": 0.0372},

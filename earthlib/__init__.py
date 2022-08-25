@@ -1,13 +1,13 @@
-from . import BRDFCorrect, Map, Mask, Read, Unmix, __version__
-from .utils import (
+from earthlib import BRDFCorrect, Mask, Unmix, __version__, read
+from earthlib.config import collections, metadata
+from earthlib.utils import (
     getBands,
     getCollection,
     getScaler,
     listSensors,
     listTypes,
-    metadata,
     selectSpectra,
 )
 
 # expose the full spectral library
-library = Read.endmembers()
+library = read.endmembers()
