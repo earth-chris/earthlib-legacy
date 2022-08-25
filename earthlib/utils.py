@@ -14,9 +14,6 @@ from earthlib.read import spectralLibrary
 def listSensors() -> list:
     """Returns a list of the supported sensor image collections.
 
-    Args:
-        None
-
     Returns:
         sensors: a list of supported sensors using the names referenced by this package.
     """

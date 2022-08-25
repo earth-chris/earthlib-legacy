@@ -219,7 +219,7 @@ def solarPosition(image: ee.Image) -> ee.Image:
     return image
 
 
-def sunZenOut(image):
+def sunZenOut(image: ee.Image) -> ee.Image:
     """Compute the solar zenith angle from an image center
 
     From https://hls.gsfc.nasa.gov/wp-content/uploads/2016/08/HLS.v1.0.UserGuide.pdf
