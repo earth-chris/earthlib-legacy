@@ -1,13 +1,4 @@
-black
-flake8
 geemap
-isort
 jupyter
-livereload
 matplotlib
-mkdocs-jupyter
-mkdocs-material
-mkdocstrings
-pytest
-pytest-cov
 twine

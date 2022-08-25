@@ -260,8 +260,8 @@ def BVN(img: ee.Image, **normalization) -> ee.Image:
 
     Args:
         img: the ee.Image to unmix.
-    **normalization: keyword arguments to pass to fractionalCover(),
-        like shade_normalize=True.
+        **normalization: keyword arguments to pass to fractionalCover(),
+            like shade_normalize=True.
 
     Returns:
         unmixed: a 4-band image file in order of (burned-veg-npv-soil).
