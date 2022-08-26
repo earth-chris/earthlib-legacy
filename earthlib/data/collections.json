@@ -121,12 +121,12 @@
       "shortwave infrared 2"
     ],
     "band_names": [
-      "B1",
-      "B2",
-      "B3",
-      "B4",
-      "B5",
-      "B7"
+      "SR_B1",
+      "SR_B2",
+      "SR_B3",
+      "SR_B4",
+      "SR_B5",
+      "SR_B7"
     ],
     "band_widths": [
       0.07,
@@ -136,8 +136,9 @@
       0.2,
       0.27
     ],
-    "collection": "LANDSAT/LT04/C01/T1_SR",
-    "scale": 0.0001
+    "collection": "LANDSAT/LT04/C02/T1_L2",
+    "offset": -0.2,
+    "scale": 2.75e-05
   },
   "Landsat5": {
     "band_centers": [
@@ -157,12 +158,12 @@
       "shortwave infrared 2"
     ],
     "band_names": [
-      "B1",
-      "B2",
-      "B3",
-      "B4",
-      "B5",
-      "B7"
+      "SR_B1",
+      "SR_B2",
+      "SR_B3",
+      "SR_B4",
+      "SR_B5",
+      "SR_B7"
     ],
     "band_widths": [
       0.07,
@@ -172,8 +173,9 @@
       0.2,
       0.27
     ],
-    "collection": "LANDSAT/LT05/C01/T1_SR",
-    "scale": 0.0001
+    "collection": "LANDSAT/LT05/C02/T1_L2",
+    "offset": -0.2,
+    "scale": 2.75e-05
   },
   "Landsat7": {
     "band_centers": [
@@ -193,12 +195,12 @@
       "shortwave infrared 2"
     ],
     "band_names": [
-      "B1",
-      "B2",
-      "B3",
-      "B4",
-      "B5",
-      "B7"
+      "SR_B1",
+      "SR_B2",
+      "SR_B3",
+      "SR_B4",
+      "SR_B5",
+      "SR_B7"
     ],
     "band_widths": [
       0.07,
@@ -208,8 +210,9 @@
       0.2,
       0.26
     ],
-    "collection": "LANDSAT/LE07/C01/T1_SR",
-    "scale": 0.0001
+    "collection": "LANDSAT/LE07/C02/T1_L2",
+    "offset": -0.2,
+    "scale": 2.75e-05
   },
   "Landsat8": {
     "band_centers": [
@@ -229,12 +232,12 @@
       "shortwave infrared 2"
     ],
     "band_names": [
-      "B2",
-      "B3",
-      "B4",
-      "B5",
-      "B6",
-      "B7"
+      "SR_B2",
+      "SR_B3",
+      "SR_B4",
+      "SR_B5",
+      "SR_B6",
+      "SR_B7"
     ],
     "band_widths": [
       0.06,
@@ -244,8 +247,9 @@
       0.085,
       0.187
     ],
-    "collection": "LANDSAT/LC08/C01/T1_SR",
-    "scale": 0.0001
+    "collection": "LANDSAT/LC08/C02/T1_L2",
+    "offset": -0.2,
+    "scale": 2.75e-05
   },
   "MODIS": {
     "band_centers": [
@@ -1916,7 +1920,7 @@
       0.142,
       0.24
     ],
-    "collection": "COPERNICUS/S2_SR",
+    "collection": "COPERNICUS/S2_SR_HARMONIZED",
     "scale": 0.0001
   },
   "SuperDove": {

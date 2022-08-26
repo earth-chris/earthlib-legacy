@@ -7,21 +7,64 @@ import ee
 from earthlib.errors import SensorError
 
 
-def Landsat8(img: ee.Image) -> ee.Image:
-    """Masks Landsat8 images.
+def bySensor(sensor: str) -> Callable:
+    """Returns the appropriate mask function to use by sensor type.
 
     Args:
-        img: the ee.Image to mask. Must have a Landsat "pixel_qa" band.
+        sensor: string with the sensor name to return (e.g. "Landsat8", "Sentinel2").
+
+    Returns:
+        the mask function associated with a sensor to pass to an ee .map() call
+    """
+    lookup = {
+        "Landsat4": Landsat4578,
+        "Landsat5": Landsat4578,
+        "Landsat7": Landsat4578,
+        "Landsat8": Landsat4578,
+        "Sentinel2": Sentinel2,
+        "MODIS": MODIS,
+        "VIIRS": VIIRS,
+    }
+    try:
+        function = lookup[sensor]
+        return function
+    except KeyError:
+        supported = ", ".join(lookup.keys())
+        raise SensorError(
+            f"Cloud masking not supported for '{sensor}'. Supported: {supported}"
+        )
+
+
+def Landsat4578(img: ee.Image) -> ee.Image:
+    """Cloud-masks Landsat images.
+
+    Args:
+        img: the ee.Image to mask. Must have a Landsat "QA_PIXEL" band.
 
     Returns:
         the same input image with an updated mask.
     """
-    cloudShadowBitMask = ee.Number(2).pow(3).int()
-    cloudsBitMask = ee.Number(2).pow(5).int()
-    qa = img.select("pixel_qa")
+    qa = img.select("QA_PIXEL")
+
+    dilatedCloudBit = ee.Number(2).pow(1).int()
+    cirrusBit = ee.Number(2).pow(2).int()
+    cloudBit = ee.Number(2).pow(3).int()
+    cloudShadowBit = ee.Number(2).pow(4).int()
+    snowBit = ee.Number(2).pow(5).int()
+
+    dilatedCloudMask = qa.bitwiseAnd(dilatedCloudBit).eq(0)
+    cirrusMask = qa.bitwiseAnd(cirrusBit).eq(0)
+    cloudMask = qa.bitwiseAnd(cloudBit).eq(0)
+    cloudShadowMask = qa.bitwiseAnd(cloudShadowBit).eq(0)
+    snowMask = qa.bitwiseAnd(snowBit).eq(0)
+
     mask = (
-        qa.bitwiseAnd(cloudShadowBitMask).eq(0).And(qa.bitwiseAnd(cloudsBitMask).eq(0))
+        dilatedCloudMask.And(cirrusMask)
+        .And(cloudMask)
+        .And(cloudShadowMask)
+        .And(snowMask)
     )
+
     return img.mask(mask)
 
 
@@ -34,10 +77,16 @@ def Sentinel2(img: ee.Image) -> ee.Image:
     Returns:
         the same input image with an updated mask.
     """
-    cirrusBitMask = ee.Number(2).pow(11).int()
-    cloudsBitMask = ee.Number(2).pow(10).int()
     qa = img.select("QA60")
-    mask = qa.bitwiseAnd(cloudsBitMask).eq(0).And(qa.bitwiseAnd(cirrusBitMask).eq(0))
+
+    cirrusBit = ee.Number(2).pow(11).int()
+    cloudsBit = ee.Number(2).pow(10).int()
+
+    cirrusMask = qa.bitwiseAnd(cloudsBit).eq(0)
+    cloudsMask = qa.bitwiseAnd(cirrusBit).eq(0)
+
+    mask = cirrusMask.And(cloudsMask)
+
     return img.updateMask(mask)
 
 
@@ -50,34 +99,51 @@ def MODIS(img: ee.Image) -> ee.Image:
     Returns:
         the same input image with an updated mask.
     """
-    cloudShadowBitMask = ee.Number(2).pow(2).int()
-    cloudsBitMask = ee.Number(2).pow(0).int()
     qa = img.select("state_1km")
-    mask = (
-        qa.bitwiseAnd(cloudShadowBitMask).eq(0).And(qa.bitwiseAnd(cloudsBitMask).eq(0))
-    )
+
+    cloudShadowBit = ee.Number(2).pow(2).int()
+    cloudBit = ee.Number(2).pow(0).int()
+
+    cloudShadowMask = qa.bitwiseAnd(cloudShadowBit).eq(0)
+    cloudMask = qa.bitwiseAnd(cloudBit).eq(0)
+
+    mask = cloudShadowMask.And(cloudMask)
+
     return img.mask(mask)
 
 
-def bySensor(sensor: str) -> Callable:
-    """Returns the appropriate mask function to use by sensor type.
+def VIIRS(img: ee.Image) -> ee.Image:
+    """Masks VIIRS images.
 
     Args:
-        sensor: string with the sensor name to return (e.g. "Landsat8", "Sentinel2").
+        img: the ee.Image to mask. Must have "QF1" and "QF2" bands.
 
     Returns:
-        the mask function associated with a sensor to pass to an ee .map() call
+        the same input image with an updated mask.
     """
-    lookup = {
-        "Landsat8": Landsat8,
-        "Sentinel2": Sentinel2,
-        "MODIS": MODIS,
-    }
-    try:
-        function = lookup[sensor]
-        return function
-    except KeyError:
-        supported = ", ".join(lookup.keys())
-        raise SensorError(
-            f"BRDF adjustment not supported for '{sensor}'. Supported: {supported}"
-        )
+    qa1 = img.select("QF1")
+    qa2 = img.select("QF2")
+
+    clearBit = ee.Number(2).pow(2).int()
+    dayBit = ee.Number(2).pow(4).int()
+    shadowBit = ee.Number(2).pow(3).int()
+    snowBit = ee.Number(2).pow(5).int()
+    cirrus1Bit = ee.Number(2).pow(6).int()
+    cirrus2Bit = ee.Number(2).pow(7).int()
+
+    clearMask = qa1.bitwiseAnd(clearBit).eq(0)
+    dayMask = qa1.bitwiseAnd(dayBit).eq(0)
+    shadowMask = qa2.bitwiseAnd(shadowBit).eq(0)
+    snowMask = qa2.bitwiseAnd(snowBit).eq(0)
+    cirrus1Mask = qa2.bitwiseAnd(cirrus1Bit).eq(0)
+    cirrus2Mask = qa2.bitwiseAnd(cirrus2Bit).eq(0)
+
+    mask = (
+        clearMask.And(dayMask)
+        .And(shadowMask)
+        .And(snowMask)
+        .And(cirrus1Mask)
+        .And(cirrus2Mask)
+    )
+
+    return img.mask(mask)

@@ -1,4 +1,4 @@
-from earthlib import BRDFCorrect, Mask, Unmix, __version__, read
+from earthlib import BRDFCorrect, Mask, Scale, Unmix, __version__, read
 from earthlib.config import collections, metadata
 from earthlib.utils import (
     getBands,

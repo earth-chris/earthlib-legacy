@@ -21,20 +21,20 @@ with open(collections_path, "r+") as f:
 # BRDF correction coefficients
 # https://www.sciencedirect.com/science/article/pii/S0034425716300220
 BRDF_COEFFICIENTS_L457 = {
-    "B1": {"fiso": 0.0774, "fgeo": 0.0079, "fvol": 0.0372},
-    "B2": {"fiso": 0.1306, "fgeo": 0.0178, "fvol": 0.0580},
-    "B3": {"fiso": 0.1690, "fgeo": 0.0227, "fvol": 0.0574},
-    "B4": {"fiso": 0.3093, "fgeo": 0.0330, "fvol": 0.1535},
-    "B5": {"fiso": 0.3430, "fgeo": 0.0453, "fvol": 0.1154},
-    "B7": {"fiso": 0.2658, "fgeo": 0.0387, "fvol": 0.0639},
+    "SR_B1": {"fiso": 0.0774, "fgeo": 0.0079, "fvol": 0.0372},
+    "SR_B2": {"fiso": 0.1306, "fgeo": 0.0178, "fvol": 0.0580},
+    "SR_B3": {"fiso": 0.1690, "fgeo": 0.0227, "fvol": 0.0574},
+    "SR_B4": {"fiso": 0.3093, "fgeo": 0.0330, "fvol": 0.1535},
+    "SR_B5": {"fiso": 0.3430, "fgeo": 0.0453, "fvol": 0.1154},
+    "SR_B7": {"fiso": 0.2658, "fgeo": 0.0387, "fvol": 0.0639},
 }
 BRDF_COEFFICIENTS_L8 = {
-    "B2": {"fiso": 0.0774, "fgeo": 0.0079, "fvol": 0.0372},
-    "B3": {"fiso": 0.1306, "fgeo": 0.0178, "fvol": 0.0580},
-    "B4": {"fiso": 0.1690, "fgeo": 0.0227, "fvol": 0.0574},
-    "B5": {"fiso": 0.3093, "fgeo": 0.0330, "fvol": 0.1535},
-    "B6": {"fiso": 0.3430, "fgeo": 0.0453, "fvol": 0.1154},
-    "B7": {"fiso": 0.2658, "fgeo": 0.0387, "fvol": 0.0639},
+    "SR_B2": {"fiso": 0.0774, "fgeo": 0.0079, "fvol": 0.0372},
+    "SR_B3": {"fiso": 0.1306, "fgeo": 0.0178, "fvol": 0.0580},
+    "SR_B4": {"fiso": 0.1690, "fgeo": 0.0227, "fvol": 0.0574},
+    "SR_B5": {"fiso": 0.3093, "fgeo": 0.0330, "fvol": 0.1535},
+    "SR_B6": {"fiso": 0.3430, "fgeo": 0.0453, "fvol": 0.1154},
+    "SR_B7": {"fiso": 0.2658, "fgeo": 0.0387, "fvol": 0.0639},
 }
 
 # https://www.sciencedirect.com/science/article/pii/S0034425717302791
