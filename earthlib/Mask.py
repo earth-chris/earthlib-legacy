@@ -90,6 +90,28 @@ def Sentinel2(img: ee.Image) -> ee.Image:
     return img.updateMask(mask)
 
 
+def MODIS(img: ee.Image) -> ee.Image:
+    """Masks MODIS images.
+
+    Args:
+        img: the ee.Image to mask. Must have a MODIS "state_1km" band.
+
+    Returns:
+        the same input image with an updated mask.
+    """
+    qa = img.select("state_1km")
+
+    cloudShadowBit = ee.Number(2).pow(2).int()
+    cloudBit = ee.Number(2).pow(0).int()
+
+    cloudShadowMask = qa.bitwiseAnd(cloudShadowBit).eq(0)
+    cloudMask = qa.bitwiseAnd(cloudBit).eq(0)
+
+    mask = cloudShadowMask.And(cloudMask)
+
+    return img.mask(mask)
+
+
 def VIIRS(img: ee.Image) -> ee.Image:
     """Masks VIIRS images.
 
@@ -124,22 +146,4 @@ def VIIRS(img: ee.Image) -> ee.Image:
         .And(cirrus2Mask)
     )
 
-    return img.mask(mask)
-
-
-def MODIS(img: ee.Image) -> ee.Image:
-    """Masks MODIS images.
-
-    Args:
-        img: the ee.Image to mask. Must have a MODIS "state_1km" band.
-
-    Returns:
-        the same input image with an updated mask.
-    """
-    cloudShadowBitMask = ee.Number(2).pow(2).int()
-    cloudsBitMask = ee.Number(2).pow(0).int()
-    qa = img.select("state_1km")
-    mask = (
-        qa.bitwiseAnd(cloudShadowBitMask).eq(0).And(qa.bitwiseAnd(cloudsBitMask).eq(0))
-    )
     return img.mask(mask)
