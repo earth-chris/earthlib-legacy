@@ -17,11 +17,19 @@ def bySensor(sensor: str) -> Callable:
         the scale function associated with a sensor to pass to an ee .map() call
     """
     lookup = {
+        "ASTER": ASTER,
+        "AVNIR2": AVNIR2,
+        "DoveR": DoveR,
         "Landsat4": Landsat4,
         "Landsat5": Landsat5,
         "Landsat7": Landsat7,
         "Landsat8": Landsat8,
+        "MODIS": MODIS,
+        "NEON": NEON,
+        "PlanetScope": PlanetScope,
         "Sentinel2": Sentinel2,
+        "SuperDove": SuperDove,
+        "VIIRS": VIIRS,
     }
     try:
         function = lookup[sensor]
@@ -29,7 +37,7 @@ def bySensor(sensor: str) -> Callable:
     except KeyError:
         supported = ", ".join(lookup.keys())
         raise SensorError(
-            f"BRDF adjustment not supported for '{sensor}'. Supported: {supported}"
+            f"Scaling adjustment not supported for '{sensor}'. Supported: {supported}"
         )
 
 
@@ -64,6 +72,62 @@ def Landsat8(image: ee.Image) -> ee.Image:
 def Sentinel2(image: ee.Image) -> ee.Image:
     """Transform Sentinel2 image data to scaled reflectance values"""
     sensor = "Sentinel2"
+    scale, offset = getScaleParams(sensor)
+    return scaleWrapper(image, scale, offset)
+
+
+def MODIS(image: ee.Image) -> ee.Image:
+    """Transform MODIS image data to scaled reflectance values"""
+    sensor = "MODIS"
+    scale, offset = getScaleParams(sensor)
+    return scaleWrapper(image, scale, offset)
+
+
+def VIIRS(image: ee.Image) -> ee.Image:
+    """Transform VIIRS image data to scaled reflectance values"""
+    sensor = "VIIRS"
+    scale, offset = getScaleParams(sensor)
+    return scaleWrapper(image, scale, offset)
+
+
+def ASTER(image: ee.Image) -> ee.Image:
+    """Transform ASTER image data to scaled reflectance values"""
+    sensor = "ASTER"
+    scale, offset = getScaleParams(sensor)
+    return scaleWrapper(image, scale, offset)
+
+
+def AVNIR2(image: ee.Image) -> ee.Image:
+    """Transform ALOS-AVNIR2 image data to scaled reflectance values"""
+    sensor = "AVNIR2"
+    scale, offset = getScaleParams(sensor)
+    return scaleWrapper(image, scale, offset)
+
+
+def NEON(image: ee.Image) -> ee.Image:
+    """Transform NEON image data to scaled reflectance values"""
+    sensor = "NEON"
+    scale, offset = getScaleParams(sensor)
+    return scaleWrapper(image, scale, offset)
+
+
+def DoveR(image: ee.Image) -> ee.Image:
+    """Transform Planet Dove-R image data to scaled reflectance values"""
+    sensor = "DoveR"
+    scale, offset = getScaleParams(sensor)
+    return scaleWrapper(image, scale, offset)
+
+
+def SuperDove(image: ee.Image) -> ee.Image:
+    """Transform Planet SuperDove image data to scaled reflectance values"""
+    sensor = "SuperDove"
+    scale, offset = getScaleParams(sensor)
+    return scaleWrapper(image, scale, offset)
+
+
+def PlanetScope(image: ee.Image) -> ee.Image:
+    """Transform PlanetScope image data to scaled reflectance values"""
+    sensor = "PlanetScope"
     scale, offset = getScaleParams(sensor)
     return scaleWrapper(image, scale, offset)
 
