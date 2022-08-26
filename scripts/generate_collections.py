@@ -111,7 +111,7 @@ collections = {
         "offset": -0.2,
     },
     "Sentinel2": {
-        "collection": "COPERNICUS/S2_SR",
+        "collection": "COPERNICUS/S2_SR_HARMONIZED",
         "band_names": [
             "B2",
             "B3",

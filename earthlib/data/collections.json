@@ -1920,7 +1920,7 @@
       0.142,
       0.24
     ],
-    "collection": "COPERNICUS/S2_SR",
+    "collection": "COPERNICUS/S2_SR_HARMONIZED",
     "scale": 0.0001
   },
   "SuperDove": {
