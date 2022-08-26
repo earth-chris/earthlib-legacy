@@ -134,12 +134,12 @@ def PlanetScope(image: ee.Image) -> ee.Image:
 
 def getScaleParams(sensor: str) -> tuple:
     """Look-up the scale and offset values for a sensor"""
-    scale = collections[sensor].pop("scale", None)
-    offset = collections[sensor].pop("offset", None)
+    scale = collections[sensor].get("scale", 1)
+    offset = collections[sensor].get("offset", 0)
     return scale, offset
 
 
-def scaleWrapper(image: ee.Image, scale: float, offset: float = None) -> ee.Image:
+def scaleWrapper(image: ee.Image, scale: float = 1, offset: float = 0) -> ee.Image:
     """Apply image rescaling and offset adjustments
 
     Args:
@@ -150,5 +150,5 @@ def scaleWrapper(image: ee.Image, scale: float, offset: float = None) -> ee.Imag
     Returns:
         the input rescaled as a 0-1 floating point image
     """
-    scaled = image.multiply(scale).add(offset) if offset else image.multiply(scale)
+    scaled = image.multiply(scale).add(offset)
     return scaled.toFloat()
