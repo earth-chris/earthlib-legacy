@@ -25,11 +25,11 @@ def bySensor(sensor: str) -> Callable:
         "Landsat5": Landsat5,
         "Landsat7": Landsat7,
         "Landsat8": Landsat8,
-        # "MODIS": MODIS,
-        # "PlanetScope": PlanetScope,
-        # "Sentinel2": Sentinel2,
-        # "SuperDove": SuperDove,
-        # "VIIRS": VIIRS,
+        "MODIS": MODIS,
+        "PlanetScope": PlanetScope,
+        "Sentinel2": Sentinel2,
+        "SuperDove": SuperDove,
+        "VIIRS": VIIRS,
     }
     try:
         function = lookup[sensor]
