@@ -60,7 +60,7 @@ def Landsat457(
 
 def Landsat8(
     image: ee.Image,
-    scaleFactor: float = 3,
+    scaleFactor: float = 1,
 ) -> ee.Image:
     """Apply BRDF adjustments to a Landsat8 image
 
@@ -79,7 +79,7 @@ def Landsat8(
 
 def Sentinel2(
     image: ee.Image,
-    scaleFactor: float = 2,
+    scaleFactor: float = 1,
 ) -> ee.Image:
     """Apply BRDF adjustments to a Sentinel2 image
 
