@@ -38,6 +38,8 @@ def bySensor(sensor: str) -> Callable:
 def Landsat4578(img: ee.Image) -> ee.Image:
     """Cloud-masks Landsat images.
 
+    See https://gis.stackexchange.com/questions/425159/how-to-make-a-cloud-free-composite-for-landsat-8-collection-2-surface-reflectanc/425160#425160
+
     Args:
         img: the ee.Image to mask. Must have a Landsat "QA_PIXEL" band.
 
@@ -45,27 +47,12 @@ def Landsat4578(img: ee.Image) -> ee.Image:
         the same input image with an updated mask.
     """
     qa = img.select("QA_PIXEL")
+    sat = img.select("QA_RADSAT")
 
-    dilatedCloudBit = ee.Number(2).pow(1).int()
-    cirrusBit = ee.Number(2).pow(2).int()
-    cloudBit = ee.Number(2).pow(3).int()
-    cloudShadowBit = ee.Number(2).pow(4).int()
-    snowBit = ee.Number(2).pow(5).int()
+    qamask = qa.bitwiseAnd(int("111111", 2)).eq(0)
+    satmask = sat.eq(0)
 
-    dilatedCloudMask = qa.bitwiseAnd(dilatedCloudBit).eq(0)
-    cirrusMask = qa.bitwiseAnd(cirrusBit).eq(0)
-    cloudMask = qa.bitwiseAnd(cloudBit).eq(0)
-    cloudShadowMask = qa.bitwiseAnd(cloudShadowBit).eq(0)
-    snowMask = qa.bitwiseAnd(snowBit).eq(0)
-
-    mask = (
-        dilatedCloudMask.And(cirrusMask)
-        .And(cloudMask)
-        .And(cloudShadowMask)
-        .And(snowMask)
-    )
-
-    return img.mask(mask)
+    return img.updateMask(qamask).updateMask(satmask)
 
 
 def Sentinel2(img: ee.Image) -> ee.Image:
