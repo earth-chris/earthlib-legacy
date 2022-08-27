@@ -1941,7 +1941,8 @@
       "green 2",
       "yellow",
       "red",
-      "red edgenear infrared"
+      "red edge",
+      "near infrared"
     ],
     "band_names": [
       "B1",

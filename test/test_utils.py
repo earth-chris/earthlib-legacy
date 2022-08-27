@@ -1,5 +1,7 @@
 import random
 
+import ee
+
 from earthlib import utils
 
 sensor = "Sentinel2"
@@ -28,8 +30,8 @@ def test_getTypeLevel():
     assert invalid_level == 0
 
 
-def test_getCollection():
-    assert "COPERNICUS" in utils.getCollection(sensor)
+def test_getCollectionName():
+    assert "COPERNICUS" in utils.getCollectionName(sensor)
 
 
 def test_getScaler():

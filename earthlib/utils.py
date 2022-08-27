@@ -3,6 +3,7 @@
 import os
 from warnings import warn
 
+import ee
 import numpy as np
 import spectral
 
@@ -69,7 +70,7 @@ def getTypeLevel(Type: str) -> int:
     return 0
 
 
-def getCollection(sensor: str) -> str:
+def getCollectionName(sensor: str) -> str:
     """Returns the earth engine collection name for a specific satellite sensor.
 
     Args:
@@ -81,6 +82,18 @@ def getCollection(sensor: str) -> str:
     validateSensor(sensor)
     collection = collections[sensor]["collection"]
     return collection
+
+
+def getCollection(sensor: str) -> ee.ImageCollection:
+    """Returns the default image collection for a satellite sensor.
+
+    Args:
+        sensor: the name of the sensor (from earthlib.listSensors()).
+
+    Returns:
+        that sensor's ee image collection.
+    """
+    return ee.ImageCollection(getCollectionName(sensor))
 
 
 def getScaler(sensor: str) -> str:
@@ -108,6 +121,20 @@ def getBands(sensor: str) -> list:
     """
     validateSensor(sensor)
     bands = collections[sensor]["band_names"]
+    return bands
+
+
+def getBandDescriptions(sensor: str) -> list:
+    """Returns a list band name descriptions by sensor.
+
+    Args:
+        sensor: the name of the sensor (from earthlib.listSensors()).
+
+    Returns:
+        bands: a list of sensor-specific band names.
+    """
+    validateSensor(sensor)
+    bands = collections[sensor]["band_descriptions"]
     return bands
 
 
