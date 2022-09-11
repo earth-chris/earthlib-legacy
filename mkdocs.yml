@@ -35,7 +35,7 @@ nav:
 
 # theme
 theme:
-    logo: 'img/symbol-earthlib.svg'
+    logo: 'img/earthlib.svg'
     icon:
       repo: 'fontawesome/brands/github'
     name: 'material'
@@ -43,7 +43,7 @@ theme:
     nav_style: dark
     palette:
       - media: "(prefers-color-scheme: light)"
-        scheme: 'forestobs-light'
+        scheme: 'earthchris-light'
         toggle:
           icon: 'material/weather-night'
           name: 'Go dark'
@@ -67,7 +67,8 @@ plugins:
         include_source: True
 
 extra_css:
-    - css/colors.css
+        - https://earth-chris.github.io/shared/mkdocs.css
+        #- css/colors.css
 
 # pandoc (https://pandoc.org/MANUAL.html)
 markdown_extensions:
