@@ -53,7 +53,7 @@ theme:
           icon: 'material/weather-sunny'
           name: 'Go light'
     font:
-      text: 'Poppins'
+      text: 'Nunito'
       code: 'Source Code Pro'
     favicon: 'img/favicon.png'
     features:
