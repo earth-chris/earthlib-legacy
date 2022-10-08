@@ -7,6 +7,23 @@ import ee
 from earthlib.errors import SensorError
 
 
+def bitwiseSelect(img: ee.Image, fromBit: int, toBit: int = None) -> ee.Image:
+    """Filter QA bit masks.
+
+    Args:
+        img: the QA band image
+        fromBit: QA start bit
+        toBit: QA end bit
+
+    Returns:
+        encoded bitmap for the passed QA bits
+    """
+    toBit = fromBit if toBit is None else toBit
+    size = ee.Number(1).add(toBit).subtract(fromBit)
+    mask = ee.Number(1).leftShift(size).subtract(1)
+    return img.rightShift(fromBit).bitwiseAnd(mask)
+
+
 def bySensor(sensor: str) -> Callable:
     """Returns the appropriate mask function to use by sensor type.
 
@@ -33,6 +50,32 @@ def bySensor(sensor: str) -> Callable:
         raise SensorError(
             f"Cloud masking not supported for '{sensor}'. Supported: {supported}"
         )
+
+
+def Landsat4578_new(img: ee.Image) -> ee.Image:
+    """Cloud-masks Landsat images.
+
+    See https://gis.stackexchange.com/questions/349371/creating-cloud-free-images-out-of-a-mod09a1-modis-image-in-gee
+    Previously: https://gis.stackexchange.com/questions/425159/how-to-make-a-cloud-free-composite-for-landsat-8-collection-2-surface-reflectanc/425160#425160
+
+    Args:
+        img: the ee.Image to mask. Must have a Landsat "QA_PIXEL" band.
+
+    Returns:
+        the same input image with an updated mask.
+    """
+    qa = img.select("QA_PIXEL")
+    sat = img.select("QA_RADSAT")
+
+    qaDilatedCloud = bitwiseSelect(qa, 1).eq(0)
+    qaCloudShadow = bitwiseSelect(qa, 4).eq(0)
+    qaSnow = bitwiseSelect(qa, 5).eq(0)
+    qaMask = qaDilatedCloud.And(qaCloudShadow).And(qaSnow)
+
+    satMask = sat.eq(0)
+    jointMask = qaMask.And(satMask)
+
+    return img.updateMask(jointMask)
 
 
 def Landsat4578(img: ee.Image) -> ee.Image:
