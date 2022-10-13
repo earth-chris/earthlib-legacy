@@ -1,4 +1,14 @@
-from earthlib import BRDFCorrect, Mask, NIRv, Scale, Unmix, __version__, read
+from earthlib import (
+    BRDFCorrect,
+    BrightMask,
+    CloudMask,
+    NIRv,
+    Scale,
+    ShadeMask,
+    Unmix,
+    __version__,
+    read,
+)
 from earthlib.config import collections, metadata
 from earthlib.utils import (
     getBands,
