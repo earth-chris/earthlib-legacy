@@ -48,21 +48,13 @@ cd earthlib
 pip install -e .
 ```
 
-### conda
+---
 
-I recommend working with `earthlib` in `conda` (download from [here](https://docs.conda.io/en/latest/miniconda.html)). The `environment.yml` file in this repository contains a series of packages that are either required (`earthengine-api`) or just convenient (`jupyter`, `folium`) to have.
+## Developed by
 
-```bash
-git clone https://github.com/earth-chris/earthlib.git
-cd earthlib
-conda env update
-```
+[Christopher Anderson](https://cbanderson.info)
 
-Once the environment has been created, you can activate it with `conda activate earthlib`.
+<a href="https://twitter.com/earth_chris">![Twitter Follow](https://img.shields.io/twitter/follow/earth_chris)</a>
+<a href="https://github.com/earth-chris">![GitHub Stars](https://img.shields.io/github/stars/earth-chris?affiliations=OWNER%2CCOLLABORATOR&style=social)</a>
 
-
-## Contact
-
-![Twitter Follow](https://img.shields.io/twitter/follow/earth_chris)
-
-This work is supported by the Stanford Center for Conservation Biology and the Natural Capital Project.
+This work was supported by the Stanford Center for Conservation Biology and the Natural Capital Project.
