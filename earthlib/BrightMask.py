@@ -39,7 +39,7 @@ def brightMask(img: ee.Image, threshold: float) -> ee.Image:
     Args:
         img: the ee.Image to shade mask.
         threshold: the brightness/reflectance value to exclude.
-            pixels below this value are flagged as shade.
+            pixels above this value are flagged as bright.
 
     Returns:
         a pixel byte map with 0 for shade pixels, 1 for bright pixels.
@@ -55,7 +55,7 @@ def Landsat457(img: ee.Image, threshold: float = 0.4) -> ee.Image:
     Args:
         img: the ee.Image to shade mask.
         threshold: the brightness/reflectance value to exclude.
-            pixels below this value are flagged as shade.
+            pixels above this value are flagged as bright.
 
     Returns:
         the same input image with an updated mask.
@@ -71,7 +71,7 @@ def Landsat8(img: ee.Image, threshold: float = 0.4) -> ee.Image:
     Args:
         img: the ee.Image to shade mask.
         threshold: the brightness/reflectance value to exclude.
-            pixels below this value are flagged as shade.
+            pixels above this value are flagged as bright.
 
     Returns:
         the same input image with an updated mask.
