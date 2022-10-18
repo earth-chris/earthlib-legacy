@@ -83,7 +83,7 @@ def Landsat8(img: ee.Image, threshold: float = 0.4) -> ee.Image:
 
 
 def MODIS(img: ee.Image, threshold: float = 0.45) -> ee.Image:
-    """Apply bright pixel masking to a Landsat 8 image.
+    """Apply bright pixel masking to a MODIS image.
 
     Args:
         img: the ee.Image to shade mask.
