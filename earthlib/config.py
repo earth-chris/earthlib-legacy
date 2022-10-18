@@ -52,3 +52,9 @@ BRDF_COEFFICIENTS_S2 = {
     "B11": {"fiso": 0.3430, "fgeo": 0.0453, "fvol": 0.1154},
     "B12": {"fiso": 0.2658, "fgeo": 0.0387, "fvol": 0.0639},
 }
+
+# spectral mixture analysis defaults
+N_ITERATIONS = 20
+SHADE_NORMALIZE = True
+RMSE = "RMSE"
+WEIGHT = "WEIGHT"
