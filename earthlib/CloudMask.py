@@ -53,7 +53,7 @@ def bySensor(sensor: str) -> Callable:
 
 
 def Landsat4578(img: ee.Image) -> ee.Image:
-    """Cloud-masks Landsat images.
+    """Cloud-mask Landsat images.
 
     See https://gis.stackexchange.com/questions/349371/creating-cloud-free-images-out-of-a-mod09a1-modis-image-in-gee
     Previously: https://gis.stackexchange.com/questions/425159/how-to-make-a-cloud-free-composite-for-landsat-8-collection-2-surface-reflectanc/425160
@@ -81,7 +81,7 @@ def Landsat4578(img: ee.Image) -> ee.Image:
 
 
 def Sentinel2QA(img: ee.Image) -> ee.Image:
-    """Masks Sentinel2 images using the QA band.
+    """Mask Sentinel2 images using the QA band.
 
     Args:
         img: the ee.Image to mask. Must have a Sentinel "QA60" band.
@@ -98,7 +98,7 @@ def Sentinel2QA(img: ee.Image) -> ee.Image:
 
 
 def Sentinel2SCL(img: ee.Image) -> ee.Image:
-    """Masks Sentinel2 images using scene classification labels.
+    """Mask Sentinel2 images using scene classification labels.
 
     Args:
         img: the ee.Image to mask. Must have a Sentinel "SCL" class band.
@@ -153,23 +153,37 @@ def Sentinel2(img: ee.Image, use_qa: bool = True, use_scl: bool = True) -> ee.Im
 
 
 def MODIS(img: ee.Image) -> ee.Image:
-    """Dummy function for MODIS images.
-
-    This function just returns the original image because the MODIS collection
-        already applies a cloud mask to all pixels. It only exists so as to
-        not break other processing chains that use .bySensor() methods.
+    """Mask MODIS images.
 
     Args:
-        img: an ee.Image.
+        img: the ee.Image to mask.
 
     Returns:
-        the input image.
+        the same input image with an updated mask.
     """
-    return img
+    qa = img.select("state_1km")
+
+    clearMask = bitwiseSelect(qa, 0, 1).eq(0)
+    shadowMask = bitwiseSelect(qa, 2).eq(0)
+    aerosolMask = bitwiseSelect(qa, 6, 7).lte(1)
+    cirrusMask = bitwiseSelect(qa, 8, 9).eq(0)
+    cloudMask = bitwiseSelect(qa, 10).eq(0)
+    fireMask = bitwiseSelect(qa, 11).eq(0)
+    snowMask = bitwiseSelect(qa, 15).eq(0)
+
+    mask = (
+        clearMask.And(shadowMask)
+        .And(aerosolMask)
+        .And(cirrusMask)
+        .And(cloudMask)
+        .And(fireMask)
+        .And(snowMask)
+    )
+    return img.updateMask(mask)
 
 
 def VIIRS(img: ee.Image) -> ee.Image:
-    """Masks VIIRS images.
+    """Mask VIIRS images.
 
     Args:
         img: the ee.Image to mask. Must have "QF1" and "QF2" bands.

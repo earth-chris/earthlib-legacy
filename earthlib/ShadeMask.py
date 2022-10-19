@@ -22,6 +22,7 @@ def bySensor(sensor: str) -> Callable:
         "Landsat5": Landsat457,
         "Landsat7": Landsat457,
         "Landsat8": Landsat8,
+        "MODIS": MODIS,
     }
     try:
         function = lookup[sensor]
@@ -77,5 +78,21 @@ def Landsat8(img: ee.Image, threshold: float = 0.03) -> ee.Image:
         the same input image with an updated mask.
     """
     subset = img.select(getBands("Landsat8"))
+    shade = shadeMask(subset, threshold)
+    return img.updateMask(shade)
+
+
+def MODIS(img: ee.Image, threshold: float = 0.025) -> ee.Image:
+    """Apply shade masking to a MODIS image.
+
+    Args:
+        img: the ee.Image to shade mask.
+        threshold: the brightness/reflectance value to exclude.
+            pixels below this value are flagged as shade.
+
+    Returns:
+        the same input image with an updated mask.
+    """
+    subset = img.select(getBands("MODIS"))
     shade = shadeMask(subset, threshold)
     return img.updateMask(shade)

@@ -163,15 +163,15 @@ collections = {
         "scale": 0.0001,
     },
     "MODIS": {
-        "collection": "MODIS/006/MCD43A4",
+        "collection": "MODIS/061/MOD09GA",
         "band_names": [
-            "Nadir_Reflectance_Band3",
-            "Nadir_Reflectance_Band4",
-            "Nadir_Reflectance_Band1",
-            "Nadir_Reflectance_Band2",
-            "Nadir_Reflectance_Band5",
-            "Nadir_Reflectance_Band6",
-            "Nadir_Reflectance_Band7",
+            "sur_refl_b03",
+            "sur_refl_b04",
+            "sur_refl_b01",
+            "sur_refl_b02",
+            "sur_refl_b05",
+            "sur_refl_b06",
+            "sur_refl_b07",
         ],
         "band_descriptions": [
             "blue",
