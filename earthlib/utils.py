@@ -1,6 +1,7 @@
 """Utility functions for working with spectral libraries and earth engine routines."""
 
 import os
+from copy import deepcopy as copy
 from warnings import warn
 
 import ee
@@ -106,7 +107,7 @@ def getScaler(sensor: str) -> str:
         scaler: the scale factor to multiply.
     """
     validateSensor(sensor)
-    scaler = collections[sensor]["scale"]
+    scaler = copy(collections[sensor]).get("scale")
     return scaler
 
 
@@ -120,7 +121,7 @@ def getBands(sensor: str) -> list:
         bands: a list of sensor-specific band names.
     """
     validateSensor(sensor)
-    bands = collections[sensor]["band_names"]
+    bands = copy(collections[sensor]).get("band_names")
     return bands
 
 
@@ -134,7 +135,7 @@ def getBandDescriptions(sensor: str) -> list:
         bands: a list of sensor-specific band names.
     """
     validateSensor(sensor)
-    bands = collections[sensor]["band_descriptions"]
+    bands = copy(collections[sensor]).get("band_descriptions")
     return bands
 
 
@@ -149,7 +150,7 @@ def getBandIndices(custom_bands: list, sensor: str) -> list:
         indices: list of integer band indices.
     """
     validateSensor(sensor)
-    sensor_bands = collections[sensor]["band_names"]
+    sensor_bands = getBands(sensor)
     indices = list()
 
     if type(custom_bands) in (list, tuple):
