@@ -53,13 +53,13 @@ def bySensor(sensor: str) -> Callable:
 
 
 def Landsat4578(img: ee.Image) -> ee.Image:
-    """Cloud-mask Landsat images.
+    """Cloud-mask Landsat images based on the QA bands.
 
     See https://gis.stackexchange.com/questions/349371/creating-cloud-free-images-out-of-a-mod09a1-modis-image-in-gee
     Previously: https://gis.stackexchange.com/questions/425159/how-to-make-a-cloud-free-composite-for-landsat-8-collection-2-surface-reflectanc/425160
 
     Args:
-        img: the ee.Image to mask. Must have a Landsat "QA_PIXEL" band.
+        img: the ee.Image to mask. Must have Landsat "QA_PIXEL" and "QA_RADSAT" band.
 
     Returns:
         the same input image with an updated mask.
@@ -78,6 +78,26 @@ def Landsat4578(img: ee.Image) -> ee.Image:
     jointMask = qaMask.And(satMask)
 
     return img.updateMask(jointMask)
+
+
+def Sentinel2(img: ee.Image, use_qa: bool = True, use_scl: bool = True) -> ee.Image:
+    """Mask Sentinel2 images using multiple masking approaches.
+
+    Args:
+        img: the ee.Image to mask.
+        use_qa: apply QA band cloud masking. img must have a "QA60" band.
+        use_scl: apply SCL band cloud masking. img must have a "SCL" band.
+
+    Returns:
+        the same input image with an updated mask.
+    """
+    if use_qa:
+        img = Sentinel2QA(img)
+
+    if use_scl:
+        img = Sentinel2SCL(img)
+
+    return img
 
 
 def Sentinel2QA(img: ee.Image) -> ee.Image:
@@ -132,31 +152,11 @@ def Sentinel2SCL(img: ee.Image) -> ee.Image:
     return img.updateMask(cloudBareMask)
 
 
-def Sentinel2(img: ee.Image, use_qa: bool = True, use_scl: bool = True) -> ee.Image:
-    """Mask Sentinel2 images using multiple masking approaches.
-
-    Args:
-        img: the ee.Image to mask.
-        use_qa: apply QA band cloud masking. img must have a "QA60" band.
-        use_scl: apply SCL band cloud masking. img must have a "SCL" band.
-
-    Returns:
-        the same input image with an updated mask.
-    """
-    if use_qa:
-        img = Sentinel2QA(img)
-
-    if use_scl:
-        img = Sentinel2SCL(img)
-
-    return img
-
-
 def MODIS(img: ee.Image) -> ee.Image:
-    """Mask MODIS images.
+    """Mask MODIS images using the QA band.
 
     Args:
-        img: the ee.Image to mask.
+        img: the ee.Image to mask. Requires a "state_1km" band.
 
     Returns:
         the same input image with an updated mask.
@@ -183,10 +183,10 @@ def MODIS(img: ee.Image) -> ee.Image:
 
 
 def VIIRS(img: ee.Image) -> ee.Image:
-    """Mask VIIRS images.
+    """Mask VIIRS images using QA bands.
 
     Args:
-        img: the ee.Image to mask. Must have "QF1" and "QF2" bands.
+        img: the ee.Image to mask. Must have "QF1", "QF2" and "QF7" bands.
 
     Returns:
         the same input image with an updated mask.

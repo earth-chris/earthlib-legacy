@@ -50,7 +50,7 @@ def shadeMask(img: ee.Image, threshold: float) -> ee.Image:
     return mask
 
 
-def Landsat457(img: ee.Image, threshold: float = 0.03) -> ee.Image:
+def Landsat457(img: ee.Image, threshold: float = 0.045) -> ee.Image:
     """Apply shade masking to a Landsat 4/5/7 image.
 
     Args:
@@ -61,12 +61,15 @@ def Landsat457(img: ee.Image, threshold: float = 0.03) -> ee.Image:
     Returns:
         the same input image with an updated mask.
     """
-    subset = img.select(getBands("Landsat7"))
+    # remove NIR band to ignore multiple scattering
+    bands = getBands("Landsat7")
+    bands.remove("SR_B4")
+    subset = img.select(bands)
     shade = shadeMask(subset, threshold)
     return img.updateMask(shade)
 
 
-def Landsat8(img: ee.Image, threshold: float = 0.03) -> ee.Image:
+def Landsat8(img: ee.Image, threshold: float = 0.045) -> ee.Image:
     """Apply shade masking to a Landsat 8 image.
 
     Args:
@@ -77,12 +80,14 @@ def Landsat8(img: ee.Image, threshold: float = 0.03) -> ee.Image:
     Returns:
         the same input image with an updated mask.
     """
-    subset = img.select(getBands("Landsat8"))
+    bands = getBands("Landsat8")
+    bands.remove("SR_B5")
+    subset = img.select(bands)
     shade = shadeMask(subset, threshold)
     return img.updateMask(shade)
 
 
-def MODIS(img: ee.Image, threshold: float = 0.025) -> ee.Image:
+def MODIS(img: ee.Image, threshold: float = 0.045) -> ee.Image:
     """Apply shade masking to a MODIS image.
 
     Args:
@@ -93,6 +98,9 @@ def MODIS(img: ee.Image, threshold: float = 0.025) -> ee.Image:
     Returns:
         the same input image with an updated mask.
     """
-    subset = img.select(getBands("MODIS"))
+    bands = getBands("MODIS")
+    bands.remove("sur_refl_b02")
+    bands.remove("sur_refl_b05")
+    subset = img.select(bands)
     shade = shadeMask(subset, threshold)
     return img.updateMask(shade)

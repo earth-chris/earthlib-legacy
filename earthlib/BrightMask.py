@@ -61,7 +61,10 @@ def Landsat457(img: ee.Image, threshold: float = 0.4) -> ee.Image:
     Returns:
         the same input image with an updated mask.
     """
-    subset = img.select(getBands("Landsat7"))
+    # remove SWIR2 band where most ground/cloud confusion occurs
+    bands = getBands("Landsat7")
+    bands.remove("SR_B7")
+    subset = img.select()
     shade = brightMask(subset, threshold)
     return img.updateMask(shade)
 
@@ -77,12 +80,14 @@ def Landsat8(img: ee.Image, threshold: float = 0.4) -> ee.Image:
     Returns:
         the same input image with an updated mask.
     """
-    subset = img.select(getBands("Landsat8"))
+    bands = getBands("Landsat8")
+    bands.remove("SR_B7")
+    subset = img.select(bands)
     shade = brightMask(subset, threshold)
     return img.updateMask(shade)
 
 
-def MODIS(img: ee.Image, threshold: float = 0.45) -> ee.Image:
+def MODIS(img: ee.Image, threshold: float = 0.4) -> ee.Image:
     """Apply bright pixel masking to a MODIS image.
 
     Args:
@@ -93,6 +98,8 @@ def MODIS(img: ee.Image, threshold: float = 0.45) -> ee.Image:
     Returns:
         the same input image with an updated mask.
     """
-    subset = img.select(getBands("MODIS"))
+    bands = getBands("MODIS")
+    bands.remove("sur_refl_b07")
+    subset = img.select(bands)
     shade = brightMask(subset, threshold)
     return img.updateMask(shade)

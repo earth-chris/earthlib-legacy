@@ -5,6 +5,7 @@ from earthlib import (
     NIRv,
     Scale,
     ShadeMask,
+    ThresholdMask,
     Unmix,
     __version__,
     read,
