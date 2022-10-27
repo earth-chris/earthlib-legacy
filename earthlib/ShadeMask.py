@@ -63,7 +63,7 @@ def Landsat457(img: ee.Image, threshold: float = 0.045) -> ee.Image:
     """
     # remove NIR band to ignore multiple scattering
     bands = getBands("Landsat7")
-    bands.remove("SR_B3")
+    bands.remove("SR_B4")
     subset = img.select(bands)
     shade = shadeMask(subset, threshold)
     return img.updateMask(shade)
