@@ -9,8 +9,8 @@ import pandas as pd
 package_path = os.path.realpath(__file__)
 package_dir = os.path.dirname(package_path)
 collections_path = os.path.join(package_dir, "data", "collections.json")
-metadata_path = os.path.join(package_dir, "data", "spectra.csv")
-endmember_path = os.path.join(package_dir, "data", "spectra.sli")
+metadata_path = os.path.join(package_dir, "data", "spectra-optimized.csv")
+endmember_path = os.path.join(package_dir, "data", "spectra-optimized.sli")
 
 # read critical data into memory
 metadata = pd.read_csv(metadata_path)

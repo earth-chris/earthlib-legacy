@@ -1,0 +1,318 @@
+,NAME,SOURCE,LEVEL_1,LEVEL_2,LEVEL_3,LEVEL_4,LAT,LON,NOTES
+0,FS15R_FS4281,icraf-isric-soil-database,pervious,bare,soil,measured,-32.85,137.53333333333333,none
+1,FS15R_FS4297,icraf-isric-soil-database,pervious,bare,soil,measured,-35.35,144.85,none
+2,FS15R_FS4308,icraf-isric-soil-database,pervious,bare,soil,measured,-29.016666666666666,152.03333333333333,none
+3,FS15R_FS4309,icraf-isric-soil-database,pervious,bare,soil,measured,-29.016666666666666,152.03333333333333,none
+4,FS15R_FS4361,icraf-isric-soil-database,pervious,bare,soil,measured,-27.36666666666667,152.88333333333333,none
+5,FS15R_FS4393,icraf-isric-soil-database,pervious,bare,soil,measured,-24.85,152.4,none
+6,FS15R_FS4397,icraf-isric-soil-database,pervious,bare,soil,measured,-34.7,139.06666666666666,none
+7,FS15R_FS4144,icraf-isric-soil-database,pervious,bare,soil,measured,-2.6,-54.95,none
+8,FS15R_FS4152,icraf-isric-soil-database,pervious,bare,soil,measured,-2.9,-54.93333333333333,none
+9,FS15R_FS4177,icraf-isric-soil-database,pervious,bare,soil,measured,-7.733333333333332,-35.25,none
+10,FS15R_FS4180,icraf-isric-soil-database,pervious,bare,soil,measured,-7.733333333333332,-35.25,none
+11,FS15R_FS4205,icraf-isric-soil-database,pervious,bare,soil,measured,-6.666666666666668,-35.13333333333333,none
+12,FS15R_FS4218,icraf-isric-soil-database,pervious,bare,soil,measured,-8.35,-35.016666666666666,none
+13,FS15R_FS4221,icraf-isric-soil-database,pervious,bare,soil,measured,-8.35,-35.016666666666666,none
+14,FS15R_FS4261,icraf-isric-soil-database,pervious,bare,soil,measured,-12.0,-50.0,none
+15,FS15R_FS5730,icraf-isric-soil-database,pervious,bare,soil,measured,5.883333333333333,-7.333333333333332,none
+16,FS15R_FS5731,icraf-isric-soil-database,pervious,bare,soil,measured,5.883333333333333,-7.333333333333332,none
+17,FS15R_FS5088,icraf-isric-soil-database,pervious,bare,soil,measured,23.216666666666665,113.46666666666668,none
+18,FS15R_FS5094,icraf-isric-soil-database,pervious,bare,soil,measured,23.13333333333333,112.58333333333331,none
+19,FS21_FS1115,icraf-isric-soil-database,pervious,bare,soil,measured,3.8333333333333335,103.31666666666666,none
+20,FS21_FS1122,icraf-isric-soil-database,pervious,bare,soil,measured,3.8333333333333335,103.31666666666666,none
+21,FS21_FS1145,icraf-isric-soil-database,pervious,bare,soil,measured,1.75,109.8,none
+22,FS21_FS1146,icraf-isric-soil-database,pervious,bare,soil,measured,1.75,109.8,none
+23,FS15R_FS5176,icraf-isric-soil-database,pervious,bare,soil,measured,28.216666666666665,116.91666666666669,none
+24,FS15R_FS5230,icraf-isric-soil-database,pervious,bare,soil,measured,23.65,113.65833333333336,none
+25,FS15R_FS5286,icraf-isric-soil-database,pervious,bare,soil,measured,21.91666666666667,101.23333333333332,none
+26,FS15R_FS5303,icraf-isric-soil-database,pervious,bare,soil,measured,26.38333333333333,106.43333333333334,none
+27,FS15R_FS4948,icraf-isric-soil-database,pervious,bare,soil,measured,4.1,-72.8,none
+28,FS15R_FS4989,icraf-isric-soil-database,pervious,bare,soil,measured,0.45,-72.21666666666667,none
+29,FS15R_FS4996,icraf-isric-soil-database,pervious,bare,soil,measured,1.3333333333333333,-77.33333333333333,none
+30,FS15R_FS5013,icraf-isric-soil-database,pervious,bare,soil,measured,2.5,-72.63333333333334,none
+31,FS15R_FS5015,icraf-isric-soil-database,pervious,bare,soil,measured,2.5,-72.63333333333334,none
+32,FS15R_FS5575,icraf-isric-soil-database,pervious,bare,soil,measured,22.73333333333333,-82.16666666666667,none
+33,FS15R_FS5649,icraf-isric-soil-database,pervious,bare,soil,measured,21.166666666666668,-76.58333333333333,none
+34,FS15R_FS5662,icraf-isric-soil-database,pervious,bare,soil,measured,20.2,-75.2,none
+35,FS15R_FS4759,icraf-isric-soil-database,pervious,bare,soil,measured,0.0,0.0,none
+36,FS15R_FS4768,icraf-isric-soil-database,pervious,bare,soil,measured,50.47916666666667,6.383055555555555,none
+37,FS15R_FS4521,icraf-isric-soil-database,pervious,bare,soil,measured,0.3375,-78.5625,none
+38,FS15R_FS4524,icraf-isric-soil-database,pervious,bare,soil,measured,0.3375,-78.5625,none
+39,FS15R_FS5486,icraf-isric-soil-database,pervious,bare,soil,measured,38.85,-6.266666666666668,none
+40,FS15R_FS5488,icraf-isric-soil-database,pervious,bare,soil,measured,38.85,-6.266666666666668,none
+41,FS15R_FS5520,icraf-isric-soil-database,pervious,bare,soil,measured,39.98333333333333,-3.6,none
+42,FS15R_FS5552,icraf-isric-soil-database,pervious,bare,soil,measured,38.8,-6.433333333333334,none
+43,FS15R_FS4906,icraf-isric-soil-database,pervious,bare,soil,measured,0.0,0.0,none
+44,FS15R_FS5346,icraf-isric-soil-database,pervious,bare,soil,measured,40.583333333333336,22.5,none
+45,FS21_FS9742,icraf-isric-soil-database,pervious,bare,soil,measured,-4.75,104.98333333333332,none
+46,FS21_FS1254,icraf-isric-soil-database,pervious,bare,soil,measured,2.5666666666666664,98.61666666666666,none
+47,FS21_FS814,icraf-isric-soil-database,pervious,bare,soil,measured,-1.7333333333333334,102.16666666666669,none
+48,FS21_FS9761,icraf-isric-soil-database,pervious,bare,soil,measured,-3.5166666666666666,128.0036111111111,none
+49,FS21_FS1275,icraf-isric-soil-database,pervious,bare,soil,measured,0.9933333333333332,116.95666666666666,none
+50,FS21_FS1023,icraf-isric-soil-database,pervious,bare,soil,measured,52.41666666666666,-6.416666666666668,none
+51,FS21_FS972,icraf-isric-soil-database,pervious,bare,soil,measured,21.5,79.08333333333333,none
+52,FS21_FS845,icraf-isric-soil-database,pervious,bare,soil,measured,39.66388888888888,16.216666666666665,none
+53,FS21_FS850,icraf-isric-soil-database,pervious,bare,soil,measured,39.66388888888888,16.216666666666665,none
+54,FS21_FS922,icraf-isric-soil-database,pervious,bare,soil,measured,41.25861111111112,13.459444444444443,none
+55,FS21_FS930,icraf-isric-soil-database,pervious,bare,soil,measured,41.45555555555556,13.62527777777778,none
+56,FS21_FS1071,icraf-isric-soil-database,pervious,bare,soil,measured,18.369444444444444,-77.99166666666667,none
+57,FS21_FS1075,icraf-isric-soil-database,pervious,bare,soil,measured,18.044722222222227,-77.91861111111113,none
+58,FS21_FS1076,icraf-isric-soil-database,pervious,bare,soil,measured,18.044722222222227,-77.91861111111113,none
+59,FS21_FS1078,icraf-isric-soil-database,pervious,bare,soil,measured,18.044722222222227,-77.91861111111113,none
+60,FS21_FS9575,icraf-isric-soil-database,pervious,bare,soil,measured,36.255833333333335,139.9038888888889,none
+61,FS21_FS1425,icraf-isric-soil-database,pervious,bare,soil,measured,0.0,0.0,none
+62,FS21_FS1328,icraf-isric-soil-database,pervious,bare,soil,measured,-3.55,39.55,none
+63,FS21_FS1460,icraf-isric-soil-database,pervious,bare,soil,measured,0.7055555555555555,34.57777777777778,none
+64,FS21_FS1515,icraf-isric-soil-database,pervious,bare,soil,measured,0.1722222222222222,37.46111111111112,none
+65,FS21_FS1231,icraf-isric-soil-database,pervious,bare,soil,measured,15.383333333333333,-5.416666666666668,none
+66,FS21_FS1249,icraf-isric-soil-database,pervious,bare,soil,measured,16.5,-4.183333333333334,none
+67,FS21_FS1174,icraf-isric-soil-database,pervious,bare,soil,measured,1.4583333333333333,110.28333333333332,none
+68,FS21_FS9784,icraf-isric-soil-database,pervious,bare,soil,measured,-13.133333333333333,35.266666666666666,none
+69,FS21_FS524,icraf-isric-soil-database,pervious,bare,soil,measured,7.483333333333332,4.5,none
+70,FS21_FS528,icraf-isric-soil-database,pervious,bare,soil,measured,7.483333333333332,4.5,none
+71,FS21_FS726,icraf-isric-soil-database,pervious,bare,soil,measured,7.583333333333332,4.933333333333334,none
+72,FS21_FS538,icraf-isric-soil-database,pervious,bare,soil,measured,6.783333333333332,4.866666666666667,none
+73,FS21_FS541,icraf-isric-soil-database,pervious,bare,soil,measured,6.783333333333332,4.866666666666667,none
+74,FS21_FS547,icraf-isric-soil-database,pervious,bare,soil,measured,6.783333333333332,4.866666666666667,none
+75,FS21_FS549,icraf-isric-soil-database,pervious,bare,soil,measured,6.783333333333332,4.866666666666667,none
+76,FS21_FS671,icraf-isric-soil-database,pervious,bare,soil,measured,11.433333333333335,-86.1,none
+77,FS21_FS672,icraf-isric-soil-database,pervious,bare,soil,measured,11.433333333333335,-86.1,none
+78,FS21_FS9663,icraf-isric-soil-database,pervious,bare,soil,measured,52.01666666666666,5.966666666666668,none
+79,FS21_FS9671,icraf-isric-soil-database,pervious,bare,soil,measured,52.01666666666666,5.966666666666668,none
+80,FS21_FS9708,icraf-isric-soil-database,pervious,bare,soil,measured,51.56972222222223,5.576111111111112,none
+81,FS21_FS372,icraf-isric-soil-database,pervious,bare,soil,measured,-3.8202777777777777,-73.3175,none
+82,FS21_FS406,icraf-isric-soil-database,pervious,bare,soil,measured,-5.766666666666668,-76.08333333333333,none
+83,FS21_FS125,icraf-isric-soil-database,pervious,bare,soil,measured,-3.910833333333333,-73.37194444444444,none
+84,FS21_FS126,icraf-isric-soil-database,pervious,bare,soil,measured,-3.910833333333333,-73.37194444444444,none
+85,FS21_FS132,icraf-isric-soil-database,pervious,bare,soil,measured,-3.910833333333333,-73.37194444444444,none
+86,FS21_FS179,icraf-isric-soil-database,pervious,bare,soil,measured,-16.433333333333334,-71.6,none
+87,FS21_FS614,icraf-isric-soil-database,pervious,bare,soil,measured,51.31666666666667,22.2,none
+88,FS21_FS580,icraf-isric-soil-database,pervious,bare,soil,measured,51.48333333333333,21.91666666666667,none
+89,FS21_FS1712,icraf-isric-soil-database,pervious,bare,soil,measured,55.81666666666667,14.066666666666665,none
+90,FS21_FS1654,icraf-isric-soil-database,pervious,bare,soil,measured,0.0,0.0,none
+91,FS21_FS1667,icraf-isric-soil-database,pervious,bare,soil,measured,58.94944444444444,15.041111111111109,none
+92,FS21_FS1800,icraf-isric-soil-database,pervious,bare,soil,measured,16.516666666666666,102.83333333333331,none
+93,FS21_FS1923,icraf-isric-soil-database,pervious,bare,soil,measured,0.0,0.0,none
+94,FS21_FS2029,icraf-isric-soil-database,pervious,bare,soil,measured,29.70833333333333,-82.25694444444444,none
+95,FS21_FS2033,icraf-isric-soil-database,pervious,bare,soil,measured,29.70833333333333,-82.25694444444444,none
+96,FS21_FS2035,icraf-isric-soil-database,pervious,bare,soil,measured,29.70833333333333,-82.25694444444444,none
+97,FS21_FS2036,icraf-isric-soil-database,pervious,bare,soil,measured,29.70833333333333,-82.25694444444444,none
+98,FS21_FS242,icraf-isric-soil-database,pervious,bare,soil,measured,-32.166666666666664,-55.01666666666666,none
+99,FS21_FS9972,icraf-isric-soil-database,pervious,bare,soil,measured,0.0,0.0,none
+100,FS21_FS9989,icraf-isric-soil-database,pervious,bare,soil,measured,-15.229166666666664,23.266666666666666,none
+101,FS21_FS9992,icraf-isric-soil-database,pervious,bare,soil,measured,-15.229166666666664,23.266666666666666,none
+102,muakye.001-,asd,pervious,bare,gravel,measured,34.4408,-119.8745,urban reflectance spectra from santa barbara
+4248,ash,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4249,charduff,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4250,chartree,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4251,burncham,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4252,charbark,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4253,charlogs,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4254,charrock,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4255,charsoil,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4256,graysoil,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4257,ash_litter,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4258,ash,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4259,barkchar,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4260,black_charwood,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4261,charbark,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4262,charrock,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4263,charsoil,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4264,charwood,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4265,cooney_charwood,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4266,light_charsoil,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4267,difubr,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+4268,scorch_psme,asd,pervious,burn,char,measured,0.0,0.0,joint fire science program
+560,MCON_Tower_CWD1_Canopy,specevo,pervious,npv,npv,measured,37.06699,-119.1955,hyspiri simulation spectra
+561,MCON_Tower_CWD2_Canopy,specevo,pervious,npv,npv,measured,37.06695,-119.19554,hyspiri simulation spectra
+562,SJER_Plot361_NPV_T015,asd,pervious,npv,npv,measured,37.084376,-119.733826,hyspiri simulation spectra
+563,kellbark,asd,pervious,npv,bark,measured,0.0,0.0,joint fire science program
+564,crosscut,asd,pervious,npv,wood,measured,0.0,0.0,joint fire science program
+565,bleachwd,asd,pervious,npv,wood,measured,0.0,0.0,joint fire science program
+566,yewdead,asd,pervious,npv,wood,measured,0.0,0.0,joint fire science program
+567,deadcott,asd,pervious,npv,litter,measured,0.0,0.0,joint fire science program
+568,deadbark,asd,pervious,npv,bark,measured,0.0,0.0,joint fire science program
+569,deadfern,asd,pervious,npv,litter,measured,0.0,0.0,joint fire science program
+570,stmpwood,asd,pervious,npv,wood,measured,0.0,0.0,joint fire science program
+571,deadlodg,asd,pervious,npv,litter,measured,0.0,0.0,joint fire science program
+572,innrbark,asd,pervious,npv,bark,measured,0.0,0.0,joint fire science program
+573,needbrow,asd,pervious,npv,litter,measured,0.0,0.0,joint fire science program
+574,dedbirch,asd,pervious,npv,bark,measured,0.0,0.0,joint fire science program
+575,deadwood,asd,pervious,npv,wood,measured,0.0,0.0,joint fire science program
+576,dedaspen,asd,pervious,npv,bark,measured,0.0,0.0,joint fire science program
+577,difubr,asd,pervious,npv,litter,measured,0.0,0.0,joint fire science program
+578,ndbnof.004-,asd,pervious,npv,bark,measured,34.44,-119.8927,urban reflectance spectra from santa barbara
+579,ndbnye.003-,asd,pervious,npv,bark,measured,34.4357,-119.8801,urban reflectance spectra from santa barbara
+580,ndbnyg.002-,asd,pervious,npv,bark,measured,34.44,-119.8927,urban reflectance spectra from santa barbara
+581,ndbnof.001-,asd,pervious,npv,bark,measured,34.44,-119.8927,urban reflectance spectra from santa barbara
+582,ndbnyg.003-,asd,pervious,npv,bark,measured,34.44,-119.8927,urban reflectance spectra from santa barbara
+583,ndbnye.012-,asd,pervious,npv,bark,measured,34.4399,-119.8927,urban reflectance spectra from santa barbara
+584,ndbnye.005-,asd,pervious,npv,bark,measured,34.4399,-119.8927,urban reflectance spectra from santa barbara
+585,ndbnye.008-,asd,pervious,npv,bark,measured,34.4399,-119.8927,urban reflectance spectra from santa barbara
+586,ndbnmm.001-,asd,pervious,npv,bark,measured,34.4483,-119.8191,urban reflectance spectra from santa barbara
+587,ndbnye.013-,asd,pervious,npv,bark,measured,34.4399,-119.8927,urban reflectance spectra from santa barbara
+588,ndbnmm.004-,asd,pervious,npv,bark,measured,34.4483,-119.8191,urban reflectance spectra from santa barbara
+589,ndwnyg.001-,asd,pervious,npv,wood,measured,34.4483,-119.8191,urban reflectance spectra from santa barbara
+590,ndwnmf.006-,asd,pervious,npv,wood,measured,34.4574,-119.823,urban reflectance spectra from santa barbara
+591,ndwnmf.003-,asd,pervious,npv,wood,measured,34.4574,-119.823,urban reflectance spectra from santa barbara
+592,ndwnmm.001-,asd,pervious,npv,wood,measured,34.4358,-119.8804,urban reflectance spectra from santa barbara
+593,D.spicata,asd,pervious,npv,litter,measured,0.0,0.0,usgs
+594,Grass_dry.8+.2green,asd,pervious,npv,litter,measured,0.0,0.0,usgs
+595,Grass_dry.9+.1green,asd,pervious,npv,litter,measured,0.0,0.0,usgs
+596,Marsh,asd,pervious,npv,litter,measured,0.0,0.0,usgs
+597,Marsh,asd,pervious,npv,litter,measured,0.0,0.0,usgs
+598,P.aus.,asd,pervious,npv,litter,measured,0.0,0.0,usgs
+599,P.australis,asd,pervious,npv,litter,measured,0.0,0.0,usgs
+600,Sagebrush,asd,pervious,npv,litter,measured,0.0,0.0,usgs
+601,Willow,asd,pervious,npv,litter,measured,0.0,0.0,usgs
+602,frrkof.003-,asd,impervious,urban,asphalt,measured,34.4127,-119.7317,urban reflectance spectra from santa barbara
+603,frrkof.007-,asd,impervious,urban,asphalt,measured,34.4127,-119.7317,urban reflectance spectra from santa barbara
+604,frrkof.006-,asd,impervious,urban,asphalt,measured,34.4127,-119.7317,urban reflectance spectra from santa barbara
+605,fggeof.004-,asd,impervious,urban,asphalt,measured,34.4183,-119.8721,urban reflectance spectra from santa barbara
+606,fscnmm.004-,asd,impervious,urban,comp_shingle,measured,34.4358,-119.8804,urban reflectance spectra from santa barbara
+607,fscnof.008-,asd,impervious,urban,comp_shingle,measured,34.4358,-119.8804,urban reflectance spectra from santa barbara
+608,fscnof.001-,asd,impervious,urban,comp_shingle,measured,34.4358,-119.8804,urban reflectance spectra from santa barbara
+609,fscnof.006-,asd,impervious,urban,comp_shingle,measured,34.4358,-119.8804,urban reflectance spectra from santa barbara
+610,fscrmg.013-,asd,impervious,urban,comp_shingle,measured,34.4332,-119.7809,urban reflectance spectra from santa barbara
+611,fscrmg.006-,asd,impervious,urban,comp_shingle,measured,34.4118,-119.8709,urban reflectance spectra from santa barbara
+612,fscgye.022-,asd,impervious,urban,comp_shingle,measured,34.4309,-119.6795,urban reflectance spectra from santa barbara
+613,fttrmg.007-,asd,impervious,urban,comp_shingle,measured,34.4118,-119.8709,urban reflectance spectra from santa barbara
+614,fscemm.010-,asd,impervious,urban,comp_shingle,measured,34.4003,-119.7311,urban reflectance spectra from santa barbara
+615,fscgye.028-,asd,impervious,urban,comp_shingle,measured,34.4309,-119.6795,urban reflectance spectra from santa barbara
+616,fsceye.026-,asd,impervious,urban,comp_shingle,measured,34.4283,-119.8707,urban reflectance spectra from santa barbara
+617,fsfnye.003-,asd,impervious,urban,concrete_tile,measured,34.43,-119.7633,urban reflectance spectra from santa barbara
+618,modrmg.004-,asd,impervious,urban,driveway,measured,34.4357,119.8801,urban reflectance spectra from santa barbara
+619,spcsye.006-,asd,impervious,urban,driveway,measured,34.4399,-119.8927,urban reflectance spectra from santa barbara
+620,spcsye.005-,asd,impervious,urban,driveway,measured,34.4399,-119.8927,urban reflectance spectra from santa barbara
+621,folwmm.002-,asd,impervious,urban,glass,measured,34.43,-119.7633,urban reflectance spectra from santa barbara
+622,folwmm.001-,asd,impervious,urban,glass,measured,34.43,-119.7633,urban reflectance spectra from santa barbara
+623,fggeof.001-,asd,impervious,urban,gravel,measured,34.4183,119.8721,urban reflectance spectra from santa barbara
+624,fggrom.004-,asd,impervious,urban,gravel,measured,34.4156,-119.8453,urban reflectance spectra from santa barbara
+625,fggemg.006-,asd,impervious,urban,gravel,measured,34.4003,-119.7311,urban reflectance spectra from santa barbara
+626,fggemg.003-,asd,impervious,urban,gravel,measured,34.4003,-119.7311,urban reflectance spectra from santa barbara
+627,mozmom.001-,asd,impervious,urban,manhole,measured,34.446,-119.8319,urban reflectance spectra from santa barbara
+628,mozmom.003-,asd,impervious,urban,manhole,measured,34.446,-119.8319,urban reflectance spectra from santa barbara
+629,foznof.001-,asd,impervious,urban,metal,measured,34.4003,-119.7311,urban reflectance spectra from santa barbara
+630,fozkyg.002-,asd,impervious,urban,metal,measured,34.4003,-119.7311,urban reflectance spectra from santa barbara
+631,foznof.002-,asd,impervious,urban,metal,measured,34.4003,-119.7311,urban reflectance spectra from santa barbara
+632,fhzgmg.007-,asd,impervious,urban,metal,measured,34.4574,-119.823,urban reflectance spectra from santa barbara
+633,fhzgmg.008-,asd,impervious,urban,metal,measured,34.4574,-119.823,urban reflectance spectra from santa barbara
+634,mobrmg.008-,asd,impervious,urban,other,measured,34.4358,-119.8804,urban reflectance spectra from santa barbara
+635,mobrmg.003-,asd,impervious,urban,other,measured,34.4358,-119.8804,urban reflectance spectra from santa barbara
+636,mobrmg.005-,asd,impervious,urban,other,measured,34.4358,-119.8804,urban reflectance spectra from santa barbara
+637,mobrmg.007-,asd,impervious,urban,other,measured,34.4358,-119.8804,urban reflectance spectra from santa barbara
+638,mobrmg.004-,asd,impervious,urban,other,measured,34.4358,-119.8804,urban reflectance spectra from santa barbara
+639,mobrmg.001-,asd,impervious,urban,other,measured,34.4358,-119.8804,urban reflectance spectra from santa barbara
+640,tpabmg.003-,asd,impervious,urban,paint,measured,34.4417,-119.8306,urban reflectance spectra from santa barbara
+641,ctcnmm.005-,asd,impervious,urban,paint,measured,34.4168,-119.8506,urban reflectance spectra from santa barbara
+642,ctcgmm.016-,asd,impervious,urban,paint,measured,34.4168,-119.8506,urban reflectance spectra from santa barbara
+643,ctcgmm.001-,asd,impervious,urban,paint,measured,34.4483,-119.8191,urban reflectance spectra from santa barbara
+644,fhznmg.002-,asd,impervious,urban,paint,measured,34.4358,-119.8804,urban reflectance spectra from santa barbara
+645,trawmm.006-,asd,impervious,urban,paint,measured,34.4417,-119.8306,urban reflectance spectra from santa barbara
+646,trayye.004-,asd,impervious,urban,paint,measured,34.4357,119.8801,urban reflectance spectra from santa barbara
+647,trayye.003-,asd,impervious,urban,paint,measured,34.44,119.8927,urban reflectance spectra from santa barbara
+648,tccryg.001-,asd,impervious,urban,paint,measured,34.4401,-119.8327,urban reflectance spectra from santa barbara
+649,traymg.003-,asd,impervious,urban,paint,measured,34.4408,-119.8745,urban reflectance spectra from santa barbara
+650,traymg.001-,asd,impervious,urban,paint,measured,34.4408,-119.8745,urban reflectance spectra from santa barbara
+651,tccrye.001-,asd,impervious,urban,paint,measured,34.4373,-119.6926,urban reflectance spectra from santa barbara
+652,trawyf.002-,asd,impervious,urban,paint,measured,34.4408,-119.8745,urban reflectance spectra from santa barbara
+653,pprwmg.003-,asd,impervious,urban,paint,measured,34.4419,-119.8315,urban reflectance spectra from santa barbara
+654,trawmm.003-,asd,impervious,urban,paint,measured,34.4417,-119.8306,urban reflectance spectra from santa barbara
+655,fhznmg.003-,asd,impervious,urban,paint,measured,34.4358,-119.8804,urban reflectance spectra from santa barbara
+656,trawyg.003-,asd,impervious,urban,paint,measured,34.4408,-119.8745,urban reflectance spectra from santa barbara
+657,pprwmg.002-,asd,impervious,urban,paint,measured,34.4419,-119.8315,urban reflectance spectra from santa barbara
+658,trawyg.002-,asd,impervious,urban,paint,measured,34.4408,-119.8745,urban reflectance spectra from santa barbara
+659,pprwmg.001-,asd,impervious,urban,paint,measured,34.4419,-119.8315,urban reflectance spectra from santa barbara
+660,rpaeye.006-,asd,impervious,urban,road,measured,34.4408,-119.8745,urban reflectance spectra from santa barbara
+661,rpaeom.003-,asd,impervious,urban,road,measured,34.44,-119.8927,urban reflectance spectra from santa barbara
+662,rpcsye.004-,asd,impervious,urban,road,measured,34.4373,-119.6926,urban reflectance spectra from santa barbara
+663,trawmm.001-,asd,impervious,urban,paint,measured,34.4417,-119.8306,urban reflectance spectra from santa barbara
+664,spmrye.005-,asd,impervious,urban,sidewalk,measured,34.4168,-119.8506,urban reflectance spectra from santa barbara
+665,spcsmg.009-,asd,impervious,urban,sidewalk,measured,34.446,-119.8319,urban reflectance spectra from santa barbara
+666,subrmg.010-,asd,impervious,urban,sidewalk,measured,34.4399,-119.8927,urban reflectance spectra from santa barbara
+667,spcsmg.005-,asd,impervious,urban,sidewalk,measured,34.446,-119.8319,urban reflectance spectra from santa barbara
+668,spcsmg.002-,asd,impervious,urban,sidewalk,measured,34.446,-119.8319,urban reflectance spectra from santa barbara
+669,spcemg.011-,asd,impervious,urban,sidewalk,measured,34.4417,-119.8306,urban reflectance spectra from santa barbara
+670,spcsyg.001-,asd,impervious,urban,sidewalk,measured,34.44,-119.8927,urban reflectance spectra from santa barbara
+671,spcsye.002-,asd,impervious,urban,sidewalk,measured,34.446,-119.8319,urban reflectance spectra from santa barbara
+672,spcsmg.010-,asd,impervious,urban,sidewalk,measured,34.446,-119.8319,urban reflectance spectra from santa barbara
+673,spceye.002-,asd,impervious,urban,sidewalk,measured,34.4357,-119.8801,urban reflectance spectra from santa barbara
+674,fttrme.007-,asd,impervious,urban,tile,measured,34.4373,-119.6926,urban reflectance spectra from santa barbara
+675,fttrme.005-,asd,impervious,urban,tile,measured,34.4373,-119.6926,urban reflectance spectra from santa barbara
+676,fsfnof.012-,asd,impervious,urban,wood_shingle,measured,34.43,-119.7633,urban reflectance spectra from santa barbara
+677,fsfnof.003-,asd,impervious,urban,wood_shingle,measured,34.43,-119.7633,urban reflectance spectra from santa barbara
+678,fsfnof.007-,asd,impervious,urban,wood_shingle,measured,34.43,-119.7633,urban reflectance spectra from santa barbara
+679,fsfnof.001-,asd,impervious,urban,wood_shingle,measured,34.43,-119.7633,urban reflectance spectra from santa barbara
+680,fswnog.009-,asd,impervious,urban,wood_shingle,measured,34.4399,-119.8927,urban reflectance spectra from santa barbara
+681,fswnog.008-,asd,impervious,urban,wood_shingle,measured,34.4399,-119.8927,urban reflectance spectra from santa barbara
+682,fswnof.004-,asd,impervious,urban,wood_shingle,measured,34.43,-119.7633,urban reflectance spectra from santa barbara
+683,fswnof.001-,asd,impervious,urban,wood_shingle,measured,34.43,-119.7633,urban reflectance spectra from santa barbara
+684,v-LAI-3.9-LMA-0.011-CHL-11.5-N-2.0,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+685,v-LAI-4.9-LMA-0.008-CHL-17.6-N-2.1,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+686,v-LAI-6.7-LMA-0.008-CHL-47.8-N-2.1,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+687,v-LAI-4.0-LMA-0.005-CHL-28.6-N-2.0,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+688,v-LAI-4.5-LMA-0.010-CHL-13.0-N-1.5,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+689,v-LAI-2.7-LMA-0.007-CHL-10.3-N-1.8,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+690,v-LAI-5.0-LMA-0.010-CHL-41.3-N-2.1,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+691,v-LAI-1.4-LMA-0.007-CHL-25.5-N-1.9,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+692,v-LAI-3.4-LMA-0.015-CHL-45.7-N-1.5,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+693,v-LAI-8.8-LMA-0.015-CHL-19.7-N-2.0,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+694,v-LAI-1.9-LMA-0.006-CHL-39.1-N-2.3,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+695,v-LAI-8.7-LMA-0.008-CHL-45.3-N-1.3,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+696,v-LAI-0.75-LMA-0.011-CHL-19.1-N-1.8,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+697,v-LAI-0.9-LMA-0.014-CHL-31.4-N-2.2,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+698,v-LAI-4.5-LMA-0.007-CHL-23.0-N-1.9,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+699,v-LAI-6.2-LMA-0.010-CHL-17.0-N-2.1,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+700,v-LAI-5.8-LMA-0.007-CHL-55.2-N-2.3,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+701,v-LAI-3.5-LMA-0.005-CHL-14.0-N-2.3,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+702,v-LAI-7.5-LMA-0.006-CHL-37.8-N-2.0,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+703,v-LAI-0.91-LMA-0.009-CHL-32.1-N-1.4,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+704,v-LAI-3.2-LMA-0.013-CHL-17.2-N-1.9,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+705,v-LAI-1.6-LMA-0.017-CHL-58.9-N-2.2,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+706,v-LAI-6.8-LMA-0.010-CHL-11.0-N-2.5,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+707,v-LAI-8.0-LMA-0.009-CHL-56.1-N-1.9,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+708,v-LAI-7.1-LMA-0.005-CHL-10.4-N-2.3,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+709,v-LAI-6.8-LMA-0.007-CHL-34.1-N-2.0,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+710,v-LAI-5.9-LMA-0.021-CHL-10.1-N-1.6,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+711,v-LAI-1.8-LMA-0.016-CHL-30.2-N-2.4,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+712,v-LAI-3.2-LMA-0.014-CHL-23.2-N-2.2,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+713,v-LAI-6.8-LMA-0.007-CHL-44.9-N-1.6,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+714,v-LAI-6.6-LMA-0.010-CHL-34.3-N-2.2,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+715,v-LAI-5.2-LMA-0.007-CHL-11.7-N-2.2,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+716,v-LAI-2.9-LMA-0.010-CHL-28.0-N-2.2,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+717,v-LAI-2.1-LMA-0.019-CHL-27.8-N-2.3,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+718,v-LAI-0.89-LMA-0.007-CHL-41.0-N-2.4,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+719,v-LAI-4.1-LMA-0.017-CHL-10.2-N-1.9,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+720,v-LAI-0.88-LMA-0.018-CHL-32.6-N-2.1,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+721,v-LAI-8.5-LMA-0.008-CHL-28.1-N-1.9,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+722,v-LAI-1.3-LMA-0.018-CHL-29.6-N-1.7,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+723,v-LAI-1.4-LMA-0.005-CHL-38.4-N-2.4,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+724,v-LAI-1.3-LMA-0.012-CHL-55.7-N-2.1,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+725,v-LAI-2.4-LMA-0.011-CHL-38.8-N-2.1,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+726,v-LAI-1.5-LMA-0.012-CHL-12.8-N-2.4,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+727,v-LAI-1e+01-LMA-0.008-CHL-26.6-N-2.3,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+728,v-LAI-6.8-LMA-0.013-CHL-50.4-N-2.3,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+729,v-LAI-4.6-LMA-0.009-CHL-12.0-N-2.4,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+730,v-LAI-2.1-LMA-0.006-CHL-25.5-N-2.0,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+731,v-LAI-1.0-LMA-0.012-CHL-17.6-N-2.2,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+732,v-LAI-5.8-LMA-0.008-CHL-15.1-N-1.8,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+733,v-LAI-3.8-LMA-0.013-CHL-12.6-N-2.4,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+734,v-LAI-0.72-LMA-0.008-CHL-51.3-N-1.5,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+735,v-LAI-3.4-LMA-0.014-CHL-17.9-N-2.0,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+736,v-LAI-6.7-LMA-0.006-CHL-58.8-N-2.2,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+737,v-LAI-3.9-LMA-0.006-CHL-44.2-N-2.4,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+738,v-LAI-6.2-LMA-0.011-CHL-38.2-N-2.1,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+739,v-LAI-3.7-LMA-0.013-CHL-16.7-N-2.1,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+740,v-LAI-5.0-LMA-0.006-CHL-20.9-N-2.1,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+741,v-LAI-8.6-LMA-0.012-CHL-59.4-N-1.9,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+742,v-LAI-2.8-LMA-0.009-CHL-52.3-N-2.2,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+743,v-LAI-1.7-LMA-0.015-CHL-13.7-N-2.4,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+744,v-LAI-1.4-LMA-0.006-CHL-41.2-N-2.2,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+745,v-LAI-6.4-LMA-0.013-CHL-11.9-N-2.0,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+746,v-LAI-6.7-LMA-0.005-CHL-27.6-N-2.3,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+747,v-LAI-1.1-LMA-0.014-CHL-40.3-N-2.4,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+748,v-LAI-0.87-LMA-0.013-CHL-30.8-N-1.7,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+749,v-LAI-4.3-LMA-0.009-CHL-11.8-N-2.4,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+750,v-LAI-2.0-LMA-0.005-CHL-11.2-N-1.6,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+751,v-LAI-5.9-LMA-0.008-CHL-26.3-N-2.3,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
+752,v-LAI-3.7-LMA-0.005-CHL-43.1-N-1.7,prosail,pervious,vegetation,canopy,simulated,0.0,0.0,modeled canopy reflectance
