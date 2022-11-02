@@ -27,7 +27,6 @@ nav:
     - Introduction: 'introduction.md'
     - Data Sources: 'sources.md'
     - Code Documentation:
-<<<<<<< HEAD
         - earthlib.BRDFCorrect: 'module/BRDFCorrect.md'
         - earthlib.BrightMask: 'module/BrightMask.md'
         - earthlib.CloudMask: 'module/CloudMask.md'
@@ -36,21 +35,11 @@ nav:
         - earthlib.ShadeMask: 'module/ShadeMask.md'
         - earthlib.Unmix: 'module/Unmix.md'
         - earthlib.read: 'module/read.md'
-=======
-        - earthlib.Map: 'module/Map.md'
-        - earthlib.Mask: 'module/Mask.md'
-        - earthlib.Read: 'module/Read.md'
-        - earthlib.Unmix: 'module/Unmix.md'
->>>>>>> truncated history
         - earthlib.utils: 'module/utils.md'
 
 # theme
 theme:
-<<<<<<< HEAD
     logo: 'img/earthlib.svg'
-=======
-    logo: 'img/symbol-earthlib.svg'
->>>>>>> truncated history
     icon:
       repo: 'fontawesome/brands/github'
     name: 'material'
@@ -58,11 +47,7 @@ theme:
     nav_style: dark
     palette:
       - media: "(prefers-color-scheme: light)"
-<<<<<<< HEAD
         scheme: 'earthchris-light'
-=======
-        scheme: 'forestobs-light'
->>>>>>> truncated history
         toggle:
           icon: 'material/weather-night'
           name: 'Go dark'
@@ -72,11 +57,7 @@ theme:
           icon: 'material/weather-sunny'
           name: 'Go light'
     font:
-<<<<<<< HEAD
       text: 'Nunito'
-=======
-      text: 'Poppins'
->>>>>>> truncated history
       code: 'Source Code Pro'
     favicon: 'img/favicon.png'
     features:
@@ -90,12 +71,8 @@ plugins:
         include_source: True
 
 extra_css:
-<<<<<<< HEAD
         - https://earth-chris.github.io/shared/mkdocs.css
         #- css/colors.css
-=======
-    - css/colors.css
->>>>>>> truncated history
 
 # pandoc (https://pandoc.org/MANUAL.html)
 markdown_extensions:
