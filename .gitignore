@@ -108,5 +108,11 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+<<<<<<< HEAD
 # downloaded data
 /data
+=======
+# zed stuff
+.zedstate
+*/.zedstate
+>>>>>>> truncated history

@@ -17,5 +17,9 @@ jobs:
         with:
           python-version: 3.7
       - run: pip install .
+<<<<<<< HEAD
       - run: pip install mkdocs mkdocs-material mkdocstrings[python] mkdocs-jupyter livereload
+=======
+      - run: pip install -r requirements-dev.txt
+>>>>>>> truncated history
       - run: mkdocs gh-deploy --force

@@ -19,6 +19,7 @@ output_path = os.path.join(repo_directory, "earthlib", "data", "collections.json
 # create the dictionary to write as json
 collections = {
     "Landsat4": {
+<<<<<<< HEAD
         "collection": "LANDSAT/LT04/C02/T1_L2",
         "band_names": [
             "SR_B1",
@@ -27,6 +28,16 @@ collections = {
             "SR_B4",
             "SR_B5",
             "SR_B7",
+=======
+        "collection": "LANDSAT/LT04/C01/T1_SR",
+        "band_names": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B7",
+>>>>>>> truncated history
         ],
         "band_descriptions": [
             "blue",
@@ -38,6 +49,7 @@ collections = {
         ],
         "band_centers": [0.485, 0.56, 0.66, 0.835, 1.65, 2.215],
         "band_widths": [0.07, 0.08, 0.06, 0.13, 0.2, 0.27],
+<<<<<<< HEAD
         "scale": 0.0000275,
         "offset": -0.2,
     },
@@ -50,6 +62,19 @@ collections = {
             "SR_B4",
             "SR_B5",
             "SR_B7",
+=======
+        "scale": 0.0001,
+    },
+    "Landsat5": {
+        "collection": "LANDSAT/LT05/C01/T1_SR",
+        "band_names": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B7",
+>>>>>>> truncated history
         ],
         "band_descriptions": [
             "blue",
@@ -61,6 +86,7 @@ collections = {
         ],
         "band_centers": [0.485, 0.56, 0.66, 0.835, 1.65, 2.215],
         "band_widths": [0.07, 0.08, 0.06, 0.13, 0.2, 0.27],
+<<<<<<< HEAD
         "scale": 0.0000275,
         "offset": -0.2,
     },
@@ -73,6 +99,19 @@ collections = {
             "SR_B4",
             "SR_B5",
             "SR_B7",
+=======
+        "scale": 0.0001,
+    },
+    "Landsat7": {
+        "collection": "LANDSAT/LE07/C01/T1_SR",
+        "band_names": [
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B7",
+>>>>>>> truncated history
         ],
         "band_descriptions": [
             "blue",
@@ -84,6 +123,7 @@ collections = {
         ],
         "band_centers": [0.485, 0.56, 0.66, 0.835, 1.65, 2.22],
         "band_widths": [0.07, 0.08, 0.06, 0.13, 0.2, 0.26],
+<<<<<<< HEAD
         "scale": 0.0000275,
         "offset": -0.2,
     },
@@ -96,6 +136,19 @@ collections = {
             "SR_B5",
             "SR_B6",
             "SR_B7",
+=======
+        "scale": 0.0001,
+    },
+    "Landsat8": {
+        "collection": "LANDSAT/LC08/C01/T1_SR",
+        "band_names": [
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B6",
+            "B7",
+>>>>>>> truncated history
         ],
         "band_descriptions": [
             "blue",
@@ -107,11 +160,18 @@ collections = {
         ],
         "band_centers": [0.482, 0.561, 0.655, 0.865, 1.609, 2.201],
         "band_widths": [0.060, 0.057, 0.037, 0.028, 0.085, 0.187],
+<<<<<<< HEAD
         "scale": 0.0000275,
         "offset": -0.2,
     },
     "Sentinel2": {
         "collection": "COPERNICUS/S2_SR_HARMONIZED",
+=======
+        "scale": 0.0001,
+    },
+    "Sentinel2": {
+        "collection": "COPERNICUS/S2_SR",
+>>>>>>> truncated history
         "band_names": [
             "B2",
             "B3",
@@ -163,7 +223,11 @@ collections = {
         "scale": 0.0001,
     },
     "MODIS": {
+<<<<<<< HEAD
         "collection": "MODIS/061/MOD09GA",
+=======
+        "collection": "MODIS/006/MOD09GA",
+>>>>>>> truncated history
         "band_names": [
             "sur_refl_b03",
             "sur_refl_b04",
@@ -318,13 +382,21 @@ collections = {
             "B8",
         ],
         "band_descriptions": [
+<<<<<<< HEAD
             "coastal blue",
+=======
+            "coastal blue"
+>>>>>>> truncated history
             "blue",
             "green",
             "green 2",
             "yellow",
             "red",
+<<<<<<< HEAD
             "red edge",
+=======
+            "red edge"
+>>>>>>> truncated history
             "near infrared",
         ],
         "band_centers": [0.441, 0.49, 0.531, 0.565, 0.61, 0.665, 0.705, 0.865],

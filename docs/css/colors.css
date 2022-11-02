@@ -1,4 +1,5 @@
 :root {
+<<<<<<< HEAD
   --dark-blue: #0c87f2;
   --blue:   #0ca6f2;
   --orange: #ff9030;
@@ -21,10 +22,27 @@
   --md-accent-fg-color:  var(--orange);
   --md-typeset-a-color:  var(--dark-blue);
   --md-code-bg-color: var(--light-grey);
+=======
+  --orange: #F4A740;
+  --yellow: #FDD47D;
+  --green:  #134F3A;
+  --grey:   #7B7B7B;
+  --black:  #222222;
+  --white:  #FFFFFF;
+}
+
+[data-md-color-scheme="forestobs-light"] {
+  --md-primary-fg-color: var(--green);
+  --md-primary-fg-color--dark: var(--black);
+  --md-default-bg-color: var(--white);
+  --md-primary-bg-color: var(--white);
+  --md-accent-fg-color:  var(--orange);
+>>>>>>> truncated history
 }
 
 [data-md-color-scheme="slate"] {
   --md-hue: 150; /* [0, 360] */
+<<<<<<< HEAD
   --md-primary-fg-color: var(--dark-blue);
   --md-primary-fg-color--dark: var(--black);
   --md-default-fg-color--light: var(--white);
@@ -33,4 +51,12 @@
   --md-accent-fg-color:  var(--orange);
   --md-typeset-a-color:  var(--blue);
   --md-code-bg-color: var(--dark-grey);
+=======
+  --md-primary-fg-color: var(--green);
+  --md-primary-fg-color--dark: var(--black);
+  --md-default-bg-color: var(--black);
+  --md-primary-bg-color: var(--white);
+  --md-accent-fg-color:  var(--yellow);
+  --md-typeset-a-color:  var(--orange);
+>>>>>>> truncated history
 }

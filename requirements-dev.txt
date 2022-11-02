@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 geemap
 jupyter
 matplotlib
 twine
+=======
+black
+flake8
+isort
+jupyter
+livereload
+mkdocs-jupyter
+mkdocs-material
+mkdocstrings
+pytest
+pytest-cov
+>>>>>>> truncated history

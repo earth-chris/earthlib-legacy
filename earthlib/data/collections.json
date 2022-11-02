@@ -121,12 +121,21 @@
       "shortwave infrared 2"
     ],
     "band_names": [
+<<<<<<< HEAD
       "SR_B1",
       "SR_B2",
       "SR_B3",
       "SR_B4",
       "SR_B5",
       "SR_B7"
+=======
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "B5",
+      "B7"
+>>>>>>> truncated history
     ],
     "band_widths": [
       0.07,
@@ -136,9 +145,14 @@
       0.2,
       0.27
     ],
+<<<<<<< HEAD
     "collection": "LANDSAT/LT04/C02/T1_L2",
     "offset": -0.2,
     "scale": 2.75e-05
+=======
+    "collection": "LANDSAT/LT04/C01/T1_SR",
+    "scale": 0.0001
+>>>>>>> truncated history
   },
   "Landsat5": {
     "band_centers": [
@@ -158,12 +172,21 @@
       "shortwave infrared 2"
     ],
     "band_names": [
+<<<<<<< HEAD
       "SR_B1",
       "SR_B2",
       "SR_B3",
       "SR_B4",
       "SR_B5",
       "SR_B7"
+=======
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "B5",
+      "B7"
+>>>>>>> truncated history
     ],
     "band_widths": [
       0.07,
@@ -173,9 +196,14 @@
       0.2,
       0.27
     ],
+<<<<<<< HEAD
     "collection": "LANDSAT/LT05/C02/T1_L2",
     "offset": -0.2,
     "scale": 2.75e-05
+=======
+    "collection": "LANDSAT/LT05/C01/T1_SR",
+    "scale": 0.0001
+>>>>>>> truncated history
   },
   "Landsat7": {
     "band_centers": [
@@ -195,12 +223,21 @@
       "shortwave infrared 2"
     ],
     "band_names": [
+<<<<<<< HEAD
       "SR_B1",
       "SR_B2",
       "SR_B3",
       "SR_B4",
       "SR_B5",
       "SR_B7"
+=======
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "B5",
+      "B7"
+>>>>>>> truncated history
     ],
     "band_widths": [
       0.07,
@@ -210,9 +247,14 @@
       0.2,
       0.26
     ],
+<<<<<<< HEAD
     "collection": "LANDSAT/LE07/C02/T1_L2",
     "offset": -0.2,
     "scale": 2.75e-05
+=======
+    "collection": "LANDSAT/LE07/C01/T1_SR",
+    "scale": 0.0001
+>>>>>>> truncated history
   },
   "Landsat8": {
     "band_centers": [
@@ -232,12 +274,21 @@
       "shortwave infrared 2"
     ],
     "band_names": [
+<<<<<<< HEAD
       "SR_B2",
       "SR_B3",
       "SR_B4",
       "SR_B5",
       "SR_B6",
       "SR_B7"
+=======
+      "B2",
+      "B3",
+      "B4",
+      "B5",
+      "B6",
+      "B7"
+>>>>>>> truncated history
     ],
     "band_widths": [
       0.06,
@@ -247,9 +298,14 @@
       0.085,
       0.187
     ],
+<<<<<<< HEAD
     "collection": "LANDSAT/LC08/C02/T1_L2",
     "offset": -0.2,
     "scale": 2.75e-05
+=======
+    "collection": "LANDSAT/LC08/C01/T1_SR",
+    "scale": 0.0001
+>>>>>>> truncated history
   },
   "MODIS": {
     "band_centers": [
@@ -288,7 +344,11 @@
       0.024,
       0.05
     ],
+<<<<<<< HEAD
     "collection": "MODIS/061/MOD09GA",
+=======
+    "collection": "MODIS/006/MOD09GA",
+>>>>>>> truncated history
     "scale": 0.0001
   },
   "NEON": {
@@ -1920,7 +1980,11 @@
       0.142,
       0.24
     ],
+<<<<<<< HEAD
     "collection": "COPERNICUS/S2_SR_HARMONIZED",
+=======
+    "collection": "COPERNICUS/S2_SR",
+>>>>>>> truncated history
     "scale": 0.0001
   },
   "SuperDove": {
@@ -1935,14 +1999,22 @@
       0.865
     ],
     "band_descriptions": [
+<<<<<<< HEAD
       "coastal blue",
       "blue",
+=======
+      "coastal blueblue",
+>>>>>>> truncated history
       "green",
       "green 2",
       "yellow",
       "red",
+<<<<<<< HEAD
       "red edge",
       "near infrared"
+=======
+      "red edgenear infrared"
+>>>>>>> truncated history
     ],
     "band_names": [
       "B1",
@@ -2011,4 +2083,8 @@
     "collection": "NOAA/VIIRS/001/VNP09GA",
     "scale": 0.0001
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> truncated history
