@@ -28,7 +28,11 @@ nav:
     - Data Sources: 'sources.md'
     - Code Documentation:
         - earthlib.BRDFCorrect: 'module/BRDFCorrect.md'
-        - earthlib.Mask: 'module/Mask.md'
+        - earthlib.BrightMask: 'module/BrightMask.md'
+        - earthlib.CloudMask: 'module/CloudMask.md'
+        - earthlib.NIRv: 'module/NIRv.md'
+        - earthlib.Scale: 'module/Scale.md'
+        - earthlib.ShadeMask: 'module/ShadeMask.md'
         - earthlib.Unmix: 'module/Unmix.md'
         - earthlib.read: 'module/read.md'
         - earthlib.utils: 'module/utils.md'

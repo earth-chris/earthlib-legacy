@@ -51,5 +51,5 @@ def test_selectSpectra():
     n = 20
     all_spectra = utils.selectSpectra(dtype, sensor, n=0)
     some_spectra = utils.selectSpectra(dtype, sensor, n)
-    assert len(all_spectra) > 1000
+    assert len(all_spectra) > len(some_spectra)
     assert len(some_spectra) == n

@@ -7,6 +7,7 @@ from earthlib import (
     Scale,
     ShadeMask,
     SoilPVNPV,
+    ThresholdMask,
     Unmix,
     VegImperviousSoil,
     __version__,

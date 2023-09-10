@@ -28,9 +28,9 @@ setup_args = {
         (
             "earthlib",
             [
-                "earthlib/data/spectra.csv",
-                "earthlib/data/spectra.sli",
-                "earthlib/data/spectra.sli.hdr",
+                "earthlib/data/spectra-optimized.csv",
+                "earthlib/data/spectra-optimized.sli",
+                "earthlib/data/spectra-optimized.hdr",
                 "earthlib/data/collections.json",
             ],
         )
