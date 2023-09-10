@@ -1,12 +1,15 @@
 from earthlib import (
     BRDFCorrect,
     BrightMask,
+    BurnPVSoil,
     CloudMask,
     NIRv,
     Scale,
     ShadeMask,
+    SoilPVNPV,
     ThresholdMask,
     Unmix,
+    VegImperviousSoil,
     __version__,
     read,
 )
