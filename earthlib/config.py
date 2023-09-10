@@ -54,7 +54,7 @@ BRDF_COEFFICIENTS_S2 = {
 }
 
 # spectral mixture analysis defaults
-N_ITERATIONS = 20
+N_ITERATIONS = 30
 SHADE_NORMALIZE = True
 RMSE = "RMSE"
 WEIGHT = "WEIGHT"
